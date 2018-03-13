@@ -8,3 +8,13 @@ c:\users\nndb\documents\visual studio 2015\Projects\QuanLyThuVien\QuanLyThuVien\
 c:\users\nndb\documents\visual studio 2015\Projects\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.pdb
 c:\users\nndb\documents\visual studio 2015\Projects\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.frmUser.resources
 c:\users\nndb\documents\visual studio 2015\Projects\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.frmMain.resources
+D:\Mine\5. Study\Projects\QuanLyThuVien\QuanLyThuVien\bin\Debug\QuanLyThuVien.exe.config
+D:\Mine\5. Study\Projects\QuanLyThuVien\QuanLyThuVien\bin\Debug\QuanLyThuVien.exe
+D:\Mine\5. Study\Projects\QuanLyThuVien\QuanLyThuVien\bin\Debug\QuanLyThuVien.pdb
+D:\Mine\5. Study\Projects\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.csprojResolveAssemblyReference.cache
+D:\Mine\5. Study\Projects\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.frmMain.resources
+D:\Mine\5. Study\Projects\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.frmUser.resources
+D:\Mine\5. Study\Projects\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.Properties.Resources.resources
+D:\Mine\5. Study\Projects\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.csproj.GenerateResource.Cache
+D:\Mine\5. Study\Projects\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.exe
+D:\Mine\5. Study\Projects\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.pdb

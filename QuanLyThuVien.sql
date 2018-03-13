@@ -1,0 +1,61 @@
+USE MASTER
+CREATE DATABASE QuanLyThuVien
+USE QuanLyThuVien
+
+CREATE TABLE SACH
+(
+	IDSach varchar(5) PRIMARY KEY,
+	TenSach nvarchar(200) NOT NULL,
+	TheLoai nvarchar(20) NOT NULL,
+	TacGia nvarchar(100) NOT NULL,
+	NamXB int NOT NULL,
+	NhaXB nvarchar(20) NOT NULL,
+	NgNhap datetime NOT NULL,
+	TriGia money NOT NULL,
+	TinhTrang nvarchar(20),
+	Hinh image
+)
+DROP TABLE SACH
+
+CREATE TABLE THEDOCGIA
+(
+	IDDocGia int PRIMARY KEY,
+	HoTenDG nvarchar(50) NOT NULL,
+	NGSinhDG datetime,
+	DiaChiDG nvarchar(50) NOT NULL,
+	EmailDG varchar(30) NOT NULL,
+	LoaiDG nvarchar(50) NOT NULL,
+	NgLapThe datetime NOT NULL,
+	NgHetHan datetime NOT NULL,
+	TongNo money DEFAULT(0)
+)
+DROP TABLE THEDOCGIA
+
+CREATE TABLE PHIEUMUON
+(
+	IDPhieuMuon varchar(5) PRIMARY KEY NOT NULL,
+	IDSach varchar(5) FOREIGN KEY REFERENCES SACH(IDSach),
+	IDDocGia int FOREIGN KEY REFERENCES THEDOCGIA(IDDocGia),
+	NgayMuon datetime NOT NULL,
+	HanTra datetime NOT NULL
+)
+DROP TABLE PHIEUMUON
+
+CREATE TABLE PHIEUTRA
+(
+	IDPhieuMuon varchar(5) FOREIGN KEY REFERENCES PHIEUMUON(IDPhieuMuon),
+	IDDocGia int FOREIGN KEY REFERENCES THEDOCGIA(IDDocGia),
+	IDSach varchar(5) FOREIGN KEY REFERENCES SACH(IDSach),
+	NgayTra datetime NOT NULL,
+	CONSTRAINT PK_PT PRIMARY KEY (IDPhieuMuon, IDDocGia, IDSach)
+)
+DROP TABLE PHIEUTRA
+
+CREATE TABLE PHIEUTIENPHAT
+(
+	IDTienPhat varchar(5) PRIMARY KEY NOT NULL,
+	IDDocGia int FOREIGN KEY REFERENCES THEDOCGIA(IDDocGia),
+	SoTienThu money,
+	ConLai money
+)
+DROP TABLE PHIEUTIENPHAT
