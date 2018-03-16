@@ -55,5 +55,11 @@ namespace QuanLyThuVien
             cmd.ExecuteNonQuery();
             HienThi();    
         }
+
+        private void btn_Back_Click(object sender, EventArgs e)
+        {
+            frmMain dlg2 = new frmMain();
+            dlg2.ShowDialog();
+        }
     }
 }

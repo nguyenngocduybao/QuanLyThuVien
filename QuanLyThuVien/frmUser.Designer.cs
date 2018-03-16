@@ -30,6 +30,13 @@
         {
             this.lb_Info = new System.Windows.Forms.Label();
             this.grb_Info = new System.Windows.Forms.GroupBox();
+            this.cbb_TypeReader = new System.Windows.Forms.ComboBox();
+            this.dtp_NgayLapThe = new System.Windows.Forms.DateTimePicker();
+            this.dtp_BirthDay = new System.Windows.Forms.DateTimePicker();
+            this.tb_Address = new System.Windows.Forms.TextBox();
+            this.tb_Email = new System.Windows.Forms.TextBox();
+            this.tb_Name = new System.Windows.Forms.TextBox();
+            this.tb_ID = new System.Windows.Forms.TextBox();
             this.lb_Address = new System.Windows.Forms.Label();
             this.lb_NgayLapThe = new System.Windows.Forms.Label();
             this.lb_TypeReader = new System.Windows.Forms.Label();
@@ -37,20 +44,13 @@
             this.lb_BirthDay = new System.Windows.Forms.Label();
             this.lb_Name = new System.Windows.Forms.Label();
             this.lb_ID = new System.Windows.Forms.Label();
-            this.tb_ID = new System.Windows.Forms.TextBox();
-            this.tb_Name = new System.Windows.Forms.TextBox();
-            this.tb_Email = new System.Windows.Forms.TextBox();
-            this.tb_Address = new System.Windows.Forms.TextBox();
-            this.dtp_BirthDay = new System.Windows.Forms.DateTimePicker();
-            this.dtp_NgayLapThe = new System.Windows.Forms.DateTimePicker();
-            this.cbb_TypeReader = new System.Windows.Forms.ComboBox();
             this.grb_Data = new System.Windows.Forms.GroupBox();
             this.dgv_User = new System.Windows.Forms.DataGridView();
             this.grb_Control = new System.Windows.Forms.GroupBox();
-            this.btn_Add = new System.Windows.Forms.Button();
-            this.btn_Fix = new System.Windows.Forms.Button();
-            this.btn_Delete = new System.Windows.Forms.Button();
             this.btn_Back = new System.Windows.Forms.Button();
+            this.btn_Delete = new System.Windows.Forms.Button();
+            this.btn_Fix = new System.Windows.Forms.Button();
+            this.btn_Add = new System.Windows.Forms.Button();
             this.grb_Info.SuspendLayout();
             this.grb_Data.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_User)).BeginInit();
@@ -92,6 +92,59 @@
             this.grb_Info.TabIndex = 1;
             this.grb_Info.TabStop = false;
             this.grb_Info.Text = "Nhập thông tin độc giả";
+            // 
+            // cbb_TypeReader
+            // 
+            this.cbb_TypeReader.FormattingEnabled = true;
+            this.cbb_TypeReader.Location = new System.Drawing.Point(265, 500);
+            this.cbb_TypeReader.Name = "cbb_TypeReader";
+            this.cbb_TypeReader.Size = new System.Drawing.Size(395, 44);
+            this.cbb_TypeReader.TabIndex = 13;
+            // 
+            // dtp_NgayLapThe
+            // 
+            this.dtp_NgayLapThe.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtp_NgayLapThe.Location = new System.Drawing.Point(265, 600);
+            this.dtp_NgayLapThe.Name = "dtp_NgayLapThe";
+            this.dtp_NgayLapThe.Size = new System.Drawing.Size(395, 41);
+            this.dtp_NgayLapThe.TabIndex = 12;
+            // 
+            // dtp_BirthDay
+            // 
+            this.dtp_BirthDay.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtp_BirthDay.Location = new System.Drawing.Point(265, 300);
+            this.dtp_BirthDay.Name = "dtp_BirthDay";
+            this.dtp_BirthDay.Size = new System.Drawing.Size(395, 41);
+            this.dtp_BirthDay.TabIndex = 11;
+            this.dtp_BirthDay.TabStop = false;
+            // 
+            // tb_Address
+            // 
+            this.tb_Address.Location = new System.Drawing.Point(265, 700);
+            this.tb_Address.Name = "tb_Address";
+            this.tb_Address.Size = new System.Drawing.Size(395, 41);
+            this.tb_Address.TabIndex = 10;
+            // 
+            // tb_Email
+            // 
+            this.tb_Email.Location = new System.Drawing.Point(265, 400);
+            this.tb_Email.Name = "tb_Email";
+            this.tb_Email.Size = new System.Drawing.Size(395, 41);
+            this.tb_Email.TabIndex = 9;
+            // 
+            // tb_Name
+            // 
+            this.tb_Name.Location = new System.Drawing.Point(265, 200);
+            this.tb_Name.Name = "tb_Name";
+            this.tb_Name.Size = new System.Drawing.Size(395, 41);
+            this.tb_Name.TabIndex = 8;
+            // 
+            // tb_ID
+            // 
+            this.tb_ID.Location = new System.Drawing.Point(265, 100);
+            this.tb_ID.Name = "tb_ID";
+            this.tb_ID.Size = new System.Drawing.Size(395, 41);
+            this.tb_ID.TabIndex = 7;
             // 
             // lb_Address
             // 
@@ -163,59 +216,6 @@
             this.lb_ID.TabIndex = 0;
             this.lb_ID.Text = "ID:";
             // 
-            // tb_ID
-            // 
-            this.tb_ID.Location = new System.Drawing.Point(265, 100);
-            this.tb_ID.Name = "tb_ID";
-            this.tb_ID.Size = new System.Drawing.Size(395, 41);
-            this.tb_ID.TabIndex = 7;
-            // 
-            // tb_Name
-            // 
-            this.tb_Name.Location = new System.Drawing.Point(265, 200);
-            this.tb_Name.Name = "tb_Name";
-            this.tb_Name.Size = new System.Drawing.Size(395, 41);
-            this.tb_Name.TabIndex = 8;
-            // 
-            // tb_Email
-            // 
-            this.tb_Email.Location = new System.Drawing.Point(265, 400);
-            this.tb_Email.Name = "tb_Email";
-            this.tb_Email.Size = new System.Drawing.Size(395, 41);
-            this.tb_Email.TabIndex = 9;
-            // 
-            // tb_Address
-            // 
-            this.tb_Address.Location = new System.Drawing.Point(265, 700);
-            this.tb_Address.Name = "tb_Address";
-            this.tb_Address.Size = new System.Drawing.Size(395, 41);
-            this.tb_Address.TabIndex = 10;
-            // 
-            // dtp_BirthDay
-            // 
-            this.dtp_BirthDay.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtp_BirthDay.Location = new System.Drawing.Point(265, 300);
-            this.dtp_BirthDay.Name = "dtp_BirthDay";
-            this.dtp_BirthDay.Size = new System.Drawing.Size(395, 41);
-            this.dtp_BirthDay.TabIndex = 11;
-            this.dtp_BirthDay.TabStop = false;
-            // 
-            // dtp_NgayLapThe
-            // 
-            this.dtp_NgayLapThe.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtp_NgayLapThe.Location = new System.Drawing.Point(265, 600);
-            this.dtp_NgayLapThe.Name = "dtp_NgayLapThe";
-            this.dtp_NgayLapThe.Size = new System.Drawing.Size(395, 41);
-            this.dtp_NgayLapThe.TabIndex = 12;
-            // 
-            // cbb_TypeReader
-            // 
-            this.cbb_TypeReader.FormattingEnabled = true;
-            this.cbb_TypeReader.Location = new System.Drawing.Point(265, 500);
-            this.cbb_TypeReader.Name = "cbb_TypeReader";
-            this.cbb_TypeReader.Size = new System.Drawing.Size(395, 44);
-            this.cbb_TypeReader.TabIndex = 13;
-            // 
             // grb_Data
             // 
             this.grb_Data.Controls.Add(this.dgv_User);
@@ -252,24 +252,15 @@
             this.grb_Control.TabStop = false;
             this.grb_Control.Text = "Xử lí";
             // 
-            // btn_Add
+            // btn_Back
             // 
-            this.btn_Add.Location = new System.Drawing.Point(100, 40);
-            this.btn_Add.Name = "btn_Add";
-            this.btn_Add.Size = new System.Drawing.Size(153, 52);
-            this.btn_Add.TabIndex = 0;
-            this.btn_Add.Text = "Thêm";
-            this.btn_Add.UseVisualStyleBackColor = true;
-            this.btn_Add.Click += new System.EventHandler(this.btn_Add_Click);
-            // 
-            // btn_Fix
-            // 
-            this.btn_Fix.Location = new System.Drawing.Point(350, 40);
-            this.btn_Fix.Name = "btn_Fix";
-            this.btn_Fix.Size = new System.Drawing.Size(153, 52);
-            this.btn_Fix.TabIndex = 1;
-            this.btn_Fix.Text = "Sửa";
-            this.btn_Fix.UseVisualStyleBackColor = true;
+            this.btn_Back.Location = new System.Drawing.Point(850, 40);
+            this.btn_Back.Name = "btn_Back";
+            this.btn_Back.Size = new System.Drawing.Size(153, 52);
+            this.btn_Back.TabIndex = 3;
+            this.btn_Back.Text = "Trở về";
+            this.btn_Back.UseVisualStyleBackColor = true;
+            this.btn_Back.Click += new System.EventHandler(this.btn_Back_Click);
             // 
             // btn_Delete
             // 
@@ -280,14 +271,24 @@
             this.btn_Delete.Text = "Xóa";
             this.btn_Delete.UseVisualStyleBackColor = true;
             // 
-            // btn_Back
+            // btn_Fix
             // 
-            this.btn_Back.Location = new System.Drawing.Point(850, 40);
-            this.btn_Back.Name = "btn_Back";
-            this.btn_Back.Size = new System.Drawing.Size(153, 52);
-            this.btn_Back.TabIndex = 3;
-            this.btn_Back.Text = "Trở về";
-            this.btn_Back.UseVisualStyleBackColor = true;
+            this.btn_Fix.Location = new System.Drawing.Point(350, 40);
+            this.btn_Fix.Name = "btn_Fix";
+            this.btn_Fix.Size = new System.Drawing.Size(153, 52);
+            this.btn_Fix.TabIndex = 1;
+            this.btn_Fix.Text = "Sửa";
+            this.btn_Fix.UseVisualStyleBackColor = true;
+            // 
+            // btn_Add
+            // 
+            this.btn_Add.Location = new System.Drawing.Point(100, 40);
+            this.btn_Add.Name = "btn_Add";
+            this.btn_Add.Size = new System.Drawing.Size(153, 52);
+            this.btn_Add.TabIndex = 0;
+            this.btn_Add.Text = "Thêm";
+            this.btn_Add.UseVisualStyleBackColor = true;
+            this.btn_Add.Click += new System.EventHandler(this.btn_Add_Click);
             // 
             // frmUser
             // 
