@@ -29,3 +29,9 @@ C:\Users\NNDB\Documents\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.frmM
 C:\Users\NNDB\Documents\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.frmUser.resources
 C:\Users\NNDB\Documents\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.Properties.Resources.resources
 C:\Users\NNDB\Documents\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.csproj.GenerateResource.Cache
+D:\Mine\5. Study\Projects\C#\QuanLyThuVien\QuanLyThuVien\bin\Debug\QuanLyThuVien.exe.config
+D:\Mine\5. Study\Projects\C#\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.exe
+D:\Mine\5. Study\Projects\C#\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.pdb
+D:\Mine\5. Study\Projects Test\C#\QuanLyThuVien\QuanLyThuVien\bin\Debug\QuanLyThuVien.exe.config
+D:\Mine\5. Study\Projects Test\C#\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.exe
+D:\Mine\5. Study\Projects Test\C#\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.pdb
