@@ -17,14 +17,16 @@ namespace QuanLyThuVien
         {
             InitializeComponent();
         }
+
         SqlConnection con;
+
         private void frmUser_Load(object sender, EventArgs e)
         {
-
             con = new SqlConnection(@"Data Source=DESKTOP-UKUNBAP\SQLEXPRESS;Initial Catalog=QuanLyThuVien;Integrated Security=True");
             con.Open();
             HienThi();
         }
+
         private void frmUser_FormClosing(object sender, FormClosingEventArgs e)
         {
             con.Close();
