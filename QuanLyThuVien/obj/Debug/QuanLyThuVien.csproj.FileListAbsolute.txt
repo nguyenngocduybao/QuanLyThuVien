@@ -43,3 +43,11 @@ D:\Mine\5. Study\Projects\C#\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien
 D:\Mine\5. Study\Projects\C#\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.csproj.GenerateResource.Cache
 D:\Mine\5. Study\Projects\C#\QuanLyThuVien\QuanLyThuVien\bin\Debug\QuanLyThuVien.exe
 D:\Mine\5. Study\Projects\C#\QuanLyThuVien\QuanLyThuVien\bin\Debug\QuanLyThuVien.pdb
+D:\Mine\5. Study\Projects Test\C#\QuanLyThuVien\QuanLyThuVien\bin\Debug\QuanLyThuVien.exe
+D:\Mine\5. Study\Projects Test\C#\QuanLyThuVien\QuanLyThuVien\bin\Debug\QuanLyThuVien.pdb
+D:\Mine\5. Study\Projects Test\C#\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.csprojResolveAssemblyReference.cache
+D:\Mine\5. Study\Projects Test\C#\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.frmAddBook.resources
+D:\Mine\5. Study\Projects Test\C#\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.frmMain.resources
+D:\Mine\5. Study\Projects Test\C#\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.frmUser.resources
+D:\Mine\5. Study\Projects Test\C#\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.Properties.Resources.resources
+D:\Mine\5. Study\Projects Test\C#\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.csproj.GenerateResource.Cache

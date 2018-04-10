@@ -44,7 +44,7 @@ namespace QuanLyThuVien
 
         private void btn_Add_Click(object sender, EventArgs e)
         {
-            string sqlINSERT = "INSERT INTO THEDOCGIA VALUES (@IDDocGia, @HoTenDG, @NgSinhDG, @EmailDG, @LoaiDG, @Diachi, @NgLapThe, NULL, NULL)";
+            string sqlINSERT = "INSERT INTO THEDOCGIA VALUES (@IDDocGia, @HoTenDG, @NgSinhDG, @Diachi, @EmailDG, @LoaiDG, @NgLapThe, NULL, NULL)";
             SqlCommand cmd = new SqlCommand(sqlINSERT, con);
 
             cmd.Parameters.AddWithValue("IDDocGia", tb_ID.Text);
@@ -62,6 +62,6 @@ namespace QuanLyThuVien
         {
             frmMain dlg2 = new frmMain();
             dlg2.ShowDialog();
-        }
+        }    
     }
 }

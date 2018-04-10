@@ -44,7 +44,7 @@ namespace QuanLyThuVien
 
         private void btn_AddBook_Click(object sender, EventArgs e)
         {
-            string sqlINSERT = "INSERT INTO SACH VALUES (@IDSach, @TenSach, @TheLoai, @TacGia, @NamXB, @NhaXB, @NgNhap, @TriGia, @TinhTrang, NULL)";
+            string sqlINSERT = "INSERT INTO SACH VALUES (@IDSach, @TenSach, @TheLoai, @TacGia, @NamXB, @NhaXB, @NgNhap, @TriGia, @TinhTrang)";
             SqlCommand cmd = new SqlCommand(sqlINSERT, con);
 
             cmd.Parameters.AddWithValue("IDSach", tb_IDBook.Text);
@@ -55,6 +55,7 @@ namespace QuanLyThuVien
             cmd.Parameters.AddWithValue("NhaXB", tb_NhaXB.Text);
             cmd.Parameters.AddWithValue("NgNhap", dtp_NgayNhap.Text);
             cmd.Parameters.AddWithValue("TriGia", tb_TriGia.Text);
+            cmd.Parameters.AddWithValue("TinhTrang", cbb_TinhTrang.Text);
             cmd.ExecuteNonQuery();
             HienThi();
         }

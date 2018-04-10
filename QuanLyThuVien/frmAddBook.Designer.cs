@@ -38,7 +38,7 @@
             this.tb_NhaXB = new System.Windows.Forms.TextBox();
             this.tb_NameBook = new System.Windows.Forms.TextBox();
             this.tb_IDBook = new System.Windows.Forms.TextBox();
-            this.lb_Image = new System.Windows.Forms.Label();
+            this.lb_TinhTrang = new System.Windows.Forms.Label();
             this.lb_TriGia = new System.Windows.Forms.Label();
             this.lb_Time = new System.Windows.Forms.Label();
             this.lb_NhaXB = new System.Windows.Forms.Label();
@@ -48,17 +48,18 @@
             this.lb_NameBook = new System.Windows.Forms.Label();
             this.lb_IDSach = new System.Windows.Forms.Label();
             this.grb_DataBook = new System.Windows.Forms.GroupBox();
+            this.dgv_AddBook = new System.Windows.Forms.DataGridView();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.grb_DieuKhien = new System.Windows.Forms.GroupBox();
             this.btn_Back = new System.Windows.Forms.Button();
             this.btn_DeleteBook = new System.Windows.Forms.Button();
             this.btn_EditBook = new System.Windows.Forms.Button();
             this.btn_AddBook = new System.Windows.Forms.Button();
-            this.dgv_AddBook = new System.Windows.Forms.DataGridView();
+            this.cbb_TinhTrang = new System.Windows.Forms.ComboBox();
             this.grb_InfoBook.SuspendLayout();
             this.grb_DataBook.SuspendLayout();
-            this.grb_DieuKhien.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_AddBook)).BeginInit();
+            this.grb_DieuKhien.SuspendLayout();
             this.SuspendLayout();
             // 
             // lb_ThongTin
@@ -75,6 +76,7 @@
             // 
             // grb_InfoBook
             // 
+            this.grb_InfoBook.Controls.Add(this.cbb_TinhTrang);
             this.grb_InfoBook.Controls.Add(this.dtp_NgayNhap);
             this.grb_InfoBook.Controls.Add(this.cbb_NamXB);
             this.grb_InfoBook.Controls.Add(this.cbb_Authors);
@@ -83,7 +85,7 @@
             this.grb_InfoBook.Controls.Add(this.tb_NhaXB);
             this.grb_InfoBook.Controls.Add(this.tb_NameBook);
             this.grb_InfoBook.Controls.Add(this.tb_IDBook);
-            this.grb_InfoBook.Controls.Add(this.lb_Image);
+            this.grb_InfoBook.Controls.Add(this.lb_TinhTrang);
             this.grb_InfoBook.Controls.Add(this.lb_TriGia);
             this.grb_InfoBook.Controls.Add(this.lb_Time);
             this.grb_InfoBook.Controls.Add(this.lb_NhaXB);
@@ -95,9 +97,9 @@
             this.grb_InfoBook.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grb_InfoBook.ForeColor = System.Drawing.Color.DodgerBlue;
             this.grb_InfoBook.Location = new System.Drawing.Point(48, 127);
-            this.grb_InfoBook.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.grb_InfoBook.Margin = new System.Windows.Forms.Padding(2);
             this.grb_InfoBook.Name = "grb_InfoBook";
-            this.grb_InfoBook.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.grb_InfoBook.Padding = new System.Windows.Forms.Padding(2);
             this.grb_InfoBook.Size = new System.Drawing.Size(457, 453);
             this.grb_InfoBook.TabIndex = 1;
             this.grb_InfoBook.TabStop = false;
@@ -107,16 +109,27 @@
             // 
             this.dtp_NgayNhap.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtp_NgayNhap.Location = new System.Drawing.Point(165, 309);
-            this.dtp_NgayNhap.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dtp_NgayNhap.Margin = new System.Windows.Forms.Padding(2);
             this.dtp_NgayNhap.Name = "dtp_NgayNhap";
             this.dtp_NgayNhap.Size = new System.Drawing.Size(209, 30);
             this.dtp_NgayNhap.TabIndex = 17;
             // 
             // cbb_NamXB
             // 
+            this.cbb_NamXB.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbb_NamXB.FormattingEnabled = true;
+            this.cbb_NamXB.Items.AddRange(new object[] {
+            "2010",
+            "2011",
+            "2012",
+            "2013",
+            "2014",
+            "2015",
+            "2016",
+            "2017",
+            "2018"});
             this.cbb_NamXB.Location = new System.Drawing.Point(165, 218);
-            this.cbb_NamXB.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbb_NamXB.Margin = new System.Windows.Forms.Padding(2);
             this.cbb_NamXB.Name = "cbb_NamXB";
             this.cbb_NamXB.Size = new System.Drawing.Size(209, 33);
             this.cbb_NamXB.TabIndex = 15;
@@ -125,7 +138,7 @@
             // 
             this.cbb_Authors.FormattingEnabled = true;
             this.cbb_Authors.Location = new System.Drawing.Point(165, 173);
-            this.cbb_Authors.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbb_Authors.Margin = new System.Windows.Forms.Padding(2);
             this.cbb_Authors.Name = "cbb_Authors";
             this.cbb_Authors.Size = new System.Drawing.Size(209, 33);
             this.cbb_Authors.TabIndex = 14;
@@ -133,8 +146,12 @@
             // cbb_TypeBook
             // 
             this.cbb_TypeBook.FormattingEnabled = true;
+            this.cbb_TypeBook.Items.AddRange(new object[] {
+            "Truyện",
+            "Tài liệu chuyên ngành",
+            "Truyen"});
             this.cbb_TypeBook.Location = new System.Drawing.Point(165, 127);
-            this.cbb_TypeBook.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbb_TypeBook.Margin = new System.Windows.Forms.Padding(2);
             this.cbb_TypeBook.Name = "cbb_TypeBook";
             this.cbb_TypeBook.Size = new System.Drawing.Size(209, 33);
             this.cbb_TypeBook.TabIndex = 13;
@@ -142,7 +159,7 @@
             // tb_TriGia
             // 
             this.tb_TriGia.Location = new System.Drawing.Point(165, 355);
-            this.tb_TriGia.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb_TriGia.Margin = new System.Windows.Forms.Padding(2);
             this.tb_TriGia.Name = "tb_TriGia";
             this.tb_TriGia.Size = new System.Drawing.Size(209, 30);
             this.tb_TriGia.TabIndex = 12;
@@ -150,7 +167,7 @@
             // tb_NhaXB
             // 
             this.tb_NhaXB.Location = new System.Drawing.Point(165, 264);
-            this.tb_NhaXB.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb_NhaXB.Margin = new System.Windows.Forms.Padding(2);
             this.tb_NhaXB.Name = "tb_NhaXB";
             this.tb_NhaXB.Size = new System.Drawing.Size(209, 30);
             this.tb_NhaXB.TabIndex = 11;
@@ -158,7 +175,7 @@
             // tb_NameBook
             // 
             this.tb_NameBook.Location = new System.Drawing.Point(165, 82);
-            this.tb_NameBook.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb_NameBook.Margin = new System.Windows.Forms.Padding(2);
             this.tb_NameBook.Name = "tb_NameBook";
             this.tb_NameBook.Size = new System.Drawing.Size(209, 30);
             this.tb_NameBook.TabIndex = 10;
@@ -166,20 +183,20 @@
             // tb_IDBook
             // 
             this.tb_IDBook.Location = new System.Drawing.Point(165, 36);
-            this.tb_IDBook.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb_IDBook.Margin = new System.Windows.Forms.Padding(2);
             this.tb_IDBook.Name = "tb_IDBook";
             this.tb_IDBook.Size = new System.Drawing.Size(209, 30);
             this.tb_IDBook.TabIndex = 9;
             // 
-            // lb_Image
+            // lb_TinhTrang
             // 
-            this.lb_Image.AutoSize = true;
-            this.lb_Image.Location = new System.Drawing.Point(17, 402);
-            this.lb_Image.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lb_Image.Name = "lb_Image";
-            this.lb_Image.Size = new System.Drawing.Size(105, 25);
-            this.lb_Image.TabIndex = 8;
-            this.lb_Image.Text = "Hình ảnh:";
+            this.lb_TinhTrang.AutoSize = true;
+            this.lb_TinhTrang.Location = new System.Drawing.Point(17, 402);
+            this.lb_TinhTrang.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lb_TinhTrang.Name = "lb_TinhTrang";
+            this.lb_TinhTrang.Size = new System.Drawing.Size(117, 25);
+            this.lb_TinhTrang.TabIndex = 8;
+            this.lb_TinhTrang.Text = "Tình trạng:";
             // 
             // lb_TriGia
             // 
@@ -267,13 +284,21 @@
             this.grb_DataBook.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grb_DataBook.ForeColor = System.Drawing.Color.DodgerBlue;
             this.grb_DataBook.Location = new System.Drawing.Point(523, 127);
-            this.grb_DataBook.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.grb_DataBook.Margin = new System.Windows.Forms.Padding(2);
             this.grb_DataBook.Name = "grb_DataBook";
-            this.grb_DataBook.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.grb_DataBook.Padding = new System.Windows.Forms.Padding(2);
             this.grb_DataBook.Size = new System.Drawing.Size(720, 453);
             this.grb_DataBook.TabIndex = 2;
             this.grb_DataBook.TabStop = false;
             this.grb_DataBook.Text = "Bảng thông tin sách";
+            // 
+            // dgv_AddBook
+            // 
+            this.dgv_AddBook.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_AddBook.Location = new System.Drawing.Point(0, 28);
+            this.dgv_AddBook.Name = "dgv_AddBook";
+            this.dgv_AddBook.Size = new System.Drawing.Size(623, 420);
+            this.dgv_AddBook.TabIndex = 0;
             // 
             // grb_DieuKhien
             // 
@@ -284,9 +309,9 @@
             this.grb_DieuKhien.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grb_DieuKhien.ForeColor = System.Drawing.Color.DodgerBlue;
             this.grb_DieuKhien.Location = new System.Drawing.Point(275, 602);
-            this.grb_DieuKhien.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.grb_DieuKhien.Margin = new System.Windows.Forms.Padding(2);
             this.grb_DieuKhien.Name = "grb_DieuKhien";
-            this.grb_DieuKhien.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.grb_DieuKhien.Padding = new System.Windows.Forms.Padding(2);
             this.grb_DieuKhien.Size = new System.Drawing.Size(593, 77);
             this.grb_DieuKhien.TabIndex = 3;
             this.grb_DieuKhien.TabStop = false;
@@ -295,7 +320,7 @@
             // btn_Back
             // 
             this.btn_Back.Location = new System.Drawing.Point(467, 32);
-            this.btn_Back.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_Back.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Back.Name = "btn_Back";
             this.btn_Back.Size = new System.Drawing.Size(88, 30);
             this.btn_Back.TabIndex = 3;
@@ -306,7 +331,7 @@
             // btn_DeleteBook
             // 
             this.btn_DeleteBook.Location = new System.Drawing.Point(324, 32);
-            this.btn_DeleteBook.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_DeleteBook.Margin = new System.Windows.Forms.Padding(2);
             this.btn_DeleteBook.Name = "btn_DeleteBook";
             this.btn_DeleteBook.Size = new System.Drawing.Size(95, 30);
             this.btn_DeleteBook.TabIndex = 2;
@@ -316,7 +341,7 @@
             // btn_EditBook
             // 
             this.btn_EditBook.Location = new System.Drawing.Point(187, 32);
-            this.btn_EditBook.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_EditBook.Margin = new System.Windows.Forms.Padding(2);
             this.btn_EditBook.Name = "btn_EditBook";
             this.btn_EditBook.Size = new System.Drawing.Size(90, 30);
             this.btn_EditBook.TabIndex = 1;
@@ -326,7 +351,7 @@
             // btn_AddBook
             // 
             this.btn_AddBook.Location = new System.Drawing.Point(44, 32);
-            this.btn_AddBook.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_AddBook.Margin = new System.Windows.Forms.Padding(2);
             this.btn_AddBook.Name = "btn_AddBook";
             this.btn_AddBook.Size = new System.Drawing.Size(93, 30);
             this.btn_AddBook.TabIndex = 0;
@@ -334,13 +359,19 @@
             this.btn_AddBook.UseVisualStyleBackColor = true;
             this.btn_AddBook.Click += new System.EventHandler(this.btn_AddBook_Click);
             // 
-            // dgv_AddBook
+            // cbb_TinhTrang
             // 
-            this.dgv_AddBook.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_AddBook.Location = new System.Drawing.Point(0, 28);
-            this.dgv_AddBook.Name = "dgv_AddBook";
-            this.dgv_AddBook.Size = new System.Drawing.Size(623, 420);
-            this.dgv_AddBook.TabIndex = 0;
+            this.cbb_TinhTrang.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbb_TinhTrang.FormattingEnabled = true;
+            this.cbb_TinhTrang.Items.AddRange(new object[] {
+            "Cho mượn",
+            "Chưa cho mượn",
+            "Truyen"});
+            this.cbb_TinhTrang.Location = new System.Drawing.Point(165, 399);
+            this.cbb_TinhTrang.Margin = new System.Windows.Forms.Padding(2);
+            this.cbb_TinhTrang.Name = "cbb_TinhTrang";
+            this.cbb_TinhTrang.Size = new System.Drawing.Size(209, 33);
+            this.cbb_TinhTrang.TabIndex = 18;
             // 
             // frmAddBook
             // 
@@ -353,7 +384,7 @@
             this.Controls.Add(this.grb_DataBook);
             this.Controls.Add(this.grb_InfoBook);
             this.Controls.Add(this.lb_ThongTin);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmAddBook";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmAddBook";
@@ -362,8 +393,8 @@
             this.grb_InfoBook.ResumeLayout(false);
             this.grb_InfoBook.PerformLayout();
             this.grb_DataBook.ResumeLayout(false);
-            this.grb_DieuKhien.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_AddBook)).EndInit();
+            this.grb_DieuKhien.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -382,7 +413,7 @@
         private System.Windows.Forms.TextBox tb_NhaXB;
         private System.Windows.Forms.TextBox tb_NameBook;
         private System.Windows.Forms.TextBox tb_IDBook;
-        private System.Windows.Forms.Label lb_Image;
+        private System.Windows.Forms.Label lb_TinhTrang;
         private System.Windows.Forms.Label lb_TriGia;
         private System.Windows.Forms.Label lb_Time;
         private System.Windows.Forms.Label lb_NhaXB;
@@ -398,5 +429,6 @@
         private System.Windows.Forms.Button btn_EditBook;
         private System.Windows.Forms.Button btn_AddBook;
         private System.Windows.Forms.DataGridView dgv_AddBook;
+        private System.Windows.Forms.ComboBox cbb_TinhTrang;
     }
 }
