@@ -19,7 +19,7 @@ namespace QuanLyThuVien
 
         private void button1_Click(object sender, EventArgs e)
         {
-            frmAddBook dlg2 = new frmAddBook();
+            frmUser dlg2 = new frmUser();
             dlg2.ShowDialog();
         }
     }

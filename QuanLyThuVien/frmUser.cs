@@ -44,19 +44,19 @@ namespace QuanLyThuVien
         private void btn_Add_Click(object sender, EventArgs e)
         {
             if (tb_ID.Text == "") MessageBox.Show("Không được để trống ID độc giả.");
-                else
+            else
                     if (tb_Name.Text == "") MessageBox.Show("Không được để trống tên độc giả.");
-                else
+            else
                     if (dtp_BirthDay.Text == "") MessageBox.Show("Không được để trống ngày sinh");
-                else
+            else
                     if (tb_Email.Text == "") MessageBox.Show("Không được để trống email.");
-                else
-                    if (tb_Email.Text != tb_Email.Text + "@gmail.com" || tb_Email.Text != tb_Email.Text + "@yahoo.com") MessageBox.Show("Không đúng định dạng email.");
-                else
+            else
+                    if (tb_Email.Text.Length < 11 || (tb_Email.Text.Substring(tb_Email.Text.Length - 10) != "@gmail.com" && tb_Email.Text.Substring(tb_Email.Text.Length - 10) != "@yahoo.com")) MessageBox.Show("Không đúng định dạng email.");
+            else
                     if (cbb_TypeReader.Text == "") MessageBox.Show("Vui lòng chọn loại độc giả.");
-                else
+            else
                     if (dtp_NgayLapThe.Text == "") MessageBox.Show("Không được để trống ngày lập thẻ.");
-                else
+            else
             {
                 string sqlINSERT = "INSERT INTO THEDOCGIA VALUES (@IDDocGia, @HoTenDG, @NgSinhDG, @Diachi, @EmailDG, @LoaiDG, @NgLapThe, NULL, NULL)";
                 SqlCommand cmd = new SqlCommand(sqlINSERT, con);
@@ -77,8 +77,12 @@ namespace QuanLyThuVien
 
         private void btn_Back_Click(object sender, EventArgs e)
         {
-            frmMain dlg2 = new frmMain();
-            dlg2.ShowDialog();
+            DialogResult kq;
+            kq = MessageBox.Show("Bạn có thật sự muốn thoát không?", "Chú ý", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (kq == DialogResult.Yes)
+            {
+                this.Close();
+            }
         }    
     }
 }
