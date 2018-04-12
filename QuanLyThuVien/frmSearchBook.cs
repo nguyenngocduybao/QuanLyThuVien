@@ -17,6 +17,7 @@ namespace QuanLyThuVien
         {
             InitializeComponent();
         }
+        SqlConnection con;
 
         private void frmSearchBook_Load(object sender, EventArgs e)
         {
@@ -24,7 +25,6 @@ namespace QuanLyThuVien
             con.Open();
             HienThi();
         }
-        SqlConnection con;
         public void HienThi()
         {
             string sqlSELECT = "SELECT * FROM SACH";
@@ -53,9 +53,11 @@ namespace QuanLyThuVien
         {
             string chuoikn = "select * from SACH where TinhTrang=@TinhTrang";
             SqlCommand cmd = new SqlCommand(chuoikn, con);
+            SqlDataReader dr = cmd.ExecuteReader();
             DataTable sach = new DataTable();
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.AddWithValue("@TinhTrang", TinhTrang);
+            sach.Load(dr);
             return sach;
         }
         private DataTable timkiemtheoIDSach(string IDBook)
@@ -114,31 +116,31 @@ namespace QuanLyThuVien
         }
         private void btn_Search_Click(object sender, EventArgs e)
         {
-            if (tb_IDBook.Text != null)
+            if (tb_IDBook.Text != "")
             {
                 dgv_SearchBook.DataSource = timkiemtheoIDSach(tb_IDBook.Text);
             }
-            if (tb_NameBook.Text != null)
+            if (tb_NameBook.Text != "")
             {
                 dgv_SearchBook.DataSource = timkiemtheoTenSach(tb_NameBook.Text);
             }
-            if (tb_NXB.Text != null)
+            if (tb_NXB.Text != "")
             {
                 dgv_SearchBook.DataSource = timkiemtheoNhaXB(tb_NXB.Text);
             }
-            if (cbb_TacGia.Text != null)
+            if (cbb_TacGia.Text != "")
             {
                 dgv_SearchBook.DataSource = timkiemtheoTacGia(cbb_TacGia.Text);
             }
-            if (cbb_TheLoai.Text != null)
+            if (cbb_TheLoai.Text != "")
             {
                 dgv_SearchBook.DataSource = timkiemtheoTheLoai(cbb_TheLoai.Text);
             }
-            if (cbb_TinhTrang.Text != null)
+            if (cbb_TinhTrang.Text != "")
             {
                 dgv_SearchBook.DataSource = timkiemtheoTinhTrang(cbb_TinhTrang.Text);
             }
-            if (cbb_YXB.Text != null)
+            if (cbb_YXB.Text != "")
             {
                 dgv_SearchBook.DataSource = timkiemtheoNamXB(cbb_YXB.Text);
             }
@@ -154,59 +156,59 @@ namespace QuanLyThuVien
             {
                 case 0:
                     {
-                        tb_NameBook.Text = null;
+                        tb_NameBook.Text = "";
                         cbb_TacGia.Text = null;
                         cbb_TheLoai.Text = null;
                         cbb_TinhTrang.Text = null;
                         cbb_YXB.Text = null;
-                        tb_NXB.Text = null;
+                        tb_NXB.Text = "";
                         break;
                     }
                 case 1:
                     {
-                        tb_IDBook.Text = null;
+                        tb_IDBook.Text = "";
                         cbb_TacGia.Text = null;
                         cbb_TheLoai.Text = null;
                         cbb_TinhTrang.Text = null;
                         cbb_YXB.Text = null;
-                        tb_NXB.Text = null;
+                        tb_NXB.Text = "";
                         break;
                     }
                 case 2:
                     {
-                        tb_NameBook.Text = null;
+                        tb_NameBook.Text = "";
                         cbb_TacGia.Text = null;
-                        tb_IDBook.Text = null;
+                        tb_IDBook.Text = "";
                         cbb_TinhTrang.Text = null;
                         cbb_YXB.Text = null;
-                        tb_NXB.Text = null;
+                        tb_NXB.Text = "";
                         break;
                     }
                 case 3:
                     {
-                        tb_NameBook.Text = null;
+                        tb_NameBook.Text = "";
                         cbb_TheLoai.Text = null;
-                        tb_IDBook.Text = null;
+                        tb_IDBook.Text = "";
                         cbb_TinhTrang.Text = null;
                         cbb_YXB.Text = null;
-                        tb_NXB.Text = null;
+                        tb_NXB.Text = "";
                         break;
                 }
                 case 4:
                     {
-                        tb_NameBook.Text = null;
+                        tb_NameBook.Text = "";
                         cbb_TheLoai.Text = null;
-                        tb_IDBook.Text = null;
+                        tb_IDBook.Text = "";
                         cbb_TinhTrang.Text = null;
                         cbb_TacGia.Text = null;
-                        tb_NXB.Text = null;
+                        tb_NXB.Text = "";
                         break;
                     }
                 case 5:
                     {
-                        tb_NameBook.Text = null;
+                        tb_NameBook.Text = "";
                         cbb_TheLoai.Text = null;
-                        tb_IDBook.Text = null;
+                        tb_IDBook.Text = "";
                         cbb_TinhTrang.Text = null;
                         cbb_TacGia.Text = null;
                         cbb_YXB.Text = null;
@@ -214,12 +216,12 @@ namespace QuanLyThuVien
                     }
                 case 6:
                     {
-                        tb_NameBook.Text = null;
+                        tb_NameBook.Text = "";
                         cbb_TheLoai.Text = null;
-                        tb_IDBook.Text = null;
+                        tb_IDBook.Text = "";
                         cbb_YXB.Text = null;
                         cbb_TacGia.Text = null;
-                        tb_NXB.Text = null;
+                        tb_NXB.Text = "";
                         break;
                     }
             }
