@@ -30,9 +30,9 @@ namespace QuanLyThuVien
             kq = MessageBox.Show("Bạn có thật sự muốn xóa không?", "Chú ý", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (kq == DialogResult.Yes)
             {
-                string sqlDelete = "DELETE FROM THEDOCGIA WHERE IDDocGia=@IDUser";
+                string sqlDelete = "DELETE FROM THEDOCGIA WHERE IDDocGia=@IDDocGia";
                 SqlCommand cmd = new SqlCommand(sqlDelete, con);
-                cmd.Parameters.AddWithValue("IDUser", tb_DeleteUser.Text);
+                cmd.Parameters.AddWithValue("@IDDocGia", tb_DeleteUser.Text);
             }
 
         }

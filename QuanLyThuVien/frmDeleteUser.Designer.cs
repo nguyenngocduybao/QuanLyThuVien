@@ -73,9 +73,9 @@
             this.lb_Delete.ForeColor = System.Drawing.Color.DodgerBlue;
             this.lb_Delete.Location = new System.Drawing.Point(172, 69);
             this.lb_Delete.Name = "lb_Delete";
-            this.lb_Delete.Size = new System.Drawing.Size(317, 36);
+            this.lb_Delete.Size = new System.Drawing.Size(351, 36);
             this.lb_Delete.TabIndex = 4;
-            this.lb_Delete.Text = "Nhập mã sách cần xóa";
+            this.lb_Delete.Text = "Nhập mã độc giả cần xóa";
             // 
             // frmDeleteUser
             // 

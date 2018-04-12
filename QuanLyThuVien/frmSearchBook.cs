@@ -55,34 +55,34 @@ namespace QuanLyThuVien
             SqlCommand cmd = new SqlCommand(chuoikn, con);
             DataTable sach = new DataTable();
             cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.AddWithValue("TinhTrang", TinhTrang);
+            cmd.Parameters.AddWithValue("@TinhTrang", TinhTrang);
             return sach;
         }
         private DataTable timkiemtheoIDSach(string IDBook)
         {
-            string chuoikn = "select * from SACH where IDSach=@IDBook";
+            string chuoikn = "select * from SACH where IDSach=@IDSach";
             SqlCommand cmd = new SqlCommand(chuoikn, con);
             DataTable sach = new DataTable();
             cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.AddWithValue("IDBook",IDBook);
+            cmd.Parameters.AddWithValue("@IDSach",IDBook);
             return sach;
         }
         private DataTable timkiemtheoTenSach(string NameBook)
         {
-            string chuoikn = "select * from SACH where TenSach=@NameBook";
+            string chuoikn = "select * from SACH where TenSach=@TenSach";
             SqlCommand cmd = new SqlCommand(chuoikn, con);
             DataTable sach = new DataTable();
             cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.AddWithValue("NameBook", NameBook);
+            cmd.Parameters.AddWithValue("@TenSach", NameBook);
             return sach;
         }
         private DataTable timkiemtheoTheLoai(string TheLoai)
         {
-            string chuoikn = "select * from SACH where TheLoai=@TheLoai";
+            string chuoikn = "SELECT * FROM SACH WHERE TheLoai=@TheLoai";
             SqlCommand cmd = new SqlCommand(chuoikn, con);
             DataTable sach = new DataTable();
             cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.AddWithValue("TheLoai", TheLoai);
+            cmd.Parameters.AddWithValue("@TheLoai", TheLoai);
             return sach;
         }
         private DataTable timkiemtheoTacGia(string TacGia)
@@ -91,7 +91,7 @@ namespace QuanLyThuVien
             SqlCommand cmd = new SqlCommand(chuoikn, con);
             DataTable sach = new DataTable();
             cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.AddWithValue("TacGia", TacGia);
+            cmd.Parameters.AddWithValue("@TacGia", TacGia);
             return sach;
         }
         private DataTable timkiemtheoNamXB(string YXB)
@@ -100,7 +100,7 @@ namespace QuanLyThuVien
             SqlCommand cmd = new SqlCommand(chuoikn, con);
             DataTable sach = new DataTable();
             cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.AddWithValue("NamXB", YXB);
+            cmd.Parameters.AddWithValue("@NamXB", YXB);
             return sach;
         }
         private DataTable timkiemtheoNhaXB(string NXB)
@@ -109,7 +109,7 @@ namespace QuanLyThuVien
             SqlCommand cmd = new SqlCommand(chuoikn, con);
             DataTable sach = new DataTable();
             cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.AddWithValue("NhaXB", NXB);
+            cmd.Parameters.AddWithValue("@NhaXB", NXB);
             return sach;
         }
         private void btn_Search_Click(object sender, EventArgs e)

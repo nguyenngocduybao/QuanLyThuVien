@@ -87,9 +87,8 @@ namespace QuanLyThuVien
 
         private void btn_Delete_Click(object sender, EventArgs e)
         {
-            string sqlDelete = "DELETE FROM THEDOCGIA WHERE IDDocGia=@IDDocGia";
-            SqlCommand cmd = new SqlCommand(sqlDelete, con);
-            cmd.Parameters.AddWithValue("IDDocGia", tb_ID.Text);
+            frmDeleteUser dlg2 = new frmDeleteUser();
+            dlg2.ShowDialog();
         }
     }
 }
