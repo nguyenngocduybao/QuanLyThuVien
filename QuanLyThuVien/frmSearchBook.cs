@@ -108,27 +108,27 @@ namespace QuanLyThuVien
             }
             if (tb_NameBook.Text != "")
             {
-                dgv_SearchBook.DataSource = HienDL("select * from SACH where IDSach like '%" + tb_NameBook.Text.Trim() + "%' ");
+                dgv_SearchBook.DataSource = HienDL("select * from SACH where TenSach like N'%" + tb_NameBook.Text.Trim() + "%' ");
             }
             if (tb_NXB.Text != "")
             {
-                dgv_SearchBook.DataSource = HienDL("select * from SACH where IDSach like '%" + tb_NXB.Text.Trim() + "%' ");
+                dgv_SearchBook.DataSource = HienDL("select * from SACH where NhaXB like N'%" + tb_NXB.Text.Trim() + "%' ");
             }
             if (cbb_TacGia.Text != "")
             {
-                dgv_SearchBook.DataSource = HienDL("select * from SACH where IDSach like '%" + cbb_TacGia.Text.Trim() + "%' ");
+                dgv_SearchBook.DataSource = HienDL("select * from SACH where TacGia like N'%" + cbb_TacGia.Text.Trim() + "%' ");
             }
             if (cbb_TheLoai.Text != "")
             {
-                dgv_SearchBook.DataSource = HienDL("select * from SACH where IDSach like '%" + cbb_TheLoai.Text.Trim() + "%' ");
+                dgv_SearchBook.DataSource = HienDL("select * from SACH where TheLoai like N'%" + cbb_TheLoai.Text.Trim() + "%' ");
             }
             if (cbb_TinhTrang.Text != "")
             {
-                dgv_SearchBook.DataSource = HienDL("select * from SACH where IDSach like '%" + cbb_TinhTrang.Text.Trim() + "%' ");
+                dgv_SearchBook.DataSource = HienDL("select * from SACH where TinhTranglike N'%" + cbb_TinhTrang.Text.Trim() + "%' ");
             }
             if (cbb_YXB.Text != "")
             {
-                dgv_SearchBook.DataSource = HienDL("select * from SACH where IDSach like '%" + cbb_YXB.Text.Trim() + "%' ");
+                dgv_SearchBook.DataSource = HienDL("select * from SACH where NamXB like '%" + cbb_YXB.Text.Trim() + "%' ");
             }
             if (tb_IDBook.Text == "" && tb_NameBook.Text == "" && tb_NXB.Text == "" && cbb_TacGia.Text == "" && cbb_TheLoai.Text == "" && cbb_TinhTrang.Text == "" && cbb_YXB.Text == "")
             {
@@ -211,6 +211,17 @@ namespace QuanLyThuVien
                         break;
                     }
             }
+        }
+
+        private void btn_HienDL_Click(object sender, EventArgs e)
+        {
+            HienThi();
+        }
+
+        private void tb_IDBook_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
+                e.Handled = true;
         }
     }
 }

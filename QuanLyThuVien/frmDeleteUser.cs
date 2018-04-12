@@ -30,9 +30,8 @@ namespace QuanLyThuVien
             kq = MessageBox.Show("Bạn có thật sự muốn xóa không?", "Chú ý", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (kq == DialogResult.Yes)
             {
-                string sqlDelete = "DELETE FROM THEDOCGIA WHERE IDDocGia=@IDDocGia";
+                string sqlDelete = "DELETE FROM THEDOCGIA WHERE IDDocGia="+tb_DeleteUser.Text.Trim()+"";
                 SqlCommand cmd = new SqlCommand(sqlDelete, con);
-                cmd.Parameters.AddWithValue("@IDDocGia", tb_DeleteUser.Text);
             }
 
         }
@@ -50,6 +49,12 @@ namespace QuanLyThuVien
         private void frmDeleteUser_FormClosing(object sender, FormClosingEventArgs e)
         {
             con.Close();
+        }
+
+        private void tb_DeleteUser_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
+                e.Handled = true;
         }
     }
 }

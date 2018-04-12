@@ -44,20 +44,21 @@
             this.cbb_TheLoai = new System.Windows.Forms.ComboBox();
             this.lb_TheLoai = new System.Windows.Forms.Label();
             this.tab_TacGia = new System.Windows.Forms.TabPage();
-            this.tab_YXB = new System.Windows.Forms.TabPage();
-            this.tab_NXB = new System.Windows.Forms.TabPage();
-            this.tab_TinhTrang = new System.Windows.Forms.TabPage();
-            this.lb_TacGia = new System.Windows.Forms.Label();
             this.cbb_TacGia = new System.Windows.Forms.ComboBox();
-            this.lb_YXB = new System.Windows.Forms.Label();
+            this.lb_TacGia = new System.Windows.Forms.Label();
+            this.tab_YXB = new System.Windows.Forms.TabPage();
             this.cbb_YXB = new System.Windows.Forms.ComboBox();
-            this.lb_NXB = new System.Windows.Forms.Label();
+            this.lb_YXB = new System.Windows.Forms.Label();
+            this.tab_NXB = new System.Windows.Forms.TabPage();
             this.tb_NXB = new System.Windows.Forms.TextBox();
-            this.lb_TinhTrang = new System.Windows.Forms.Label();
+            this.lb_NXB = new System.Windows.Forms.Label();
+            this.tab_TinhTrang = new System.Windows.Forms.TabPage();
             this.cbb_TinhTrang = new System.Windows.Forms.ComboBox();
+            this.lb_TinhTrang = new System.Windows.Forms.Label();
             this.grb_DieuKhien = new System.Windows.Forms.GroupBox();
-            this.btn_Search = new System.Windows.Forms.Button();
+            this.btn_HienDL = new System.Windows.Forms.Button();
             this.btn_Back = new System.Windows.Forms.Button();
+            this.btn_Search = new System.Windows.Forms.Button();
             this.grb_DataSearchBook.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_SearchBook)).BeginInit();
             this.grb_SearchBook.SuspendLayout();
@@ -150,6 +151,7 @@
             this.tb_IDBook.Name = "tb_IDBook";
             this.tb_IDBook.Size = new System.Drawing.Size(307, 41);
             this.tb_IDBook.TabIndex = 1;
+            this.tb_IDBook.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tb_IDBook_KeyPress);
             // 
             // lb_IDSach
             // 
@@ -167,7 +169,7 @@
             this.tab_NameBook.Location = new System.Drawing.Point(4, 45);
             this.tab_NameBook.Name = "tab_NameBook";
             this.tab_NameBook.Padding = new System.Windows.Forms.Padding(3);
-            this.tab_NameBook.Size = new System.Drawing.Size(1021, 148);
+            this.tab_NameBook.Size = new System.Drawing.Size(1047, 148);
             this.tab_NameBook.TabIndex = 1;
             this.tab_NameBook.Text = "Tên sách";
             this.tab_NameBook.UseVisualStyleBackColor = true;
@@ -194,7 +196,7 @@
             this.tab_TheLoai.Controls.Add(this.lb_TheLoai);
             this.tab_TheLoai.Location = new System.Drawing.Point(4, 45);
             this.tab_TheLoai.Name = "tab_TheLoai";
-            this.tab_TheLoai.Size = new System.Drawing.Size(1021, 148);
+            this.tab_TheLoai.Size = new System.Drawing.Size(1047, 148);
             this.tab_TheLoai.TabIndex = 2;
             this.tab_TheLoai.Text = "Thể loại";
             this.tab_TheLoai.UseVisualStyleBackColor = true;
@@ -227,52 +229,10 @@
             this.tab_TacGia.Controls.Add(this.lb_TacGia);
             this.tab_TacGia.Location = new System.Drawing.Point(4, 45);
             this.tab_TacGia.Name = "tab_TacGia";
-            this.tab_TacGia.Size = new System.Drawing.Size(1021, 148);
+            this.tab_TacGia.Size = new System.Drawing.Size(1047, 148);
             this.tab_TacGia.TabIndex = 3;
             this.tab_TacGia.Text = "Tác giả";
             this.tab_TacGia.UseVisualStyleBackColor = true;
-            // 
-            // tab_YXB
-            // 
-            this.tab_YXB.Controls.Add(this.cbb_YXB);
-            this.tab_YXB.Controls.Add(this.lb_YXB);
-            this.tab_YXB.Location = new System.Drawing.Point(4, 45);
-            this.tab_YXB.Name = "tab_YXB";
-            this.tab_YXB.Size = new System.Drawing.Size(1021, 148);
-            this.tab_YXB.TabIndex = 4;
-            this.tab_YXB.Text = "Năm xuất bản";
-            this.tab_YXB.UseVisualStyleBackColor = true;
-            // 
-            // tab_NXB
-            // 
-            this.tab_NXB.Controls.Add(this.tb_NXB);
-            this.tab_NXB.Controls.Add(this.lb_NXB);
-            this.tab_NXB.Location = new System.Drawing.Point(4, 45);
-            this.tab_NXB.Name = "tab_NXB";
-            this.tab_NXB.Size = new System.Drawing.Size(1021, 148);
-            this.tab_NXB.TabIndex = 5;
-            this.tab_NXB.Text = "Nhà xuất bản";
-            this.tab_NXB.UseVisualStyleBackColor = true;
-            // 
-            // tab_TinhTrang
-            // 
-            this.tab_TinhTrang.Controls.Add(this.cbb_TinhTrang);
-            this.tab_TinhTrang.Controls.Add(this.lb_TinhTrang);
-            this.tab_TinhTrang.Location = new System.Drawing.Point(4, 45);
-            this.tab_TinhTrang.Name = "tab_TinhTrang";
-            this.tab_TinhTrang.Size = new System.Drawing.Size(1021, 148);
-            this.tab_TinhTrang.TabIndex = 6;
-            this.tab_TinhTrang.Text = "Tình trạng";
-            this.tab_TinhTrang.UseVisualStyleBackColor = true;
-            // 
-            // lb_TacGia
-            // 
-            this.lb_TacGia.AutoSize = true;
-            this.lb_TacGia.Location = new System.Drawing.Point(61, 63);
-            this.lb_TacGia.Name = "lb_TacGia";
-            this.lb_TacGia.Size = new System.Drawing.Size(341, 36);
-            this.lb_TacGia.TabIndex = 0;
-            this.lb_TacGia.Text = "Nhập tên tác giả cần tìm:";
             // 
             // cbb_TacGia
             // 
@@ -283,14 +243,25 @@
             this.cbb_TacGia.Size = new System.Drawing.Size(270, 44);
             this.cbb_TacGia.TabIndex = 1;
             // 
-            // lb_YXB
+            // lb_TacGia
             // 
-            this.lb_YXB.AutoSize = true;
-            this.lb_YXB.Location = new System.Drawing.Point(61, 63);
-            this.lb_YXB.Name = "lb_YXB";
-            this.lb_YXB.Size = new System.Drawing.Size(383, 36);
-            this.lb_YXB.TabIndex = 0;
-            this.lb_YXB.Text = "Chọn năm xuất bản cần tìm:";
+            this.lb_TacGia.AutoSize = true;
+            this.lb_TacGia.Location = new System.Drawing.Point(61, 63);
+            this.lb_TacGia.Name = "lb_TacGia";
+            this.lb_TacGia.Size = new System.Drawing.Size(341, 36);
+            this.lb_TacGia.TabIndex = 0;
+            this.lb_TacGia.Text = "Nhập tên tác giả cần tìm:";
+            // 
+            // tab_YXB
+            // 
+            this.tab_YXB.Controls.Add(this.cbb_YXB);
+            this.tab_YXB.Controls.Add(this.lb_YXB);
+            this.tab_YXB.Location = new System.Drawing.Point(4, 45);
+            this.tab_YXB.Name = "tab_YXB";
+            this.tab_YXB.Size = new System.Drawing.Size(1047, 148);
+            this.tab_YXB.TabIndex = 4;
+            this.tab_YXB.Text = "Năm xuất bản";
+            this.tab_YXB.UseVisualStyleBackColor = true;
             // 
             // cbb_YXB
             // 
@@ -311,6 +282,33 @@
             this.cbb_YXB.Size = new System.Drawing.Size(179, 44);
             this.cbb_YXB.TabIndex = 1;
             // 
+            // lb_YXB
+            // 
+            this.lb_YXB.AutoSize = true;
+            this.lb_YXB.Location = new System.Drawing.Point(61, 63);
+            this.lb_YXB.Name = "lb_YXB";
+            this.lb_YXB.Size = new System.Drawing.Size(383, 36);
+            this.lb_YXB.TabIndex = 0;
+            this.lb_YXB.Text = "Chọn năm xuất bản cần tìm:";
+            // 
+            // tab_NXB
+            // 
+            this.tab_NXB.Controls.Add(this.tb_NXB);
+            this.tab_NXB.Controls.Add(this.lb_NXB);
+            this.tab_NXB.Location = new System.Drawing.Point(4, 45);
+            this.tab_NXB.Name = "tab_NXB";
+            this.tab_NXB.Size = new System.Drawing.Size(1047, 148);
+            this.tab_NXB.TabIndex = 5;
+            this.tab_NXB.Text = "Nhà xuất bản";
+            this.tab_NXB.UseVisualStyleBackColor = true;
+            // 
+            // tb_NXB
+            // 
+            this.tb_NXB.Location = new System.Drawing.Point(460, 60);
+            this.tb_NXB.Name = "tb_NXB";
+            this.tb_NXB.Size = new System.Drawing.Size(326, 41);
+            this.tb_NXB.TabIndex = 1;
+            // 
             // lb_NXB
             // 
             this.lb_NXB.AutoSize = true;
@@ -320,21 +318,16 @@
             this.lb_NXB.TabIndex = 0;
             this.lb_NXB.Text = "Nhập nhà xuất bản cần tìm:";
             // 
-            // tb_NXB
+            // tab_TinhTrang
             // 
-            this.tb_NXB.Location = new System.Drawing.Point(460, 60);
-            this.tb_NXB.Name = "tb_NXB";
-            this.tb_NXB.Size = new System.Drawing.Size(326, 41);
-            this.tb_NXB.TabIndex = 1;
-            // 
-            // lb_TinhTrang
-            // 
-            this.lb_TinhTrang.AutoSize = true;
-            this.lb_TinhTrang.Location = new System.Drawing.Point(61, 63);
-            this.lb_TinhTrang.Name = "lb_TinhTrang";
-            this.lb_TinhTrang.Size = new System.Drawing.Size(158, 36);
-            this.lb_TinhTrang.TabIndex = 0;
-            this.lb_TinhTrang.Text = "Tình trạng:";
+            this.tab_TinhTrang.Controls.Add(this.cbb_TinhTrang);
+            this.tab_TinhTrang.Controls.Add(this.lb_TinhTrang);
+            this.tab_TinhTrang.Location = new System.Drawing.Point(4, 45);
+            this.tab_TinhTrang.Name = "tab_TinhTrang";
+            this.tab_TinhTrang.Size = new System.Drawing.Size(1047, 148);
+            this.tab_TinhTrang.TabIndex = 6;
+            this.tab_TinhTrang.Text = "Tình trạng";
+            this.tab_TinhTrang.UseVisualStyleBackColor = true;
             // 
             // cbb_TinhTrang
             // 
@@ -348,18 +341,48 @@
             this.cbb_TinhTrang.Size = new System.Drawing.Size(208, 44);
             this.cbb_TinhTrang.TabIndex = 1;
             // 
+            // lb_TinhTrang
+            // 
+            this.lb_TinhTrang.AutoSize = true;
+            this.lb_TinhTrang.Location = new System.Drawing.Point(61, 63);
+            this.lb_TinhTrang.Name = "lb_TinhTrang";
+            this.lb_TinhTrang.Size = new System.Drawing.Size(158, 36);
+            this.lb_TinhTrang.TabIndex = 0;
+            this.lb_TinhTrang.Text = "Tình trạng:";
+            // 
             // grb_DieuKhien
             // 
+            this.grb_DieuKhien.Controls.Add(this.btn_HienDL);
             this.grb_DieuKhien.Controls.Add(this.btn_Back);
             this.grb_DieuKhien.Controls.Add(this.btn_Search);
             this.grb_DieuKhien.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grb_DieuKhien.ForeColor = System.Drawing.Color.DodgerBlue;
             this.grb_DieuKhien.Location = new System.Drawing.Point(1149, 315);
             this.grb_DieuKhien.Name = "grb_DieuKhien";
-            this.grb_DieuKhien.Size = new System.Drawing.Size(413, 131);
+            this.grb_DieuKhien.Size = new System.Drawing.Size(702, 131);
             this.grb_DieuKhien.TabIndex = 4;
             this.grb_DieuKhien.TabStop = false;
             this.grb_DieuKhien.Text = "Điều khiển";
+            // 
+            // btn_HienDL
+            // 
+            this.btn_HienDL.Location = new System.Drawing.Point(204, 49);
+            this.btn_HienDL.Name = "btn_HienDL";
+            this.btn_HienDL.Size = new System.Drawing.Size(247, 51);
+            this.btn_HienDL.TabIndex = 2;
+            this.btn_HienDL.Text = "Hiển thị dữ liệu";
+            this.btn_HienDL.UseVisualStyleBackColor = true;
+            this.btn_HienDL.Click += new System.EventHandler(this.btn_HienDL_Click);
+            // 
+            // btn_Back
+            // 
+            this.btn_Back.Location = new System.Drawing.Point(495, 49);
+            this.btn_Back.Name = "btn_Back";
+            this.btn_Back.Size = new System.Drawing.Size(140, 51);
+            this.btn_Back.TabIndex = 1;
+            this.btn_Back.Text = "Trở về";
+            this.btn_Back.UseVisualStyleBackColor = true;
+            this.btn_Back.Click += new System.EventHandler(this.btn_Back_Click);
             // 
             // btn_Search
             // 
@@ -370,16 +393,6 @@
             this.btn_Search.Text = "Tìm kiếm";
             this.btn_Search.UseVisualStyleBackColor = true;
             this.btn_Search.Click += new System.EventHandler(this.btn_Search_Click);
-            // 
-            // btn_Back
-            // 
-            this.btn_Back.Location = new System.Drawing.Point(235, 49);
-            this.btn_Back.Name = "btn_Back";
-            this.btn_Back.Size = new System.Drawing.Size(140, 51);
-            this.btn_Back.TabIndex = 1;
-            this.btn_Back.Text = "Trở về";
-            this.btn_Back.UseVisualStyleBackColor = true;
-            this.btn_Back.Click += new System.EventHandler(this.btn_Back_Click);
             // 
             // frmSearchBook
             // 
@@ -449,5 +462,6 @@
         private System.Windows.Forms.GroupBox grb_DieuKhien;
         private System.Windows.Forms.Button btn_Back;
         private System.Windows.Forms.Button btn_Search;
+        private System.Windows.Forms.Button btn_HienDL;
     }
 }

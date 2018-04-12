@@ -24,9 +24,8 @@ namespace QuanLyThuVien
             kq = MessageBox.Show("Bạn có thật sự muốn xóa không?", "Chú ý", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (kq == DialogResult.Yes)
             {
-                string sqlDelete = "DELETE FROM SACH WHERE IDSach=@IDSach";
+                string sqlDelete = "DELETE FROM SACH WHERE IDSach="+tb_DeleteBook.Text.Trim()+"";
                 SqlCommand cmd = new SqlCommand(sqlDelete, con);
-                cmd.Parameters.AddWithValue("IDSach", tb_DeleteBook.Text);
             }
 
         }
@@ -52,6 +51,12 @@ namespace QuanLyThuVien
         {
             con.Close();
 
+        }
+
+        private void tb_DeleteBook_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
+                e.Handled = true;
         }
     }
 }

@@ -90,5 +90,11 @@ namespace QuanLyThuVien
             frmDeleteUser dlg2 = new frmDeleteUser();
             dlg2.ShowDialog();
         }
+
+        private void tb_ID_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
+                e.Handled = true;
+        }
     }
 }

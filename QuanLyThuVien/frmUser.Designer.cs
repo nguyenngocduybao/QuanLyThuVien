@@ -150,6 +150,7 @@
             this.tb_ID.Name = "tb_ID";
             this.tb_ID.Size = new System.Drawing.Size(396, 41);
             this.tb_ID.TabIndex = 7;
+            this.tb_ID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tb_ID_KeyPress);
             // 
             // lb_Address
             // 

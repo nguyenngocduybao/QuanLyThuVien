@@ -65,6 +65,7 @@
             this.tb_DeleteUser.Name = "tb_DeleteUser";
             this.tb_DeleteUser.Size = new System.Drawing.Size(260, 41);
             this.tb_DeleteUser.TabIndex = 5;
+            this.tb_DeleteUser.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tb_DeleteUser_KeyPress);
             // 
             // lb_Delete
             // 

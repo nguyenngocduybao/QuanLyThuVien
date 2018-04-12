@@ -52,6 +52,7 @@
             this.tb_DeleteBook.Name = "tb_DeleteBook";
             this.tb_DeleteBook.Size = new System.Drawing.Size(260, 41);
             this.tb_DeleteBook.TabIndex = 1;
+            this.tb_DeleteBook.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tb_DeleteBook_KeyPress);
             // 
             // btn_DeleteBook
             // 
