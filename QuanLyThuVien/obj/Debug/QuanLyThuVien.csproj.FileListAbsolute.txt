@@ -78,3 +78,6 @@ C:\Users\NNDB\Desktop\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.csproj
 D:\Mine\5. Study\Projects Test\C#\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.frmSearchBook.resources
 C:\Users\NNDB\Desktop\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.frmDeleteBook.resources
 C:\Users\NNDB\Desktop\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.frmDeleteUser.resources
+D:\Mine\5. Study\Projects\C#\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.frmDeleteBook.resources
+D:\Mine\5. Study\Projects\C#\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.frmDeleteUser.resources
+D:\Mine\5. Study\Projects\C#\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.frmSearchBook.resources

@@ -70,9 +70,20 @@ namespace QuanLyThuVien
         {
             InitializeComponent();
         }
-
+        public void HienThi()
+        {
+            string sqlSELECT = "SELECT * FROM SACH";
+            SqlCommand cmd = new SqlCommand(sqlSELECT, cn);
+            SqlDataReader dr = cmd.ExecuteReader();
+            DataTable dt = new DataTable();
+            dt.Load(dr);
+            dgv_SearchBook.DataSource = dt;
+        }
         private void frmSearchBook_Load(object sender, EventArgs e)
         {
+            cn = new SqlConnection(@"Data Source=DESKTOP-UKUNBAP\SQLEXPRESS;Initial Catalog=QuanLyThuVien;Integrated Security=True");
+            cn.Open();
+            HienThi();
         }
 
         private void frmSearchBook_FormClosing(object sender, FormClosingEventArgs e)
