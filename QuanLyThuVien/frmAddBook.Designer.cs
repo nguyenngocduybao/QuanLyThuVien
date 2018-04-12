@@ -326,6 +326,7 @@
             this.btn_DeleteBook.TabIndex = 2;
             this.btn_DeleteBook.Text = "Xóa";
             this.btn_DeleteBook.UseVisualStyleBackColor = true;
+            this.btn_DeleteBook.Click += new System.EventHandler(this.btn_DeleteBook_Click);
             // 
             // btn_EditBook
             // 
@@ -335,6 +336,7 @@
             this.btn_EditBook.TabIndex = 1;
             this.btn_EditBook.Text = "Sửa";
             this.btn_EditBook.UseVisualStyleBackColor = true;
+            this.btn_EditBook.Click += new System.EventHandler(this.btn_EditBook_Click);
             // 
             // btn_AddBook
             // 

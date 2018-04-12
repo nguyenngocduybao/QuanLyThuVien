@@ -76,3 +76,4 @@ C:\Users\NNDB\Desktop\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.frmUse
 C:\Users\NNDB\Desktop\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.Properties.Resources.resources
 C:\Users\NNDB\Desktop\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.csproj.GenerateResource.Cache
 D:\Mine\5. Study\Projects Test\C#\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.frmSearchBook.resources
+C:\Users\NNDB\Desktop\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.frmDeleteBook.resources
