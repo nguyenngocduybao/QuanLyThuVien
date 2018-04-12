@@ -13,31 +13,71 @@ namespace QuanLyThuVien
 {
     public partial class frmSearchBook : Form
     {
+        //Tạo kết nối với cơ sở dữ liệu
+        public SqlConnection cn = new SqlConnection();
+        public void Ketnoi()
+        {
+            try
+            {
+                if (cn.State == 0)
+                {
+                    cn.ConnectionString = @"Data Source=DESKTOP-UKUNBAP\SQLEXPRESS;Initial Catalog=QuanLyThuVien;Integrated Security=True";
+                    cn.Open();
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        public void Ngatketnoi()
+        {
+            if (cn.State != 0)
+            {
+                cn.Close();
+            }
+        }
+
+        //Phương thức truy vấn để xem dữ liệu
+        public DataTable HienDL(string sql)
+        {
+            Ketnoi();
+
+            SqlDataAdapter adap = new SqlDataAdapter(sql, cn);
+            DataTable dt = new DataTable();
+            adap.Fill(dt);
+
+            return dt;
+
+            Ngatketnoi();
+        }
+
+        //Phương thức truy vấn dữ liệu: Insert, Update, Delete
+        public SqlCommand ThucThiDl(string sql)
+        {
+            Ketnoi();
+
+            SqlCommand cm = new SqlCommand(sql, cn);
+            cm.ExecuteNonQuery();
+
+            return cm;
+
+            Ngatketnoi();
+        }
+
+
         public frmSearchBook()
         {
             InitializeComponent();
         }
-        SqlConnection con;
 
         private void frmSearchBook_Load(object sender, EventArgs e)
         {
-            con = new SqlConnection(@"Data Source=DESKTOP-UKUNBAP\SQLEXPRESS;Initial Catalog=QuanLyThuVien;Integrated Security=True");
-            con.Open();
-            HienThi();
-        }
-        public void HienThi()
-        {
-            string sqlSELECT = "SELECT * FROM SACH";
-            SqlCommand cmd = new SqlCommand(sqlSELECT, con);
-            SqlDataReader dr = cmd.ExecuteReader();
-            DataTable dt = new DataTable();
-            dt.Load(dr);
-            dgv_SearchBook.DataSource = dt;
         }
 
         private void frmSearchBook_FormClosing(object sender, FormClosingEventArgs e)
         {
-            con.Close();
+            cn.Close();
         }
 
         private void btn_Back_Click(object sender, EventArgs e)
@@ -49,100 +89,35 @@ namespace QuanLyThuVien
                 this.Close();
             }
         }
-        private DataTable timkiemtheoTinhTrang(string TinhTrang)
-        {
-            string chuoikn = "select * from SACH where TinhTrang=@TinhTrang";
-            SqlCommand cmd = new SqlCommand(chuoikn, con);
-            SqlDataReader dr = cmd.ExecuteReader();
-            DataTable sach = new DataTable();
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.AddWithValue("@TinhTrang", TinhTrang);
-            sach.Load(dr);
-            return sach;
-        }
-        private DataTable timkiemtheoIDSach(string IDBook)
-        {
-            string chuoikn = "select * from SACH where IDSach=@IDSach";
-            SqlCommand cmd = new SqlCommand(chuoikn, con);
-            DataTable sach = new DataTable();
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.AddWithValue("@IDSach",IDBook);
-            return sach;
-        }
-        private DataTable timkiemtheoTenSach(string NameBook)
-        {
-            string chuoikn = "select * from SACH where TenSach=@TenSach";
-            SqlCommand cmd = new SqlCommand(chuoikn, con);
-            DataTable sach = new DataTable();
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.AddWithValue("@TenSach", NameBook);
-            return sach;
-        }
-        private DataTable timkiemtheoTheLoai(string TheLoai)
-        {
-            string chuoikn = "SELECT * FROM SACH WHERE TheLoai=@TheLoai";
-            SqlCommand cmd = new SqlCommand(chuoikn, con);
-            DataTable sach = new DataTable();
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.AddWithValue("@TheLoai", TheLoai);
-            return sach;
-        }
-        private DataTable timkiemtheoTacGia(string TacGia)
-        {
-            string chuoikn = "select * from SACH where TacGia=@TacGia";
-            SqlCommand cmd = new SqlCommand(chuoikn, con);
-            DataTable sach = new DataTable();
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.AddWithValue("@TacGia", TacGia);
-            return sach;
-        }
-        private DataTable timkiemtheoNamXB(string YXB)
-        {
-            string chuoikn = "select * from SACH where NamXB=@NamXB";
-            SqlCommand cmd = new SqlCommand(chuoikn, con);
-            DataTable sach = new DataTable();
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.AddWithValue("@NamXB", YXB);
-            return sach;
-        }
-        private DataTable timkiemtheoNhaXB(string NXB)
-        {
-            string chuoikn = "select * from SACH where NhaXB=@NhaXB";
-            SqlCommand cmd = new SqlCommand(chuoikn, con);
-            DataTable sach = new DataTable();
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.AddWithValue("@NhaXB", NXB);
-            return sach;
-        }
         private void btn_Search_Click(object sender, EventArgs e)
         {
             if (tb_IDBook.Text != "")
             {
-                dgv_SearchBook.DataSource = timkiemtheoIDSach(tb_IDBook.Text);
+                dgv_SearchBook.DataSource = HienDL("select * from SACH where IDSach like '%" + tb_IDBook.Text.Trim() + "%' ");
             }
             if (tb_NameBook.Text != "")
             {
-                dgv_SearchBook.DataSource = timkiemtheoTenSach(tb_NameBook.Text);
+                dgv_SearchBook.DataSource = HienDL("select * from SACH where IDSach like '%" + tb_NameBook.Text.Trim() + "%' ");
             }
             if (tb_NXB.Text != "")
             {
-                dgv_SearchBook.DataSource = timkiemtheoNhaXB(tb_NXB.Text);
+                dgv_SearchBook.DataSource = HienDL("select * from SACH where IDSach like '%" + tb_NXB.Text.Trim() + "%' ");
             }
             if (cbb_TacGia.Text != "")
             {
-                dgv_SearchBook.DataSource = timkiemtheoTacGia(cbb_TacGia.Text);
+                dgv_SearchBook.DataSource = HienDL("select * from SACH where IDSach like '%" + cbb_TacGia.Text.Trim() + "%' ");
             }
             if (cbb_TheLoai.Text != "")
             {
-                dgv_SearchBook.DataSource = timkiemtheoTheLoai(cbb_TheLoai.Text);
+                dgv_SearchBook.DataSource = HienDL("select * from SACH where IDSach like '%" + cbb_TheLoai.Text.Trim() + "%' ");
             }
             if (cbb_TinhTrang.Text != "")
             {
-                dgv_SearchBook.DataSource = timkiemtheoTinhTrang(cbb_TinhTrang.Text);
+                dgv_SearchBook.DataSource = HienDL("select * from SACH where IDSach like '%" + cbb_TinhTrang.Text.Trim() + "%' ");
             }
             if (cbb_YXB.Text != "")
             {
-                dgv_SearchBook.DataSource = timkiemtheoNamXB(cbb_YXB.Text);
+                dgv_SearchBook.DataSource = HienDL("select * from SACH where IDSach like '%" + cbb_YXB.Text.Trim() + "%' ");
             }
             if (tb_IDBook.Text == "" && tb_NameBook.Text == "" && tb_NXB.Text == "" && cbb_TacGia.Text == "" && cbb_TheLoai.Text == "" && cbb_TinhTrang.Text == "" && cbb_YXB.Text == "")
             {
