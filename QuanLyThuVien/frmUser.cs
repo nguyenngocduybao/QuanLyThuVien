@@ -58,7 +58,7 @@ namespace QuanLyThuVien
                     if (dtp_NgayLapThe.Text == "") MessageBox.Show("Không được để trống ngày lập thẻ.");
             else
             {
-                string sqlINSERT = "INSERT INTO THEDOCGIA VALUES (@IDDocGia, @HoTenDG, @NgSinhDG, @Diachi, @EmailDG, @LoaiDG, @NgLapThe, NULL, NULL)";
+                string sqlINSERT = "INSERT INTO THEDOCGIA VALUES (@IDDocGia, @HoTenDG, @NgSinhDG, @DiachiDG, @EmailDG, @LoaiDG, @NgLapThe, NULL, NULL)";
                 SqlCommand cmd = new SqlCommand(sqlINSERT, con);
 
                 cmd.Parameters.AddWithValue("IDDocGia", tb_ID.Text);
@@ -66,8 +66,8 @@ namespace QuanLyThuVien
                 cmd.Parameters.AddWithValue("NgSinhDG", dtp_BirthDay.Text);
                 cmd.Parameters.AddWithValue("EmailDG", tb_Email.Text);
                 cmd.Parameters.AddWithValue("LoaiDG", cbb_TypeReader.Text);
-                cmd.Parameters.AddWithValue("DiaChi", tb_Address.Text);
-                cmd.Parameters.AddWithValue("NgLapThe", dtp_NgayLapThe.Text);
+                cmd.Parameters.AddWithValue("DiaChiDG", tb_Address.Text);
+                cmd.Parameters.AddWithValue("NgLapThe", dtp_NgayLapThe.Text);              
                 cmd.ExecuteNonQuery();
                 HienThi();
             }
@@ -87,7 +87,7 @@ namespace QuanLyThuVien
 
         private void btn_Delete_Click(object sender, EventArgs e)
         {
-            string sqlDelete = "DELETE FROM SACH WHERE IDDocGia = @IDDocGia";
+            string sqlDelete = "DELETE FROM THEDOCGIA WHERE IDDocGia = @IDDocGia";
             SqlCommand cmd = new SqlCommand(sqlDelete, con);
 
             cmd.Parameters.AddWithValue("IDDocGia", tb_IDDel.Text);
@@ -101,20 +101,36 @@ namespace QuanLyThuVien
                 e.Handled = true;
         }
 
-        private void btn_Fix_Click(object sender, EventArgs e)
+        private void btn_EditUser_Click(object sender, EventArgs e)
         {
-            string sqlEdit = "UPDATE SACH SET HoTenDG=@HoTenDG, NgSinhDG=@NgSinhDG, DiaChi=@Diachi, EmailDG=@EmailDG, LoaiDG=@LoaiDG, NgLapThe=@NgLapThe WHERE IDDocGia = @IDDocGia";
-            SqlCommand cmd = new SqlCommand(sqlEdit, con);
+            if (tb_ID.Text == "") MessageBox.Show("Không được để trống ID độc giả.");
+            else
+                    if (tb_Name.Text == "") MessageBox.Show("Không được để trống tên độc giả.");
+            else
+                    if (dtp_BirthDay.Text == "") MessageBox.Show("Không được để trống ngày sinh");
+            else
+                    if (tb_Email.Text == "") MessageBox.Show("Không được để trống email.");
+            else
+                    if (tb_Email.Text.Length < 11 || (tb_Email.Text.Substring(tb_Email.Text.Length - 10) != "@gmail.com" && tb_Email.Text.Substring(tb_Email.Text.Length - 10) != "@yahoo.com")) MessageBox.Show("Không đúng định dạng email.");
+            else
+                    if (cbb_TypeReader.Text == "") MessageBox.Show("Vui lòng chọn loại độc giả.");
+            else
+                    if (dtp_NgayLapThe.Text == "") MessageBox.Show("Không được để trống ngày lập thẻ.");
+            else
+            {
+                string sqlEdit = "UPDATE THEDOCGIA SET HoTenDG=@HoTenDG, NgSinhDG=@NgSinhDG, DiaChiDG=@DiachiDG, EmailDG=@EmailDG, LoaiDG=@LoaiDG, NgLapThe=@NgLapThe WHERE IDDocGia = @IDDocGia";
+                SqlCommand cmd = new SqlCommand(sqlEdit, con);
 
-            cmd.Parameters.AddWithValue("IDDocGia", tb_ID.Text);
-            cmd.Parameters.AddWithValue("HoTenDG", tb_Name.Text);
-            cmd.Parameters.AddWithValue("NgSinhDG", dtp_BirthDay.Text);
-            cmd.Parameters.AddWithValue("EmailDG", tb_Email.Text);
-            cmd.Parameters.AddWithValue("LoaiDG", cbb_TypeReader.Text);
-            cmd.Parameters.AddWithValue("DiaChi", tb_Address.Text);
-            cmd.Parameters.AddWithValue("NgLapThe", dtp_NgayLapThe.Text);
-            cmd.ExecuteNonQuery();
-            HienThi();
+                cmd.Parameters.AddWithValue("IDDocGia", tb_ID.Text);
+                cmd.Parameters.AddWithValue("HoTenDG", tb_Name.Text);
+                cmd.Parameters.AddWithValue("NgSinhDG", dtp_BirthDay.Text);
+                cmd.Parameters.AddWithValue("EmailDG", tb_Email.Text);
+                cmd.Parameters.AddWithValue("LoaiDG", cbb_TypeReader.Text);
+                cmd.Parameters.AddWithValue("DiaChiDG", tb_Address.Text);
+                cmd.Parameters.AddWithValue("NgLapThe", dtp_NgayLapThe.Text);
+                cmd.ExecuteNonQuery();
+                HienThi();
+            }
         }
 
         private void tb_IDDel_KeyPress(object sender, KeyPressEventArgs e)

@@ -47,12 +47,12 @@
             this.grb_Data = new System.Windows.Forms.GroupBox();
             this.dgv_User = new System.Windows.Forms.DataGridView();
             this.grb_Control = new System.Windows.Forms.GroupBox();
+            this.tb_IDDel = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.btn_Back = new System.Windows.Forms.Button();
             this.btn_Delete = new System.Windows.Forms.Button();
-            this.btn_Fix = new System.Windows.Forms.Button();
+            this.btn_EditUser = new System.Windows.Forms.Button();
             this.btn_Add = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.tb_IDDel = new System.Windows.Forms.TextBox();
             this.grb_Info.SuspendLayout();
             this.grb_Data.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_User)).BeginInit();
@@ -64,9 +64,10 @@
             this.lb_Info.AutoSize = true;
             this.lb_Info.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_Info.ForeColor = System.Drawing.Color.Blue;
-            this.lb_Info.Location = new System.Drawing.Point(549, 38);
+            this.lb_Info.Location = new System.Drawing.Point(366, 25);
+            this.lb_Info.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lb_Info.Name = "lb_Info";
-            this.lb_Info.Size = new System.Drawing.Size(487, 69);
+            this.lb_Info.Size = new System.Drawing.Size(327, 46);
             this.lb_Info.TabIndex = 0;
             this.lb_Info.Text = "Thông tin độc giả";
             // 
@@ -88,9 +89,11 @@
             this.grb_Info.Controls.Add(this.lb_ID);
             this.grb_Info.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grb_Info.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.grb_Info.Location = new System.Drawing.Point(74, 132);
+            this.grb_Info.Location = new System.Drawing.Point(49, 86);
+            this.grb_Info.Margin = new System.Windows.Forms.Padding(2);
             this.grb_Info.Name = "grb_Info";
-            this.grb_Info.Size = new System.Drawing.Size(692, 766);
+            this.grb_Info.Padding = new System.Windows.Forms.Padding(2);
+            this.grb_Info.Size = new System.Drawing.Size(461, 498);
             this.grb_Info.TabIndex = 1;
             this.grb_Info.TabStop = false;
             this.grb_Info.Text = "Nhập thông tin độc giả";
@@ -102,55 +105,60 @@
             this.cbb_TypeReader.Items.AddRange(new object[] {
             "Thường",
             "VIP"});
-            this.cbb_TypeReader.Location = new System.Drawing.Point(266, 500);
-            this.cbb_TypeReader.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cbb_TypeReader.Location = new System.Drawing.Point(177, 325);
             this.cbb_TypeReader.Name = "cbb_TypeReader";
-            this.cbb_TypeReader.Size = new System.Drawing.Size(396, 44);
+            this.cbb_TypeReader.Size = new System.Drawing.Size(265, 33);
             this.cbb_TypeReader.TabIndex = 13;
             // 
             // dtp_NgayLapThe
             // 
             this.dtp_NgayLapThe.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtp_NgayLapThe.Location = new System.Drawing.Point(266, 600);
+            this.dtp_NgayLapThe.Location = new System.Drawing.Point(177, 390);
+            this.dtp_NgayLapThe.Margin = new System.Windows.Forms.Padding(2);
             this.dtp_NgayLapThe.Name = "dtp_NgayLapThe";
-            this.dtp_NgayLapThe.Size = new System.Drawing.Size(396, 41);
+            this.dtp_NgayLapThe.Size = new System.Drawing.Size(265, 30);
             this.dtp_NgayLapThe.TabIndex = 12;
             // 
             // dtp_BirthDay
             // 
             this.dtp_BirthDay.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtp_BirthDay.Location = new System.Drawing.Point(266, 300);
+            this.dtp_BirthDay.Location = new System.Drawing.Point(177, 195);
+            this.dtp_BirthDay.Margin = new System.Windows.Forms.Padding(2);
             this.dtp_BirthDay.Name = "dtp_BirthDay";
-            this.dtp_BirthDay.Size = new System.Drawing.Size(396, 41);
+            this.dtp_BirthDay.Size = new System.Drawing.Size(265, 30);
             this.dtp_BirthDay.TabIndex = 11;
             this.dtp_BirthDay.TabStop = false;
             // 
             // tb_Address
             // 
-            this.tb_Address.Location = new System.Drawing.Point(266, 700);
+            this.tb_Address.Location = new System.Drawing.Point(177, 455);
+            this.tb_Address.Margin = new System.Windows.Forms.Padding(2);
             this.tb_Address.Name = "tb_Address";
-            this.tb_Address.Size = new System.Drawing.Size(396, 41);
+            this.tb_Address.Size = new System.Drawing.Size(265, 30);
             this.tb_Address.TabIndex = 10;
             // 
             // tb_Email
             // 
-            this.tb_Email.Location = new System.Drawing.Point(266, 400);
+            this.tb_Email.Location = new System.Drawing.Point(177, 260);
+            this.tb_Email.Margin = new System.Windows.Forms.Padding(2);
             this.tb_Email.Name = "tb_Email";
-            this.tb_Email.Size = new System.Drawing.Size(396, 41);
+            this.tb_Email.Size = new System.Drawing.Size(265, 30);
             this.tb_Email.TabIndex = 9;
             // 
             // tb_Name
             // 
-            this.tb_Name.Location = new System.Drawing.Point(266, 200);
+            this.tb_Name.Location = new System.Drawing.Point(177, 130);
+            this.tb_Name.Margin = new System.Windows.Forms.Padding(2);
             this.tb_Name.Name = "tb_Name";
-            this.tb_Name.Size = new System.Drawing.Size(396, 41);
+            this.tb_Name.Size = new System.Drawing.Size(265, 30);
             this.tb_Name.TabIndex = 8;
             // 
             // tb_ID
             // 
-            this.tb_ID.Location = new System.Drawing.Point(266, 100);
+            this.tb_ID.Location = new System.Drawing.Point(177, 65);
+            this.tb_ID.Margin = new System.Windows.Forms.Padding(2);
             this.tb_ID.Name = "tb_ID";
-            this.tb_ID.Size = new System.Drawing.Size(396, 41);
+            this.tb_ID.Size = new System.Drawing.Size(265, 30);
             this.tb_ID.TabIndex = 7;
             this.tb_ID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tb_ID_KeyPress);
             // 
@@ -158,9 +166,10 @@
             // 
             this.lb_Address.AutoSize = true;
             this.lb_Address.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_Address.Location = new System.Drawing.Point(32, 700);
+            this.lb_Address.Location = new System.Drawing.Point(21, 455);
+            this.lb_Address.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lb_Address.Name = "lb_Address";
-            this.lb_Address.Size = new System.Drawing.Size(122, 36);
+            this.lb_Address.Size = new System.Drawing.Size(85, 25);
             this.lb_Address.TabIndex = 6;
             this.lb_Address.Text = "Địa chỉ:";
             // 
@@ -168,9 +177,10 @@
             // 
             this.lb_NgayLapThe.AutoSize = true;
             this.lb_NgayLapThe.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_NgayLapThe.Location = new System.Drawing.Point(32, 600);
+            this.lb_NgayLapThe.Location = new System.Drawing.Point(21, 390);
+            this.lb_NgayLapThe.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lb_NgayLapThe.Name = "lb_NgayLapThe";
-            this.lb_NgayLapThe.Size = new System.Drawing.Size(203, 36);
+            this.lb_NgayLapThe.Size = new System.Drawing.Size(140, 25);
             this.lb_NgayLapThe.TabIndex = 5;
             this.lb_NgayLapThe.Text = "Ngày lập thẻ:";
             // 
@@ -178,9 +188,10 @@
             // 
             this.lb_TypeReader.AutoSize = true;
             this.lb_TypeReader.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_TypeReader.Location = new System.Drawing.Point(32, 500);
+            this.lb_TypeReader.Location = new System.Drawing.Point(21, 325);
+            this.lb_TypeReader.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lb_TypeReader.Name = "lb_TypeReader";
-            this.lb_TypeReader.Size = new System.Drawing.Size(198, 36);
+            this.lb_TypeReader.Size = new System.Drawing.Size(136, 25);
             this.lb_TypeReader.TabIndex = 4;
             this.lb_TypeReader.Text = "Loại độc giả:";
             // 
@@ -188,9 +199,10 @@
             // 
             this.lb_Email.AutoSize = true;
             this.lb_Email.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_Email.Location = new System.Drawing.Point(32, 400);
+            this.lb_Email.Location = new System.Drawing.Point(21, 260);
+            this.lb_Email.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lb_Email.Name = "lb_Email";
-            this.lb_Email.Size = new System.Drawing.Size(102, 36);
+            this.lb_Email.Size = new System.Drawing.Size(72, 25);
             this.lb_Email.TabIndex = 3;
             this.lb_Email.Text = "Email:";
             // 
@@ -198,9 +210,10 @@
             // 
             this.lb_BirthDay.AutoSize = true;
             this.lb_BirthDay.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_BirthDay.Location = new System.Drawing.Point(32, 300);
+            this.lb_BirthDay.Location = new System.Drawing.Point(21, 195);
+            this.lb_BirthDay.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lb_BirthDay.Name = "lb_BirthDay";
-            this.lb_BirthDay.Size = new System.Drawing.Size(167, 36);
+            this.lb_BirthDay.Size = new System.Drawing.Size(115, 25);
             this.lb_BirthDay.TabIndex = 2;
             this.lb_BirthDay.Text = "Ngày sinh:";
             // 
@@ -208,9 +221,10 @@
             // 
             this.lb_Name.AutoSize = true;
             this.lb_Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_Name.Location = new System.Drawing.Point(32, 200);
+            this.lb_Name.Location = new System.Drawing.Point(21, 130);
+            this.lb_Name.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lb_Name.Name = "lb_Name";
-            this.lb_Name.Size = new System.Drawing.Size(159, 36);
+            this.lb_Name.Size = new System.Drawing.Size(111, 25);
             this.lb_Name.TabIndex = 1;
             this.lb_Name.Text = "Họ và tên:";
             // 
@@ -218,9 +232,10 @@
             // 
             this.lb_ID.AutoSize = true;
             this.lb_ID.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_ID.Location = new System.Drawing.Point(32, 100);
+            this.lb_ID.Location = new System.Drawing.Point(21, 65);
+            this.lb_ID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lb_ID.Name = "lb_ID";
-            this.lb_ID.Size = new System.Drawing.Size(55, 36);
+            this.lb_ID.Size = new System.Drawing.Size(40, 25);
             this.lb_ID.TabIndex = 0;
             this.lb_ID.Text = "ID:";
             // 
@@ -229,9 +244,11 @@
             this.grb_Data.Controls.Add(this.dgv_User);
             this.grb_Data.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grb_Data.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.grb_Data.Location = new System.Drawing.Point(819, 146);
+            this.grb_Data.Location = new System.Drawing.Point(546, 95);
+            this.grb_Data.Margin = new System.Windows.Forms.Padding(2);
             this.grb_Data.Name = "grb_Data";
-            this.grb_Data.Size = new System.Drawing.Size(966, 963);
+            this.grb_Data.Padding = new System.Windows.Forms.Padding(2);
+            this.grb_Data.Size = new System.Drawing.Size(644, 626);
             this.grb_Data.TabIndex = 2;
             this.grb_Data.TabStop = false;
             this.grb_Data.Text = "Bảng thông tin độc giả";
@@ -239,10 +256,11 @@
             // dgv_User
             // 
             this.dgv_User.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_User.Location = new System.Drawing.Point(28, 42);
+            this.dgv_User.Location = new System.Drawing.Point(19, 27);
+            this.dgv_User.Margin = new System.Windows.Forms.Padding(2);
             this.dgv_User.Name = "dgv_User";
             this.dgv_User.RowTemplate.Height = 28;
-            this.dgv_User.Size = new System.Drawing.Size(911, 901);
+            this.dgv_User.Size = new System.Drawing.Size(607, 586);
             this.dgv_User.TabIndex = 0;
             // 
             // grb_Control
@@ -251,22 +269,44 @@
             this.grb_Control.Controls.Add(this.label1);
             this.grb_Control.Controls.Add(this.btn_Back);
             this.grb_Control.Controls.Add(this.btn_Delete);
-            this.grb_Control.Controls.Add(this.btn_Fix);
+            this.grb_Control.Controls.Add(this.btn_EditUser);
             this.grb_Control.Controls.Add(this.btn_Add);
             this.grb_Control.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grb_Control.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.grb_Control.Location = new System.Drawing.Point(74, 914);
+            this.grb_Control.Location = new System.Drawing.Point(49, 594);
+            this.grb_Control.Margin = new System.Windows.Forms.Padding(2);
             this.grb_Control.Name = "grb_Control";
-            this.grb_Control.Size = new System.Drawing.Size(732, 195);
+            this.grb_Control.Padding = new System.Windows.Forms.Padding(2);
+            this.grb_Control.Size = new System.Drawing.Size(488, 127);
             this.grb_Control.TabIndex = 3;
             this.grb_Control.TabStop = false;
             this.grb_Control.Text = "Xử lí";
             // 
+            // tb_IDDel
+            // 
+            this.tb_IDDel.Location = new System.Drawing.Point(229, 83);
+            this.tb_IDDel.Margin = new System.Windows.Forms.Padding(2);
+            this.tb_IDDel.Name = "tb_IDDel";
+            this.tb_IDDel.Size = new System.Drawing.Size(99, 30);
+            this.tb_IDDel.TabIndex = 5;
+            this.tb_IDDel.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tb_IDDel_KeyPress);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(63, 85);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(163, 25);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Nhập ID cần xóa:";
+            // 
             // btn_Back
             // 
-            this.btn_Back.Location = new System.Drawing.Point(562, 40);
+            this.btn_Back.Location = new System.Drawing.Point(375, 26);
+            this.btn_Back.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Back.Name = "btn_Back";
-            this.btn_Back.Size = new System.Drawing.Size(153, 52);
+            this.btn_Back.Size = new System.Drawing.Size(102, 34);
             this.btn_Back.TabIndex = 3;
             this.btn_Back.Text = "Trở về";
             this.btn_Back.UseVisualStyleBackColor = true;
@@ -274,65 +314,52 @@
             // 
             // btn_Delete
             // 
-            this.btn_Delete.Location = new System.Drawing.Point(562, 123);
+            this.btn_Delete.Location = new System.Drawing.Point(375, 80);
+            this.btn_Delete.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Delete.Name = "btn_Delete";
-            this.btn_Delete.Size = new System.Drawing.Size(153, 52);
+            this.btn_Delete.Size = new System.Drawing.Size(102, 34);
             this.btn_Delete.TabIndex = 2;
             this.btn_Delete.Text = "Xóa";
             this.btn_Delete.UseVisualStyleBackColor = true;
             this.btn_Delete.Click += new System.EventHandler(this.btn_Delete_Click);
             // 
-            // btn_Fix
+            // btn_EditUser
             // 
-            this.btn_Fix.Location = new System.Drawing.Point(325, 40);
-            this.btn_Fix.Name = "btn_Fix";
-            this.btn_Fix.Size = new System.Drawing.Size(166, 52);
-            this.btn_Fix.TabIndex = 1;
-            this.btn_Fix.Text = "Sửa";
-            this.btn_Fix.UseVisualStyleBackColor = true;
-            this.btn_Fix.Click += new System.EventHandler(this.btn_Fix_Click);
+            this.btn_EditUser.Location = new System.Drawing.Point(217, 26);
+            this.btn_EditUser.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_EditUser.Name = "btn_EditUser";
+            this.btn_EditUser.Size = new System.Drawing.Size(111, 34);
+            this.btn_EditUser.TabIndex = 1;
+            this.btn_EditUser.Text = "Sửa";
+            this.btn_EditUser.UseVisualStyleBackColor = true;
+            this.btn_EditUser.Click += new System.EventHandler(this.btn_EditUser_Click);
             // 
             // btn_Add
             // 
-            this.btn_Add.Location = new System.Drawing.Point(100, 40);
+            this.btn_Add.Location = new System.Drawing.Point(67, 26);
+            this.btn_Add.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Add.Name = "btn_Add";
-            this.btn_Add.Size = new System.Drawing.Size(153, 52);
+            this.btn_Add.Size = new System.Drawing.Size(102, 34);
             this.btn_Add.TabIndex = 0;
             this.btn_Add.Text = "Thêm";
             this.btn_Add.UseVisualStyleBackColor = true;
             this.btn_Add.Click += new System.EventHandler(this.btn_Add_Click);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(94, 131);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(244, 36);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Nhập ID cần xóa:";
-            // 
-            // tb_IDDel
-            // 
-            this.tb_IDDel.Location = new System.Drawing.Point(344, 128);
-            this.tb_IDDel.Name = "tb_IDDel";
-            this.tb_IDDel.Size = new System.Drawing.Size(147, 41);
-            this.tb_IDDel.TabIndex = 5;
-            this.tb_IDDel.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tb_IDDel_KeyPress);
-            // 
             // frmUser
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(1820, 1121);
+            this.ClientSize = new System.Drawing.Size(911, 719);
             this.Controls.Add(this.grb_Control);
             this.Controls.Add(this.grb_Data);
             this.Controls.Add(this.grb_Info);
             this.Controls.Add(this.lb_Info);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmUser";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmUser";
@@ -369,7 +396,7 @@
         private System.Windows.Forms.GroupBox grb_Control;
         private System.Windows.Forms.Button btn_Back;
         private System.Windows.Forms.Button btn_Delete;
-        private System.Windows.Forms.Button btn_Fix;
+        private System.Windows.Forms.Button btn_EditUser;
         private System.Windows.Forms.Button btn_Add;
         private System.Windows.Forms.DataGridView dgv_User;
         private System.Windows.Forms.ComboBox cbb_TypeReader;

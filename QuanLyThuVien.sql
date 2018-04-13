@@ -25,7 +25,7 @@ CREATE TABLE THEDOCGIA
 	EmailDG varchar(30) NOT NULL,
 	LoaiDG nvarchar(50) NOT NULL,
 	NgLapThe datetime NOT NULL,
-	NgHetHan datetime NOT NULL,
+	NgHetHan datetime,
 	TongNo money DEFAULT(0)
 )
 DROP TABLE THEDOCGIA
