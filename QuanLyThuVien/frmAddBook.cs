@@ -116,6 +116,24 @@ namespace QuanLyThuVien
             cmd.Parameters.AddWithValue("TinhTrang", cbb_TinhTrang.Text);
             cmd.ExecuteNonQuery();
             HienThi();
-        }        
+        }
+
+        private void tb_TriGia_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
+                e.Handled = true;
+        }
+
+        private void tb_IDBook_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
+                e.Handled = true;
+        }
+
+        private void tb_IDDel_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
+                e.Handled = true;
+        }
     }
 }

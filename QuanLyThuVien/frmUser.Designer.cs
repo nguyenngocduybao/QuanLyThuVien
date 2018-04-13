@@ -51,6 +51,8 @@
             this.btn_Delete = new System.Windows.Forms.Button();
             this.btn_Fix = new System.Windows.Forms.Button();
             this.btn_Add = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.tb_IDDel = new System.Windows.Forms.TextBox();
             this.grb_Info.SuspendLayout();
             this.grb_Data.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_User)).BeginInit();
@@ -86,7 +88,7 @@
             this.grb_Info.Controls.Add(this.lb_ID);
             this.grb_Info.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grb_Info.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.grb_Info.Location = new System.Drawing.Point(74, 146);
+            this.grb_Info.Location = new System.Drawing.Point(74, 132);
             this.grb_Info.Name = "grb_Info";
             this.grb_Info.Size = new System.Drawing.Size(692, 766);
             this.grb_Info.TabIndex = 1;
@@ -229,7 +231,7 @@
             this.grb_Data.ForeColor = System.Drawing.Color.DodgerBlue;
             this.grb_Data.Location = new System.Drawing.Point(819, 146);
             this.grb_Data.Name = "grb_Data";
-            this.grb_Data.Size = new System.Drawing.Size(966, 766);
+            this.grb_Data.Size = new System.Drawing.Size(966, 963);
             this.grb_Data.TabIndex = 2;
             this.grb_Data.TabStop = false;
             this.grb_Data.Text = "Bảng thông tin độc giả";
@@ -240,27 +242,29 @@
             this.dgv_User.Location = new System.Drawing.Point(28, 42);
             this.dgv_User.Name = "dgv_User";
             this.dgv_User.RowTemplate.Height = 28;
-            this.dgv_User.Size = new System.Drawing.Size(789, 705);
+            this.dgv_User.Size = new System.Drawing.Size(911, 901);
             this.dgv_User.TabIndex = 0;
             // 
             // grb_Control
             // 
+            this.grb_Control.Controls.Add(this.tb_IDDel);
+            this.grb_Control.Controls.Add(this.label1);
             this.grb_Control.Controls.Add(this.btn_Back);
             this.grb_Control.Controls.Add(this.btn_Delete);
             this.grb_Control.Controls.Add(this.btn_Fix);
             this.grb_Control.Controls.Add(this.btn_Add);
             this.grb_Control.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grb_Control.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.grb_Control.Location = new System.Drawing.Point(412, 937);
+            this.grb_Control.Location = new System.Drawing.Point(74, 914);
             this.grb_Control.Name = "grb_Control";
-            this.grb_Control.Size = new System.Drawing.Size(1088, 105);
+            this.grb_Control.Size = new System.Drawing.Size(732, 195);
             this.grb_Control.TabIndex = 3;
             this.grb_Control.TabStop = false;
             this.grb_Control.Text = "Xử lí";
             // 
             // btn_Back
             // 
-            this.btn_Back.Location = new System.Drawing.Point(850, 40);
+            this.btn_Back.Location = new System.Drawing.Point(562, 40);
             this.btn_Back.Name = "btn_Back";
             this.btn_Back.Size = new System.Drawing.Size(153, 52);
             this.btn_Back.TabIndex = 3;
@@ -270,7 +274,7 @@
             // 
             // btn_Delete
             // 
-            this.btn_Delete.Location = new System.Drawing.Point(600, 40);
+            this.btn_Delete.Location = new System.Drawing.Point(562, 123);
             this.btn_Delete.Name = "btn_Delete";
             this.btn_Delete.Size = new System.Drawing.Size(153, 52);
             this.btn_Delete.TabIndex = 2;
@@ -280,12 +284,13 @@
             // 
             // btn_Fix
             // 
-            this.btn_Fix.Location = new System.Drawing.Point(350, 40);
+            this.btn_Fix.Location = new System.Drawing.Point(325, 40);
             this.btn_Fix.Name = "btn_Fix";
-            this.btn_Fix.Size = new System.Drawing.Size(153, 52);
+            this.btn_Fix.Size = new System.Drawing.Size(166, 52);
             this.btn_Fix.TabIndex = 1;
             this.btn_Fix.Text = "Sửa";
             this.btn_Fix.UseVisualStyleBackColor = true;
+            this.btn_Fix.Click += new System.EventHandler(this.btn_Fix_Click);
             // 
             // btn_Add
             // 
@@ -297,6 +302,23 @@
             this.btn_Add.UseVisualStyleBackColor = true;
             this.btn_Add.Click += new System.EventHandler(this.btn_Add_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(94, 131);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(244, 36);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Nhập ID cần xóa:";
+            // 
+            // tb_IDDel
+            // 
+            this.tb_IDDel.Location = new System.Drawing.Point(344, 128);
+            this.tb_IDDel.Name = "tb_IDDel";
+            this.tb_IDDel.Size = new System.Drawing.Size(147, 41);
+            this.tb_IDDel.TabIndex = 5;
+            this.tb_IDDel.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tb_IDDel_KeyPress);
+            // 
             // frmUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -304,7 +326,7 @@
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(1653, 1089);
+            this.ClientSize = new System.Drawing.Size(1820, 1121);
             this.Controls.Add(this.grb_Control);
             this.Controls.Add(this.grb_Data);
             this.Controls.Add(this.grb_Info);
@@ -320,6 +342,7 @@
             this.grb_Data.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_User)).EndInit();
             this.grb_Control.ResumeLayout(false);
+            this.grb_Control.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -350,5 +373,7 @@
         private System.Windows.Forms.Button btn_Add;
         private System.Windows.Forms.DataGridView dgv_User;
         private System.Windows.Forms.ComboBox cbb_TypeReader;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox tb_IDDel;
     }
 }

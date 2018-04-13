@@ -87,11 +87,37 @@ namespace QuanLyThuVien
 
         private void btn_Delete_Click(object sender, EventArgs e)
         {
-            frmDeleteUser dlg2 = new frmDeleteUser();
-            dlg2.ShowDialog();
+            string sqlDelete = "DELETE FROM SACH WHERE IDDocGia = @IDDocGia";
+            SqlCommand cmd = new SqlCommand(sqlDelete, con);
+
+            cmd.Parameters.AddWithValue("IDDocGia", tb_IDDel.Text);
+            cmd.ExecuteNonQuery();
+            HienThi();
         }
 
         private void tb_ID_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
+                e.Handled = true;
+        }
+
+        private void btn_Fix_Click(object sender, EventArgs e)
+        {
+            string sqlEdit = "UPDATE SACH SET HoTenDG=@HoTenDG, NgSinhDG=@NgSinhDG, DiaChi=@Diachi, EmailDG=@EmailDG, LoaiDG=@LoaiDG, NgLapThe=@NgLapThe WHERE IDDocGia = @IDDocGia";
+            SqlCommand cmd = new SqlCommand(sqlEdit, con);
+
+            cmd.Parameters.AddWithValue("IDDocGia", tb_ID.Text);
+            cmd.Parameters.AddWithValue("HoTenDG", tb_Name.Text);
+            cmd.Parameters.AddWithValue("NgSinhDG", dtp_BirthDay.Text);
+            cmd.Parameters.AddWithValue("EmailDG", tb_Email.Text);
+            cmd.Parameters.AddWithValue("LoaiDG", cbb_TypeReader.Text);
+            cmd.Parameters.AddWithValue("DiaChi", tb_Address.Text);
+            cmd.Parameters.AddWithValue("NgLapThe", dtp_NgayLapThe.Text);
+            cmd.ExecuteNonQuery();
+            HienThi();
+        }
+
+        private void tb_IDDel_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
                 e.Handled = true;
