@@ -63,8 +63,8 @@ namespace QuanLyThuVien
             if (cbb_TinhTrang.Text == "") MessageBox.Show("Không được để trống tình trạng.");
             else
             {
-                string sqlINSERT = "INSERT INTO SACH VALUES (@IDSach, @TenSach, @TheLoai, @TacGia, @NamXB, @NhaXB, @NgNhap, @TriGia, @TinhTrang)";
-                SqlCommand cmd = new SqlCommand(sqlINSERT, con);
+                string sqlInsert = "INSERT INTO SACH VALUES (@IDSach, @TenSach, @TheLoai, @TacGia, @NamXB, @NhaXB, @NgNhap, @TriGia, @TinhTrang)";
+                SqlCommand cmd = new SqlCommand(sqlInsert, con);
 
                 cmd.Parameters.AddWithValue("IDSach", tb_IDBook.Text);
                 cmd.Parameters.AddWithValue("TenSach", tb_NameBook.Text);
@@ -92,13 +92,17 @@ namespace QuanLyThuVien
 
         private void btn_DeleteBook_Click(object sender, EventArgs e)
         {
-            frmDeleteBook dlg2 = new frmDeleteBook();
-            dlg2.ShowDialog();
+            string sqlDelete = "DELETE FROM SACH WHERE IDSach = @IDSach";
+            SqlCommand cmd = new SqlCommand(sqlDelete, con);
+
+            cmd.Parameters.AddWithValue("IDSach", tb_IDDel.Text);            
+            cmd.ExecuteNonQuery();
+            HienThi();
         }
 
         private void btn_EditBook_Click(object sender, EventArgs e)
         {
-            string sqlEdit = "UPDATE SACH SET IDSach=@IDSach, TenSach=@TenSach, TheLoai=@TheLoai, TacGia=@TacGia, NamXB=@NamXB, NhaXB=@NhaXB, NgNhap=@NgNhap, TriGia=@TriGia, TinhTrang=@TinhTrang)";
+            string sqlEdit = "UPDATE SACH SET TenSach=@TenSach, TheLoai=@TheLoai, TacGia=@TacGia, NamXB=@NamXB, NhaXB=@NhaXB, NgNhap=@NgNhap, TriGia=@TriGia, TinhTrang=@TinhTrang WHERE IDSach = @IDsach";
             SqlCommand cmd = new SqlCommand(sqlEdit, con);
 
             cmd.Parameters.AddWithValue("IDSach", tb_IDBook.Text);
@@ -112,6 +116,6 @@ namespace QuanLyThuVien
             cmd.Parameters.AddWithValue("TinhTrang", cbb_TinhTrang.Text);
             cmd.ExecuteNonQuery();
             HienThi();
-        }
+        }        
     }
 }
