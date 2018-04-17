@@ -34,11 +34,11 @@ namespace QuanLyThuVien
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLogin));
             this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.bunifuImageButton1 = new Bunifu.Framework.UI.BunifuImageButton();
-            this.tb_Password = new Bunifu.Framework.UI.BunifuTextbox();
             this.tb_UserName = new Bunifu.Framework.UI.BunifuTextbox();
             this.btn_SigninAdmin = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btn_Signup = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btn_Signin = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.tb_Pwd = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.bunifuGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
             this.SuspendLayout();
@@ -47,8 +47,8 @@ namespace QuanLyThuVien
             // 
             this.bunifuGradientPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel1.BackgroundImage")));
             this.bunifuGradientPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuGradientPanel1.Controls.Add(this.tb_Pwd);
             this.bunifuGradientPanel1.Controls.Add(this.bunifuImageButton1);
-            this.bunifuGradientPanel1.Controls.Add(this.tb_Password);
             this.bunifuGradientPanel1.Controls.Add(this.tb_UserName);
             this.bunifuGradientPanel1.Controls.Add(this.btn_SigninAdmin);
             this.bunifuGradientPanel1.Controls.Add(this.btn_Signup);
@@ -76,21 +76,6 @@ namespace QuanLyThuVien
             this.bunifuImageButton1.TabIndex = 5;
             this.bunifuImageButton1.TabStop = false;
             this.bunifuImageButton1.Zoom = 10;
-            // 
-            // tb_Password
-            // 
-            this.tb_Password.BackColor = System.Drawing.Color.Silver;
-            this.tb_Password.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("tb_Password.BackgroundImage")));
-            this.tb_Password.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.tb_Password.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.tb_Password.Icon = ((System.Drawing.Image)(resources.GetObject("tb_Password.Icon")));
-            this.tb_Password.Location = new System.Drawing.Point(122, 311);
-            this.tb_Password.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.tb_Password.Name = "tb_Password";
-            this.tb_Password.Size = new System.Drawing.Size(375, 65);
-            this.tb_Password.TabIndex = 4;
-            this.tb_Password.text = "password";
-            this.tb_Password.MouseClick += new System.Windows.Forms.MouseEventHandler(this.tb_Password_MouseClick);
             // 
             // tb_UserName
             // 
@@ -215,6 +200,27 @@ namespace QuanLyThuVien
             this.btn_Signin.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Signin.Click += new System.EventHandler(this.btn_Signin_Click);
             // 
+            // tb_Pwd
+            // 
+            this.tb_Pwd.BackColor = System.Drawing.SystemColors.Control;
+            this.tb_Pwd.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.tb_Pwd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.tb_Pwd.ForeColor = System.Drawing.Color.Black;
+            this.tb_Pwd.HintForeColor = System.Drawing.Color.Empty;
+            this.tb_Pwd.HintText = "";
+            this.tb_Pwd.isPassword = true;
+            this.tb_Pwd.LineFocusedColor = System.Drawing.Color.Blue;
+            this.tb_Pwd.LineIdleColor = System.Drawing.Color.Gray;
+            this.tb_Pwd.LineMouseHoverColor = System.Drawing.Color.Blue;
+            this.tb_Pwd.LineThickness = 3;
+            this.tb_Pwd.Location = new System.Drawing.Point(118, 314);
+            this.tb_Pwd.Margin = new System.Windows.Forms.Padding(4);
+            this.tb_Pwd.Name = "tb_Pwd";
+            this.tb_Pwd.Size = new System.Drawing.Size(379, 50);
+            this.tb_Pwd.TabIndex = 6;
+            this.tb_Pwd.Text = "password";
+            this.tb_Pwd.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
             // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -236,11 +242,11 @@ namespace QuanLyThuVien
         #endregion
 
         private Bunifu.Framework.UI.BunifuGradientPanel bunifuGradientPanel1;
-        private Bunifu.Framework.UI.BunifuTextbox tb_Password;
         private Bunifu.Framework.UI.BunifuTextbox tb_UserName;
         private Bunifu.Framework.UI.BunifuFlatButton btn_SigninAdmin;
         private Bunifu.Framework.UI.BunifuFlatButton btn_Signup;
         private Bunifu.Framework.UI.BunifuFlatButton btn_Signin;
         private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton1;
+        private Bunifu.Framework.UI.BunifuMaterialTextbox tb_Pwd;
     }
 }

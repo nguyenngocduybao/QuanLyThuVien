@@ -37,7 +37,7 @@ namespace QuanLyThuVien
 
         private void tb_Password_MouseClick(object sender, MouseEventArgs e)
         {
-            tb_Password.text = null;
+            tb_Pwd.Text = null;
             tb_UserName.text = null;
         }
     }

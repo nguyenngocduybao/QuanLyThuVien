@@ -30,16 +30,16 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSignupUser));
             this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
+            this.btn_Add = new Bunifu.Framework.UI.BunifuFlatButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.tb_Pwd = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
+            this.lb_Pwd = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.lb_ID = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.tb_UserName = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
             this.lb_UserName = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.tb_ID = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
             this.lb_Signup = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuImageButton1 = new Bunifu.Framework.UI.BunifuImageButton();
-            this.tb_UserName = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
-            this.lb_ID = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.bunifuCustomTextbox1 = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
-            this.lb_Pwd = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.tb_Pwd = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
-            this.btn_Add = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuGradientPanel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
@@ -63,15 +63,52 @@
             this.bunifuGradientPanel1.Size = new System.Drawing.Size(562, 453);
             this.bunifuGradientPanel1.TabIndex = 0;
             // 
+            // btn_Add
+            // 
+            this.btn_Add.Activecolor = System.Drawing.Color.MediumBlue;
+            this.btn_Add.BackColor = System.Drawing.Color.SkyBlue;
+            this.btn_Add.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_Add.BorderRadius = 0;
+            this.btn_Add.ButtonText = "Đăng kí";
+            this.btn_Add.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Add.DisabledColor = System.Drawing.Color.SeaShell;
+            this.btn_Add.ForeColor = System.Drawing.Color.Cyan;
+            this.btn_Add.Iconcolor = System.Drawing.Color.Transparent;
+            this.btn_Add.Iconimage = ((System.Drawing.Image)(resources.GetObject("btn_Add.Iconimage")));
+            this.btn_Add.Iconimage_right = null;
+            this.btn_Add.Iconimage_right_Selected = null;
+            this.btn_Add.Iconimage_Selected = null;
+            this.btn_Add.IconMarginLeft = 0;
+            this.btn_Add.IconMarginRight = 0;
+            this.btn_Add.IconRightVisible = true;
+            this.btn_Add.IconRightZoom = 0D;
+            this.btn_Add.IconVisible = true;
+            this.btn_Add.IconZoom = 90D;
+            this.btn_Add.IsTab = false;
+            this.btn_Add.Location = new System.Drawing.Point(224, 384);
+            this.btn_Add.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btn_Add.Name = "btn_Add";
+            this.btn_Add.Normalcolor = System.Drawing.Color.SkyBlue;
+            this.btn_Add.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.btn_Add.OnHoverTextColor = System.Drawing.Color.White;
+            this.btn_Add.selected = false;
+            this.btn_Add.Size = new System.Drawing.Size(142, 47);
+            this.btn_Add.TabIndex = 3;
+            this.btn_Add.Text = "Đăng kí";
+            this.btn_Add.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_Add.Textcolor = System.Drawing.SystemColors.ControlDarkDark;
+            this.btn_Add.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Add.Click += new System.EventHandler(this.btn_Add_Click);
+            // 
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
             this.groupBox1.Controls.Add(this.tb_Pwd);
             this.groupBox1.Controls.Add(this.lb_Pwd);
-            this.groupBox1.Controls.Add(this.bunifuCustomTextbox1);
             this.groupBox1.Controls.Add(this.lb_ID);
             this.groupBox1.Controls.Add(this.tb_UserName);
             this.groupBox1.Controls.Add(this.lb_UserName);
+            this.groupBox1.Controls.Add(this.tb_ID);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.Tomato;
             this.groupBox1.Location = new System.Drawing.Point(72, 168);
@@ -81,6 +118,41 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin đăng nhập";
             // 
+            // tb_Pwd
+            // 
+            this.tb_Pwd.BorderColor = System.Drawing.Color.SeaGreen;
+            this.tb_Pwd.Location = new System.Drawing.Point(167, 144);
+            this.tb_Pwd.Name = "tb_Pwd";
+            this.tb_Pwd.PasswordChar = '*';
+            this.tb_Pwd.Size = new System.Drawing.Size(223, 35);
+            this.tb_Pwd.TabIndex = 5;
+            // 
+            // lb_Pwd
+            // 
+            this.lb_Pwd.AutoSize = true;
+            this.lb_Pwd.Location = new System.Drawing.Point(25, 147);
+            this.lb_Pwd.Name = "lb_Pwd";
+            this.lb_Pwd.Size = new System.Drawing.Size(115, 29);
+            this.lb_Pwd.TabIndex = 4;
+            this.lb_Pwd.Text = "Mật khẩu:";
+            // 
+            // lb_ID
+            // 
+            this.lb_ID.AutoSize = true;
+            this.lb_ID.Location = new System.Drawing.Point(25, 53);
+            this.lb_ID.Name = "lb_ID";
+            this.lb_ID.Size = new System.Drawing.Size(127, 29);
+            this.lb_ID.TabIndex = 2;
+            this.lb_ID.Text = "ID độc giả:";
+            // 
+            // tb_UserName
+            // 
+            this.tb_UserName.BorderColor = System.Drawing.Color.SeaGreen;
+            this.tb_UserName.Location = new System.Drawing.Point(167, 98);
+            this.tb_UserName.Name = "tb_UserName";
+            this.tb_UserName.Size = new System.Drawing.Size(223, 35);
+            this.tb_UserName.TabIndex = 1;
+            // 
             // lb_UserName
             // 
             this.lb_UserName.AutoSize = true;
@@ -89,6 +161,14 @@
             this.lb_UserName.Size = new System.Drawing.Size(125, 29);
             this.lb_UserName.TabIndex = 0;
             this.lb_UserName.Text = "Tài khoản:";
+            // 
+            // tb_ID
+            // 
+            this.tb_ID.BorderColor = System.Drawing.Color.SeaGreen;
+            this.tb_ID.Location = new System.Drawing.Point(167, 50);
+            this.tb_ID.Name = "tb_ID";
+            this.tb_ID.Size = new System.Drawing.Size(223, 35);
+            this.tb_ID.TabIndex = 3;
             // 
             // lb_Signup
             // 
@@ -115,85 +195,6 @@
             this.bunifuImageButton1.TabStop = false;
             this.bunifuImageButton1.Zoom = 10;
             // 
-            // tb_UserName
-            // 
-            this.tb_UserName.BorderColor = System.Drawing.Color.SeaGreen;
-            this.tb_UserName.Location = new System.Drawing.Point(167, 98);
-            this.tb_UserName.Name = "tb_UserName";
-            this.tb_UserName.Size = new System.Drawing.Size(223, 35);
-            this.tb_UserName.TabIndex = 1;
-            // 
-            // lb_ID
-            // 
-            this.lb_ID.AutoSize = true;
-            this.lb_ID.Location = new System.Drawing.Point(25, 53);
-            this.lb_ID.Name = "lb_ID";
-            this.lb_ID.Size = new System.Drawing.Size(127, 29);
-            this.lb_ID.TabIndex = 2;
-            this.lb_ID.Text = "ID độc giả:";
-            // 
-            // bunifuCustomTextbox1
-            // 
-            this.bunifuCustomTextbox1.BorderColor = System.Drawing.Color.SeaGreen;
-            this.bunifuCustomTextbox1.Location = new System.Drawing.Point(167, 50);
-            this.bunifuCustomTextbox1.Name = "bunifuCustomTextbox1";
-            this.bunifuCustomTextbox1.Size = new System.Drawing.Size(223, 35);
-            this.bunifuCustomTextbox1.TabIndex = 3;
-            // 
-            // lb_Pwd
-            // 
-            this.lb_Pwd.AutoSize = true;
-            this.lb_Pwd.Location = new System.Drawing.Point(25, 147);
-            this.lb_Pwd.Name = "lb_Pwd";
-            this.lb_Pwd.Size = new System.Drawing.Size(115, 29);
-            this.lb_Pwd.TabIndex = 4;
-            this.lb_Pwd.Text = "Mật khẩu:";
-            // 
-            // tb_Pwd
-            // 
-            this.tb_Pwd.BorderColor = System.Drawing.Color.SeaGreen;
-            this.tb_Pwd.Location = new System.Drawing.Point(167, 144);
-            this.tb_Pwd.Name = "tb_Pwd";
-            this.tb_Pwd.Size = new System.Drawing.Size(223, 35);
-            this.tb_Pwd.TabIndex = 5;
-            // 
-            // btn_Add
-            // 
-            this.btn_Add.Activecolor = System.Drawing.Color.MediumBlue;
-            this.btn_Add.BackColor = System.Drawing.Color.SkyBlue;
-            this.btn_Add.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_Add.BorderRadius = 0;
-            this.btn_Add.ButtonText = "Đăng kí";
-            this.btn_Add.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_Add.DisabledColor = System.Drawing.Color.SeaShell;
-            this.btn_Add.ForeColor = System.Drawing.Color.Cyan;
-            this.btn_Add.Iconcolor = System.Drawing.Color.Transparent;
-            this.btn_Add.Iconimage = ((System.Drawing.Image)(resources.GetObject("btn_Add.Iconimage")));
-            this.btn_Add.Iconimage_right = null;
-            this.btn_Add.Iconimage_right_Selected = null;
-            this.btn_Add.Iconimage_Selected = null;
-            this.btn_Add.IconMarginLeft = 0;
-            this.btn_Add.IconMarginRight = 0;
-            this.btn_Add.IconRightVisible = true;
-            this.btn_Add.IconRightZoom = 0D;
-            this.btn_Add.IconVisible = true;
-            this.btn_Add.IconZoom = 90D;
-            this.btn_Add.IsTab = false;
-            this.btn_Add.Location = new System.Drawing.Point(201, 384);
-            this.btn_Add.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btn_Add.Name = "btn_Add";
-            this.btn_Add.Normalcolor = System.Drawing.Color.SkyBlue;
-            this.btn_Add.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.btn_Add.OnHoverTextColor = System.Drawing.Color.White;
-            this.btn_Add.selected = false;
-            this.btn_Add.Size = new System.Drawing.Size(159, 47);
-            this.btn_Add.TabIndex = 3;
-            this.btn_Add.Text = "Đăng kí";
-            this.btn_Add.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btn_Add.Textcolor = System.Drawing.SystemColors.ControlDarkDark;
-            this.btn_Add.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Add.Click += new System.EventHandler(this.btn_Add_Click);
-            // 
             // frmSignupUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -202,6 +203,8 @@
             this.Controls.Add(this.bunifuGradientPanel1);
             this.Name = "frmSignupUser";
             this.Text = "frmSignupUser";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmSignupUser_FormClosing);
+            this.Load += new System.EventHandler(this.frmSignupUser_Load);
             this.bunifuGradientPanel1.ResumeLayout(false);
             this.bunifuGradientPanel1.PerformLayout();
             this.groupBox1.ResumeLayout(false);
@@ -221,7 +224,7 @@
         private Bunifu.Framework.UI.BunifuFlatButton btn_Add;
         private WindowsFormsControlLibrary1.BunifuCustomTextbox tb_Pwd;
         private Bunifu.Framework.UI.BunifuCustomLabel lb_Pwd;
-        private WindowsFormsControlLibrary1.BunifuCustomTextbox bunifuCustomTextbox1;
+        private WindowsFormsControlLibrary1.BunifuCustomTextbox tb_ID;
         private Bunifu.Framework.UI.BunifuCustomLabel lb_ID;
         private WindowsFormsControlLibrary1.BunifuCustomTextbox tb_UserName;
     }

@@ -131,6 +131,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -147,6 +148,39 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons7-email-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons7-password-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-email-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-info-80.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-key-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-next-page-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-password-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-pls-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-plus-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-sign-up-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons-forward-button-48.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
