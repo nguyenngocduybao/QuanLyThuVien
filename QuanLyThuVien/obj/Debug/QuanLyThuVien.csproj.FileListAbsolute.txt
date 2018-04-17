@@ -79,3 +79,8 @@ D:\Mine\5. Study\Projects Test\C#\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyTh
 D:\Mine\5. Study\Projects\C#\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.frmDeleteBook.resources
 D:\Mine\5. Study\Projects\C#\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.frmDeleteUser.resources
 D:\Mine\5. Study\Projects\C#\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.frmSearchBook.resources
+C:\Users\NNDB\Desktop\QuanLyThuVien\QuanLyThuVien\bin\Debug\Bunifu_UI_v1.5.3.dll
+C:\Users\NNDB\Desktop\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.frmPhieuMuon.resources
+C:\Users\NNDB\Desktop\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.frmLogin.resources
+C:\Users\NNDB\Desktop\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.frmInfoUser.resources
+C:\Users\NNDB\Desktop\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.frmSignupUser.resources
