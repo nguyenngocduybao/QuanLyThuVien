@@ -102,116 +102,116 @@ namespace QuanLyThuVien
         }
         private void btn_Search_Click(object sender, EventArgs e)
         {
-            if (tb_IDBook.Text != "")
-            {
-                dgv_SearchBook.DataSource = HienDL("select * from SACH where IDSach like '%" + tb_IDBook.Text.Trim() + "%' ");
-            }
-            if (tb_NameBook.Text != "")
-            {
-                dgv_SearchBook.DataSource = HienDL("select * from SACH where TenSach like N'%" + tb_NameBook.Text.Trim() + "%' ");
-            }
-            if (tb_NXB.Text != "")
-            {
-                dgv_SearchBook.DataSource = HienDL("select * from SACH where NhaXB like N'%" + tb_NXB.Text.Trim() + "%' ");
-            }
-            if (cbb_TacGia.Text != "")
-            {
-                dgv_SearchBook.DataSource = HienDL("select * from SACH where TacGia like N'%" + cbb_TacGia.Text.Trim() + "%' ");
-            }
-            if (cbb_TheLoai.Text != "")
-            {
-                dgv_SearchBook.DataSource = HienDL("select * from SACH where TheLoai like N'%" + cbb_TheLoai.Text.Trim() + "%' ");
-            }
-            if (cbb_TinhTrang.Text != "")
-            {
-                dgv_SearchBook.DataSource = HienDL("select * from SACH where TinhTranglike N'%" + cbb_TinhTrang.Text.Trim() + "%' ");
-            }
-            if (cbb_YXB.Text != "")
-            {
-                dgv_SearchBook.DataSource = HienDL("select * from SACH where NamXB like '%" + cbb_YXB.Text.Trim() + "%' ");
-            }
-            if (tb_IDBook.Text == "" && tb_NameBook.Text == "" && tb_NXB.Text == "" && cbb_TacGia.Text == "" && cbb_TheLoai.Text == "" && cbb_TinhTrang.Text == "" && cbb_YXB.Text == "")
-            {
-                DialogResult kq;
-                kq = MessageBox.Show("Bạn chưa nhập giá trị để tìm kiếm.", "Chú ý", MessageBoxButtons.OK, MessageBoxIcon.Question);
-            }
+            //if (tb_IDBook.Text != "")
+            //{
+            //    dgv_SearchBook.DataSource = HienDL("select * from SACH where IDSach like '%" + tb_IDBook.Text.Trim() + "%' ");
+            //}
+            //if (tb_NameBook.Text != "")
+            //{
+            //    dgv_SearchBook.DataSource = HienDL("select * from SACH where TenSach like N'%" + tb_NameBook.Text.Trim() + "%' ");
+            //}
+            //if (tb_NXB.Text != "")
+            //{
+            //    dgv_SearchBook.DataSource = HienDL("select * from SACH where NhaXB like N'%" + tb_NXB.Text.Trim() + "%' ");
+            //}
+            //if (cbb_TacGia.Text != "")
+            //{
+            //    dgv_SearchBook.DataSource = HienDL("select * from SACH where TacGia like N'%" + cbb_TacGia.Text.Trim() + "%' ");
+            //}
+            //if (cbb_TheLoai.Text != "")
+            //{
+            //    dgv_SearchBook.DataSource = HienDL("select * from SACH where TheLoai like N'%" + cbb_TheLoai.Text.Trim() + "%' ");
+            //}
+            //if (cbb_TinhTrang.Text != "")
+            //{
+            //    dgv_SearchBook.DataSource = HienDL("select * from SACH where TinhTranglike N'%" + cbb_TinhTrang.Text.Trim() + "%' ");
+            //}
+            //if (cbb_YXB.Text != "")
+            //{
+            //    dgv_SearchBook.DataSource = HienDL("select * from SACH where NamXB like '%" + cbb_YXB.Text.Trim() + "%' ");
+            //}
+            //if (tb_IDBook.Text == "" && tb_NameBook.Text == "" && tb_NXB.Text == "" && cbb_TacGia.Text == "" && cbb_TheLoai.Text == "" && cbb_TinhTrang.Text == "" && cbb_YXB.Text == "")
+            //{
+            //    DialogResult kq;
+            //    kq = MessageBox.Show("Bạn chưa nhập giá trị để tìm kiếm.", "Chú ý", MessageBoxButtons.OK, MessageBoxIcon.Question);
+            //}
         }
-        private void tab_SearchBook_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            switch (tab_SearchBook.SelectedIndex)
-            {
-                case 0:
-                    {
-                        tb_NameBook.Text = "";
-                        cbb_TacGia.Text = null;
-                        cbb_TheLoai.Text = null;
-                        cbb_TinhTrang.Text = null;
-                        cbb_YXB.Text = null;
-                        tb_NXB.Text = "";
-                        break;
-                    }
-                case 1:
-                    {
-                        tb_IDBook.Text = "";
-                        cbb_TacGia.Text = null;
-                        cbb_TheLoai.Text = null;
-                        cbb_TinhTrang.Text = null;
-                        cbb_YXB.Text = null;
-                        tb_NXB.Text = "";
-                        break;
-                    }
-                case 2:
-                    {
-                        tb_NameBook.Text = "";
-                        cbb_TacGia.Text = null;
-                        tb_IDBook.Text = "";
-                        cbb_TinhTrang.Text = null;
-                        cbb_YXB.Text = null;
-                        tb_NXB.Text = "";
-                        break;
-                    }
-                case 3:
-                    {
-                        tb_NameBook.Text = "";
-                        cbb_TheLoai.Text = null;
-                        tb_IDBook.Text = "";
-                        cbb_TinhTrang.Text = null;
-                        cbb_YXB.Text = null;
-                        tb_NXB.Text = "";
-                        break;
-                }
-                case 4:
-                    {
-                        tb_NameBook.Text = "";
-                        cbb_TheLoai.Text = null;
-                        tb_IDBook.Text = "";
-                        cbb_TinhTrang.Text = null;
-                        cbb_TacGia.Text = null;
-                        tb_NXB.Text = "";
-                        break;
-                    }
-                case 5:
-                    {
-                        tb_NameBook.Text = "";
-                        cbb_TheLoai.Text = null;
-                        tb_IDBook.Text = "";
-                        cbb_TinhTrang.Text = null;
-                        cbb_TacGia.Text = null;
-                        cbb_YXB.Text = null;
-                        break;
-                    }
-                case 6:
-                    {
-                        tb_NameBook.Text = "";
-                        cbb_TheLoai.Text = null;
-                        tb_IDBook.Text = "";
-                        cbb_YXB.Text = null;
-                        cbb_TacGia.Text = null;
-                        tb_NXB.Text = "";
-                        break;
-                    }
-            }
-        }
+        //private void tab_SearchBook_SelectedIndexChanged(object sender, EventArgs e)
+        //{
+        //    switch (tab_SearchBook.SelectedIndex)
+        //    {
+        //        case 0:
+        //            {
+        //                tb_NameBook.Text = "";
+        //                cbb_TacGia.Text = null;
+        //                cbb_TheLoai.Text = null;
+        //                cbb_TinhTrang.Text = null;
+        //                cbb_YXB.Text = null;
+        //                tb_NXB.Text = "";
+        //                break;
+        //            }
+        //        case 1:
+        //            {
+        //                tb_IDBook.Text = "";
+        //                cbb_TacGia.Text = null;
+        //                cbb_TheLoai.Text = null;
+        //                cbb_TinhTrang.Text = null;
+        //                cbb_YXB.Text = null;
+        //                tb_NXB.Text = "";
+        //                break;
+        //            }
+        //        case 2:
+        //            {
+        //                tb_NameBook.Text = "";
+        //                cbb_TacGia.Text = null;
+        //                tb_IDBook.Text = "";
+        //                cbb_TinhTrang.Text = null;
+        //                cbb_YXB.Text = null;
+        //                tb_NXB.Text = "";
+        //                break;
+        //            }
+        //        case 3:
+        //            {
+        //                tb_NameBook.Text = "";
+        //                cbb_TheLoai.Text = null;
+        //                tb_IDBook.Text = "";
+        //                cbb_TinhTrang.Text = null;
+        //                cbb_YXB.Text = null;
+        //                tb_NXB.Text = "";
+        //                break;
+        //        }
+        //        case 4:
+        //            {
+        //                tb_NameBook.Text = "";
+        //                cbb_TheLoai.Text = null;
+        //                tb_IDBook.Text = "";
+        //                cbb_TinhTrang.Text = null;
+        //                cbb_TacGia.Text = null;
+        //                tb_NXB.Text = "";
+        //                break;
+        //            }
+        //        case 5:
+        //            {
+        //                tb_NameBook.Text = "";
+        //                cbb_TheLoai.Text = null;
+        //                tb_IDBook.Text = "";
+        //                cbb_TinhTrang.Text = null;
+        //                cbb_TacGia.Text = null;
+        //                cbb_YXB.Text = null;
+        //                break;
+        //            }
+        //        case 6:
+        //            {
+        //                tb_NameBook.Text = "";
+        //                cbb_TheLoai.Text = null;
+        //                tb_IDBook.Text = "";
+        //                cbb_YXB.Text = null;
+        //                cbb_TacGia.Text = null;
+        //                tb_NXB.Text = "";
+        //                break;
+        //            }
+        //    }
+        //}
 
         private void btn_HienDL_Click(object sender, EventArgs e)
         {
@@ -222,6 +222,64 @@ namespace QuanLyThuVien
         {
             if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
                 e.Handled = true;
+        }
+
+        private void cbOnChange(object sender, MouseEventArgs e)
+        {
+            if (cb_IDBook.Checked==true)
+            {
+                cb_IDTacGia.Checked = false;
+                cb_NameBook.Checked = false;
+                cb_NXB.Checked = false;
+                cb_TheLoai.Checked = false;
+                cb_TinhTrang.Checked = false;
+                cb_YXB.Checked = false;
+            }
+            if (cb_IDTacGia.Checked == true)
+            {
+                cb_IDBook.Checked = false;
+                cb_NameBook.Checked = false;
+                cb_NXB.Checked = false;
+                cb_TheLoai.Checked = false;
+                cb_TinhTrang.Checked = false;
+                cb_YXB.Checked = false;
+            }
+            if (cb_NXB.Checked == true)
+            {
+                cb_IDBook.Checked = false;
+                cb_NameBook.Checked = false;
+                cb_IDTacGia.Checked = false;
+                cb_TheLoai.Checked = false;
+                cb_TinhTrang.Checked = false;
+                cb_YXB.Checked = false;
+            }
+            if (cb_TheLoai.Checked == true)
+            {
+                cb_IDBook.Checked = false;
+                cb_NameBook.Checked = false;
+                cb_IDTacGia.Checked = false;
+                cb_NXB.Checked = false;
+                cb_TinhTrang.Checked = false;
+                cb_YXB.Checked = false;
+            }
+            if (cb_TinhTrang.Checked == true)
+            {
+                cb_IDBook.Checked = false;
+                cb_NameBook.Checked = false;
+                cb_IDTacGia.Checked = false;
+                cb_TheLoai.Checked = false;
+                cb_NXB.Checked = false;
+                cb_YXB.Checked = false;
+            }
+            if (cb_YXB.Checked == true)
+            {
+                cb_IDBook.Checked = false;
+                cb_NameBook.Checked = false;
+                cb_IDTacGia.Checked = false;
+                cb_TheLoai.Checked = false;
+                cb_NXB.Checked = false;
+                cb_TinhTrang.Checked = false;
+            }
         }
     }
 }

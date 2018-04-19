@@ -53,6 +53,7 @@
             this.bunifuGradientPanel1.Controls.Add(this.groupBox1);
             this.bunifuGradientPanel1.Controls.Add(this.lb_Signup);
             this.bunifuGradientPanel1.Controls.Add(this.bunifuImageButton1);
+            this.bunifuGradientPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.bunifuGradientPanel1.GradientBottomLeft = System.Drawing.Color.DodgerBlue;
             this.bunifuGradientPanel1.GradientBottomRight = System.Drawing.Color.Lime;
             this.bunifuGradientPanel1.GradientTopLeft = System.Drawing.Color.LawnGreen;
@@ -60,7 +61,7 @@
             this.bunifuGradientPanel1.Location = new System.Drawing.Point(0, 0);
             this.bunifuGradientPanel1.Name = "bunifuGradientPanel1";
             this.bunifuGradientPanel1.Quality = 20;
-            this.bunifuGradientPanel1.Size = new System.Drawing.Size(562, 453);
+            this.bunifuGradientPanel1.Size = new System.Drawing.Size(559, 453);
             this.bunifuGradientPanel1.TabIndex = 0;
             // 
             // btn_Add
@@ -166,9 +167,11 @@
             // 
             this.tb_ID.BorderColor = System.Drawing.Color.SeaGreen;
             this.tb_ID.Location = new System.Drawing.Point(167, 50);
+            this.tb_ID.MaxLength = 3;
             this.tb_ID.Name = "tb_ID";
             this.tb_ID.Size = new System.Drawing.Size(223, 35);
             this.tb_ID.TabIndex = 3;
+            this.tb_ID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tb_ID_KeyPress);
             // 
             // lb_Signup
             // 

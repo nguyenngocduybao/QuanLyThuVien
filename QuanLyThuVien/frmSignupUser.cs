@@ -28,10 +28,10 @@ namespace QuanLyThuVien
             if (tb_Pwd.Text == "") MessageBox.Show("Không được để trống mật khẩu.");
             else
             {
-                string sqlINSERT = "INSERT INTO USERS VALUES (@UserName,@Pwd,@IDDocGia)";
+                string sqlINSERT = "INSERT INTO USERS VALUES (@UserName,@IDDocGia,@Pwd)";
                 SqlCommand cmd = new SqlCommand(sqlINSERT, con);
 
-                cmd.Parameters.AddWithValue("IDDocGia", tb_ID.Text);
+                cmd.Parameters.AddWithValue("IDDocGia", "DG"+tb_ID.Text);
                 cmd.Parameters.AddWithValue("UserName", tb_UserName.Text);
                 cmd.Parameters.AddWithValue("Pwd", tb_Pwd.Text);
                 cmd.ExecuteNonQuery();
@@ -56,6 +56,11 @@ namespace QuanLyThuVien
         private void frmSignupUser_FormClosing(object sender, FormClosingEventArgs e)
         {
             con.Close();
+        }
+        private void tb_ID_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
+                e.Handled = true;
         }
     }
 }

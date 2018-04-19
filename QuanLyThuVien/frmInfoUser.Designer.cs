@@ -158,8 +158,8 @@
             this.cbb_TypeReader.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbb_TypeReader.FormattingEnabled = true;
             this.cbb_TypeReader.Items.AddRange(new object[] {
-            "Thường",
-            "VIP"});
+            "LDG01",
+            "LDG02"});
             this.cbb_TypeReader.Location = new System.Drawing.Point(178, 236);
             this.cbb_TypeReader.Name = "cbb_TypeReader";
             this.cbb_TypeReader.Size = new System.Drawing.Size(223, 37);
@@ -235,9 +235,11 @@
             // 
             this.tb_ID.BorderColor = System.Drawing.Color.SeaGreen;
             this.tb_ID.Location = new System.Drawing.Point(178, 50);
+            this.tb_ID.MaxLength = 3;
             this.tb_ID.Name = "tb_ID";
             this.tb_ID.Size = new System.Drawing.Size(223, 35);
             this.tb_ID.TabIndex = 1;
+            this.tb_ID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tb_ID_KeyPress);
             // 
             // lb_IDDocGia
             // 

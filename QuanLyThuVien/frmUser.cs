@@ -58,14 +58,14 @@ namespace QuanLyThuVien
                     if (dtp_NgayLapThe.Text == "") MessageBox.Show("Không được để trống ngày lập thẻ.");
             else
             {
-                string sqlINSERT = "INSERT INTO THEDOCGIA VALUES (@IDDocGia, @HoTenDG, @NgSinhDG, @DiachiDG, @EmailDG, @LoaiDG, @NgLapThe, NULL, NULL)";
+                string sqlINSERT = "INSERT INTO THEDOCGIA VALUES (@IDDocGia, @HoTenDG, @NgSinhDG, @DiachiDG, @EmailDG, @IDLoaiDG, @NgLapThe, NULL, NULL)";
                 SqlCommand cmd = new SqlCommand(sqlINSERT, con);
 
-                cmd.Parameters.AddWithValue("IDDocGia", tb_ID.Text);
+                cmd.Parameters.AddWithValue("IDDocGia", "DG" + tb_ID.Text);
                 cmd.Parameters.AddWithValue("HoTenDG", tb_Name.Text);
                 cmd.Parameters.AddWithValue("NgSinhDG", dtp_BirthDay.Text);
                 cmd.Parameters.AddWithValue("EmailDG", tb_Email.Text);
-                cmd.Parameters.AddWithValue("LoaiDG", cbb_TypeReader.Text);
+                cmd.Parameters.AddWithValue("IDLoaiDG", cbb_TypeReader.Text);
                 cmd.Parameters.AddWithValue("DiaChiDG", tb_Address.Text);
                 cmd.Parameters.AddWithValue("NgLapThe", dtp_NgayLapThe.Text);              
                 cmd.ExecuteNonQuery();
@@ -90,7 +90,7 @@ namespace QuanLyThuVien
             string sqlDelete = "DELETE FROM THEDOCGIA WHERE IDDocGia = @IDDocGia";
             SqlCommand cmd = new SqlCommand(sqlDelete, con);
 
-            cmd.Parameters.AddWithValue("IDDocGia", tb_IDDel.Text);
+            cmd.Parameters.AddWithValue("IDDocGia", "DG"+tb_IDDel.Text);
             cmd.ExecuteNonQuery();
             HienThi();
         }
@@ -118,14 +118,14 @@ namespace QuanLyThuVien
                     if (dtp_NgayLapThe.Text == "") MessageBox.Show("Không được để trống ngày lập thẻ.");
             else
             {
-                string sqlEdit = "UPDATE THEDOCGIA SET HoTenDG=@HoTenDG, NgSinhDG=@NgSinhDG, DiaChiDG=@DiachiDG, EmailDG=@EmailDG, LoaiDG=@LoaiDG, NgLapThe=@NgLapThe WHERE IDDocGia = @IDDocGia";
+                string sqlEdit = "UPDATE THEDOCGIA SET HoTenDG=@HoTenDG, NgSinhDG=@NgSinhDG, DiaChiDG=@DiachiDG, EmailDG=@EmailDG, IDLoaiDG=@IDLoaiDG, NgLapThe=@NgLapThe WHERE IDDocGia = @IDDocGia";
                 SqlCommand cmd = new SqlCommand(sqlEdit, con);
 
-                cmd.Parameters.AddWithValue("IDDocGia", tb_ID.Text);
+                cmd.Parameters.AddWithValue("IDDocGia", "DG"+tb_ID.Text);
                 cmd.Parameters.AddWithValue("HoTenDG", tb_Name.Text);
                 cmd.Parameters.AddWithValue("NgSinhDG", dtp_BirthDay.Text);
                 cmd.Parameters.AddWithValue("EmailDG", tb_Email.Text);
-                cmd.Parameters.AddWithValue("LoaiDG", cbb_TypeReader.Text);
+                cmd.Parameters.AddWithValue("IDLoaiDG", cbb_TypeReader.Text);
                 cmd.Parameters.AddWithValue("DiaChiDG", tb_Address.Text);
                 cmd.Parameters.AddWithValue("NgLapThe", dtp_NgayLapThe.Text);
                 cmd.ExecuteNonQuery();

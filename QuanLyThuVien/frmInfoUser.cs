@@ -38,7 +38,7 @@ namespace QuanLyThuVien
                 string sqlINSERT = "INSERT INTO THEDOCGIA VALUES (@IDDocGia, @HoTenDG, @NgSinhDG, @DiachiDG, @EmailDG, @LoaiDG, @NgLapThe, NULL, NULL)";
                 SqlCommand cmd = new SqlCommand(sqlINSERT, con);
 
-                cmd.Parameters.AddWithValue("IDDocGia", tb_ID.Text);
+                cmd.Parameters.AddWithValue("IDDocGia", "DG"+tb_ID.Text);
                 cmd.Parameters.AddWithValue("HoTenDG", tb_Name.Text);
                 cmd.Parameters.AddWithValue("NgSinhDG", dtp_BirthDay.Text);
                 cmd.Parameters.AddWithValue("EmailDG", tb_Email.Text);
@@ -65,6 +65,11 @@ namespace QuanLyThuVien
         private void frmInfoUser_FormClosing(object sender, FormClosingEventArgs e)
         {
             con.Close();
+        }
+        private void tb_ID_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
+                e.Handled = true;
         }
     }
 }
