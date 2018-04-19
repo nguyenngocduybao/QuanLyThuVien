@@ -44,23 +44,23 @@ namespace QuanLyThuVien
 
         private void btn_AddBook_Click(object sender, EventArgs e)
         {
-            if (tb_IDBook.Text == "") MessageBox.Show("Không được để trống ID sách.");
+            if (tb_IDBook.Text == "") MessageBox.Show("Không được để trống ID sách.", "Chú ý");
             else
-            if (tb_NameBook.Text == "") MessageBox.Show("Không được để trống tên sách.");
+            if (tb_NameBook.Text == "") MessageBox.Show("Không được để trống tên sách.", "Chú ý");
             else
-            if (cbb_TypeBook.Text == "") MessageBox.Show("Không được để trống thể loại sách");
+            if (cbb_TypeBook.Text == "") MessageBox.Show("Không được để trống thể loại sách", "Chú ý");
             else
-            if (cbb_Authors.Text == "") MessageBox.Show("Không được để trống tên tác giả.");
+            if (cbb_Authors.Text == "") MessageBox.Show("Không được để trống tên tác giả.", "Chú ý");
             else
-            if (cbb_NamXB.Text == "") MessageBox.Show("Vui lòng chọn năm xuất bản.");
+            if (cbb_NamXB.Text == "") MessageBox.Show("Vui lòng chọn năm xuất bản.", "Chú ý");
             else
-            if (tb_NhaXB.Text == "") MessageBox.Show("Không được để trống nhà xuất bản.");
+            if (tb_NhaXB.Text == "") MessageBox.Show("Không được để trống nhà xuất bản.", "Chú ý");
             else
-            if (dtp_NgayNhap.Text == "") MessageBox.Show("Không được để trống ngày nhập.");
+            if (dtp_NgayNhap.Text == "") MessageBox.Show("Không được để trống ngày nhập.", "Chú ý");
             else
-            if (tb_TriGia.Text == "") MessageBox.Show("Không được để trống trị giá.");
+            if (tb_TriGia.Text == "") MessageBox.Show("Không được để trống trị giá.", "Chú ý");
             else
-            if (cbb_TinhTrang.Text == "") MessageBox.Show("Không được để trống tình trạng.");
+            if (cbb_TinhTrang.Text == "") MessageBox.Show("Không được để trống tình trạng.", "Chú ý");
             else
             {
                 string sqlInsert = "INSERT INTO SACH VALUES (@IDSach, @TenSach, @TheLoai, @TacGia, @NamXB, @NhaXB, @NgNhap, @TriGia, @TinhTrang)";

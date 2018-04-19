@@ -33,12 +33,12 @@ namespace QuanLyThuVien
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLogin));
             this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
+            this.tb_Pwd = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.bunifuImageButton1 = new Bunifu.Framework.UI.BunifuImageButton();
             this.tb_UserName = new Bunifu.Framework.UI.BunifuTextbox();
             this.btn_SigninAdmin = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btn_Signup = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btn_Signin = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.tb_Pwd = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.bunifuGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
             this.SuspendLayout();
@@ -59,19 +59,43 @@ namespace QuanLyThuVien
             this.bunifuGradientPanel1.GradientTopLeft = System.Drawing.Color.DodgerBlue;
             this.bunifuGradientPanel1.GradientTopRight = System.Drawing.Color.Violet;
             this.bunifuGradientPanel1.Location = new System.Drawing.Point(0, 0);
+            this.bunifuGradientPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.bunifuGradientPanel1.Name = "bunifuGradientPanel1";
             this.bunifuGradientPanel1.Quality = 10;
-            this.bunifuGradientPanel1.Size = new System.Drawing.Size(593, 625);
+            this.bunifuGradientPanel1.Size = new System.Drawing.Size(395, 406);
             this.bunifuGradientPanel1.TabIndex = 0;
+            // 
+            // tb_Pwd
+            // 
+            this.tb_Pwd.BackColor = System.Drawing.SystemColors.Control;
+            this.tb_Pwd.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.tb_Pwd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.tb_Pwd.ForeColor = System.Drawing.Color.Black;
+            this.tb_Pwd.HintForeColor = System.Drawing.Color.Empty;
+            this.tb_Pwd.HintText = "";
+            this.tb_Pwd.isPassword = true;
+            this.tb_Pwd.LineFocusedColor = System.Drawing.Color.Blue;
+            this.tb_Pwd.LineIdleColor = System.Drawing.Color.Gray;
+            this.tb_Pwd.LineMouseHoverColor = System.Drawing.Color.Blue;
+            this.tb_Pwd.LineThickness = 3;
+            this.tb_Pwd.Location = new System.Drawing.Point(79, 204);
+            this.tb_Pwd.Margin = new System.Windows.Forms.Padding(4);
+            this.tb_Pwd.Name = "tb_Pwd";
+            this.tb_Pwd.Size = new System.Drawing.Size(253, 32);
+            this.tb_Pwd.TabIndex = 6;
+            this.tb_Pwd.Text = "password";
+            this.tb_Pwd.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.tb_Pwd.MouseClick += new System.Windows.Forms.MouseEventHandler(this.tb_Pwd_MouseClick);
             // 
             // bunifuImageButton1
             // 
             this.bunifuImageButton1.BackColor = System.Drawing.Color.Transparent;
             this.bunifuImageButton1.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton1.Image")));
             this.bunifuImageButton1.ImageActive = null;
-            this.bunifuImageButton1.Location = new System.Drawing.Point(197, 42);
+            this.bunifuImageButton1.Location = new System.Drawing.Point(131, 27);
+            this.bunifuImageButton1.Margin = new System.Windows.Forms.Padding(2);
             this.bunifuImageButton1.Name = "bunifuImageButton1";
-            this.bunifuImageButton1.Size = new System.Drawing.Size(229, 161);
+            this.bunifuImageButton1.Size = new System.Drawing.Size(153, 105);
             this.bunifuImageButton1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.bunifuImageButton1.TabIndex = 5;
             this.bunifuImageButton1.TabStop = false;
@@ -84,13 +108,12 @@ namespace QuanLyThuVien
             this.tb_UserName.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.tb_UserName.ForeColor = System.Drawing.Color.DodgerBlue;
             this.tb_UserName.Icon = ((System.Drawing.Image)(resources.GetObject("tb_UserName.Icon")));
-            this.tb_UserName.Location = new System.Drawing.Point(122, 211);
-            this.tb_UserName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tb_UserName.Location = new System.Drawing.Point(81, 137);
             this.tb_UserName.Name = "tb_UserName";
-            this.tb_UserName.Size = new System.Drawing.Size(375, 65);
+            this.tb_UserName.Size = new System.Drawing.Size(250, 42);
             this.tb_UserName.TabIndex = 3;
             this.tb_UserName.text = "username";
-            this.tb_UserName.MouseClick += new System.Windows.Forms.MouseEventHandler(this.tb_Password_MouseClick);
+            this.tb_UserName.MouseClick += new System.Windows.Forms.MouseEventHandler(this.tb_UserName_MouseClick);
             // 
             // btn_SigninAdmin
             // 
@@ -113,14 +136,13 @@ namespace QuanLyThuVien
             this.btn_SigninAdmin.IconVisible = true;
             this.btn_SigninAdmin.IconZoom = 90D;
             this.btn_SigninAdmin.IsTab = false;
-            this.btn_SigninAdmin.Location = new System.Drawing.Point(220, 525);
-            this.btn_SigninAdmin.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btn_SigninAdmin.Location = new System.Drawing.Point(147, 341);
             this.btn_SigninAdmin.Name = "btn_SigninAdmin";
             this.btn_SigninAdmin.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
             this.btn_SigninAdmin.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
             this.btn_SigninAdmin.OnHoverTextColor = System.Drawing.Color.White;
             this.btn_SigninAdmin.selected = false;
-            this.btn_SigninAdmin.Size = new System.Drawing.Size(188, 52);
+            this.btn_SigninAdmin.Size = new System.Drawing.Size(125, 34);
             this.btn_SigninAdmin.TabIndex = 2;
             this.btn_SigninAdmin.Text = "Sign in Admin";
             this.btn_SigninAdmin.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -149,14 +171,13 @@ namespace QuanLyThuVien
             this.btn_Signup.IconVisible = true;
             this.btn_Signup.IconZoom = 90D;
             this.btn_Signup.IsTab = false;
-            this.btn_Signup.Location = new System.Drawing.Point(220, 463);
-            this.btn_Signup.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btn_Signup.Location = new System.Drawing.Point(147, 301);
             this.btn_Signup.Name = "btn_Signup";
             this.btn_Signup.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
             this.btn_Signup.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
             this.btn_Signup.OnHoverTextColor = System.Drawing.Color.White;
             this.btn_Signup.selected = false;
-            this.btn_Signup.Size = new System.Drawing.Size(188, 52);
+            this.btn_Signup.Size = new System.Drawing.Size(125, 34);
             this.btn_Signup.TabIndex = 1;
             this.btn_Signup.Text = "Sign up";
             this.btn_Signup.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -185,14 +206,13 @@ namespace QuanLyThuVien
             this.btn_Signin.IconVisible = true;
             this.btn_Signin.IconZoom = 90D;
             this.btn_Signin.IsTab = false;
-            this.btn_Signin.Location = new System.Drawing.Point(220, 401);
-            this.btn_Signin.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btn_Signin.Location = new System.Drawing.Point(147, 261);
             this.btn_Signin.Name = "btn_Signin";
             this.btn_Signin.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
             this.btn_Signin.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
             this.btn_Signin.OnHoverTextColor = System.Drawing.Color.White;
             this.btn_Signin.selected = false;
-            this.btn_Signin.Size = new System.Drawing.Size(188, 52);
+            this.btn_Signin.Size = new System.Drawing.Size(125, 34);
             this.btn_Signin.TabIndex = 0;
             this.btn_Signin.Text = "Sign in";
             this.btn_Signin.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -200,35 +220,15 @@ namespace QuanLyThuVien
             this.btn_Signin.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Signin.Click += new System.EventHandler(this.btn_Signin_Click);
             // 
-            // tb_Pwd
-            // 
-            this.tb_Pwd.BackColor = System.Drawing.SystemColors.Control;
-            this.tb_Pwd.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.tb_Pwd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.tb_Pwd.ForeColor = System.Drawing.Color.Black;
-            this.tb_Pwd.HintForeColor = System.Drawing.Color.Empty;
-            this.tb_Pwd.HintText = "";
-            this.tb_Pwd.isPassword = true;
-            this.tb_Pwd.LineFocusedColor = System.Drawing.Color.Blue;
-            this.tb_Pwd.LineIdleColor = System.Drawing.Color.Gray;
-            this.tb_Pwd.LineMouseHoverColor = System.Drawing.Color.Blue;
-            this.tb_Pwd.LineThickness = 3;
-            this.tb_Pwd.Location = new System.Drawing.Point(118, 314);
-            this.tb_Pwd.Margin = new System.Windows.Forms.Padding(4);
-            this.tb_Pwd.Name = "tb_Pwd";
-            this.tb_Pwd.Size = new System.Drawing.Size(379, 50);
-            this.tb_Pwd.TabIndex = 6;
-            this.tb_Pwd.Text = "password";
-            this.tb_Pwd.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
             // frmLogin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(593, 625);
+            this.ClientSize = new System.Drawing.Size(395, 406);
             this.Controls.Add(this.bunifuGradientPanel1);
             this.ForeColor = System.Drawing.Color.Red;
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmLogin";
             this.Text = "Đăng nhập";
             this.bunifuGradientPanel1.ResumeLayout(false);

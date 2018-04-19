@@ -84,3 +84,7 @@ C:\Users\NNDB\Desktop\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.frmPhi
 C:\Users\NNDB\Desktop\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.frmLogin.resources
 C:\Users\NNDB\Desktop\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.frmInfoUser.resources
 C:\Users\NNDB\Desktop\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.frmSignupUser.resources
+D:\Mine\5. Study\Projects Test\C#\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.frmInfoUser.resources
+D:\Mine\5. Study\Projects Test\C#\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.frmLogin.resources
+D:\Mine\5. Study\Projects Test\C#\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.frmPhieuMuon.resources
+D:\Mine\5. Study\Projects Test\C#\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.frmSignupUser.resources
