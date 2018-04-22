@@ -21,17 +21,17 @@ namespace QuanLyThuVien
 
         private void btn_Add_Click(object sender, EventArgs e)
         {
-            if (tb_ID.Text == "") MessageBox.Show("Không được để trống ID độc giả.");
+            if (tb_ID.Text == "") MessageBox.Show("Không được để trống ID độc giả.", "Chú ý");
             else
-            if (tb_UserName.Text == "") MessageBox.Show("Không được để trống tài khoản.");
+            if (tb_UserName.Text == "") MessageBox.Show("Không được để trống tài khoản.", "Chú ý");
             else
-            if (tb_Pwd.Text == "") MessageBox.Show("Không được để trống mật khẩu.");
+            if (tb_Pwd.Text == "") MessageBox.Show("Không được để trống mật khẩu.", "Chú ý");
             else
             {
                 string sqlINSERT = "INSERT INTO USERS VALUES (@UserName,@IDDocGia,@Pwd)";
                 SqlCommand cmd = new SqlCommand(sqlINSERT, con);
 
-                cmd.Parameters.AddWithValue("IDDocGia", "DG"+tb_ID.Text);
+                cmd.Parameters.AddWithValue("IDDocGia", tb_ID.Text);
                 cmd.Parameters.AddWithValue("UserName", tb_UserName.Text);
                 cmd.Parameters.AddWithValue("Pwd", tb_Pwd.Text);
                 cmd.ExecuteNonQuery();
