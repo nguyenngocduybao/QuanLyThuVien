@@ -32,24 +32,18 @@
             this.dgv_SearchBook = new System.Windows.Forms.DataGridView();
             this.lb_Search = new System.Windows.Forms.Label();
             this.grb_SearchBook = new System.Windows.Forms.GroupBox();
-            this.lb_YXB = new System.Windows.Forms.Label();
-            this.lb_TinhTrang = new System.Windows.Forms.Label();
-            this.lb_TheLoai = new System.Windows.Forms.Label();
-            this.lb_IDTacGia = new System.Windows.Forms.Label();
-            this.lb_NhaXB = new System.Windows.Forms.Label();
-            this.lb_NameBook = new System.Windows.Forms.Label();
-            this.lb_IDBook = new System.Windows.Forms.Label();
-            this.cb_YXB = new Bunifu.Framework.UI.BunifuCheckbox();
-            this.cb_IDTacGia = new Bunifu.Framework.UI.BunifuCheckbox();
-            this.cb_TheLoai = new Bunifu.Framework.UI.BunifuCheckbox();
-            this.cb_TinhTrang = new Bunifu.Framework.UI.BunifuCheckbox();
-            this.cb_NXB = new Bunifu.Framework.UI.BunifuCheckbox();
-            this.cb_NameBook = new Bunifu.Framework.UI.BunifuCheckbox();
-            this.cb_IDBook = new Bunifu.Framework.UI.BunifuCheckbox();
             this.grb_DieuKhien = new System.Windows.Forms.GroupBox();
             this.btn_HienDL = new System.Windows.Forms.Button();
             this.btn_Back = new System.Windows.Forms.Button();
             this.btn_Search = new System.Windows.Forms.Button();
+            this.rd_IDSach = new System.Windows.Forms.RadioButton();
+            this.rd_TenSach = new System.Windows.Forms.RadioButton();
+            this.rd_NXB = new System.Windows.Forms.RadioButton();
+            this.rd_TacGia = new System.Windows.Forms.RadioButton();
+            this.rd_TheLoai = new System.Windows.Forms.RadioButton();
+            this.rd_TinhTrang = new System.Windows.Forms.RadioButton();
+            this.rd_YXB = new System.Windows.Forms.RadioButton();
+            this.tb_Search = new System.Windows.Forms.TextBox();
             this.grb_DataSearchBook.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_SearchBook)).BeginInit();
             this.grb_SearchBook.SuspendLayout();
@@ -90,20 +84,14 @@
             // 
             // grb_SearchBook
             // 
-            this.grb_SearchBook.Controls.Add(this.lb_YXB);
-            this.grb_SearchBook.Controls.Add(this.lb_TinhTrang);
-            this.grb_SearchBook.Controls.Add(this.lb_TheLoai);
-            this.grb_SearchBook.Controls.Add(this.lb_IDTacGia);
-            this.grb_SearchBook.Controls.Add(this.lb_NhaXB);
-            this.grb_SearchBook.Controls.Add(this.lb_NameBook);
-            this.grb_SearchBook.Controls.Add(this.lb_IDBook);
-            this.grb_SearchBook.Controls.Add(this.cb_YXB);
-            this.grb_SearchBook.Controls.Add(this.cb_IDTacGia);
-            this.grb_SearchBook.Controls.Add(this.cb_TheLoai);
-            this.grb_SearchBook.Controls.Add(this.cb_TinhTrang);
-            this.grb_SearchBook.Controls.Add(this.cb_NXB);
-            this.grb_SearchBook.Controls.Add(this.cb_NameBook);
-            this.grb_SearchBook.Controls.Add(this.cb_IDBook);
+            this.grb_SearchBook.Controls.Add(this.tb_Search);
+            this.grb_SearchBook.Controls.Add(this.rd_YXB);
+            this.grb_SearchBook.Controls.Add(this.rd_TinhTrang);
+            this.grb_SearchBook.Controls.Add(this.rd_TheLoai);
+            this.grb_SearchBook.Controls.Add(this.rd_TacGia);
+            this.grb_SearchBook.Controls.Add(this.rd_NXB);
+            this.grb_SearchBook.Controls.Add(this.rd_TenSach);
+            this.grb_SearchBook.Controls.Add(this.rd_IDSach);
             this.grb_SearchBook.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grb_SearchBook.ForeColor = System.Drawing.Color.DodgerBlue;
             this.grb_SearchBook.Location = new System.Drawing.Point(19, 181);
@@ -112,167 +100,6 @@
             this.grb_SearchBook.TabIndex = 3;
             this.grb_SearchBook.TabStop = false;
             this.grb_SearchBook.Text = "Thông tin tra cứu";
-            // 
-            // lb_YXB
-            // 
-            this.lb_YXB.AutoSize = true;
-            this.lb_YXB.Location = new System.Drawing.Point(733, 68);
-            this.lb_YXB.Name = "lb_YXB";
-            this.lb_YXB.Size = new System.Drawing.Size(198, 36);
-            this.lb_YXB.TabIndex = 13;
-            this.lb_YXB.Text = "Năm xuất bản";
-            // 
-            // lb_TinhTrang
-            // 
-            this.lb_TinhTrang.AutoSize = true;
-            this.lb_TinhTrang.Location = new System.Drawing.Point(423, 212);
-            this.lb_TinhTrang.Name = "lb_TinhTrang";
-            this.lb_TinhTrang.Size = new System.Drawing.Size(150, 36);
-            this.lb_TinhTrang.TabIndex = 12;
-            this.lb_TinhTrang.Text = "Tình trạng";
-            // 
-            // lb_TheLoai
-            // 
-            this.lb_TheLoai.AutoSize = true;
-            this.lb_TheLoai.Location = new System.Drawing.Point(423, 147);
-            this.lb_TheLoai.Name = "lb_TheLoai";
-            this.lb_TheLoai.Size = new System.Drawing.Size(121, 36);
-            this.lb_TheLoai.TabIndex = 11;
-            this.lb_TheLoai.Text = "Thể loại";
-            // 
-            // lb_IDTacGia
-            // 
-            this.lb_IDTacGia.AutoSize = true;
-            this.lb_IDTacGia.Location = new System.Drawing.Point(423, 68);
-            this.lb_IDTacGia.Name = "lb_IDTacGia";
-            this.lb_IDTacGia.Size = new System.Drawing.Size(139, 36);
-            this.lb_IDTacGia.TabIndex = 10;
-            this.lb_IDTacGia.Text = "ID tác giả";
-            // 
-            // lb_NhaXB
-            // 
-            this.lb_NhaXB.AutoSize = true;
-            this.lb_NhaXB.Location = new System.Drawing.Point(76, 212);
-            this.lb_NhaXB.Name = "lb_NhaXB";
-            this.lb_NhaXB.Size = new System.Drawing.Size(192, 36);
-            this.lb_NhaXB.TabIndex = 9;
-            this.lb_NhaXB.Text = "Nhà xuất bản";
-            // 
-            // lb_NameBook
-            // 
-            this.lb_NameBook.AutoSize = true;
-            this.lb_NameBook.Location = new System.Drawing.Point(76, 147);
-            this.lb_NameBook.Name = "lb_NameBook";
-            this.lb_NameBook.Size = new System.Drawing.Size(137, 36);
-            this.lb_NameBook.TabIndex = 8;
-            this.lb_NameBook.Text = "Tên sách";
-            // 
-            // lb_IDBook
-            // 
-            this.lb_IDBook.AutoSize = true;
-            this.lb_IDBook.Location = new System.Drawing.Point(76, 68);
-            this.lb_IDBook.Name = "lb_IDBook";
-            this.lb_IDBook.Size = new System.Drawing.Size(115, 36);
-            this.lb_IDBook.TabIndex = 7;
-            this.lb_IDBook.Text = "ID sách";
-            // 
-            // cb_YXB
-            // 
-            this.cb_YXB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(135)))), ((int)(((byte)(140)))));
-            this.cb_YXB.ChechedOffColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(135)))), ((int)(((byte)(140)))));
-            this.cb_YXB.Checked = false;
-            this.cb_YXB.CheckedOnColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(205)))), ((int)(((byte)(117)))));
-            this.cb_YXB.ForeColor = System.Drawing.Color.White;
-            this.cb_YXB.Location = new System.Drawing.Point(988, 84);
-            this.cb_YXB.Margin = new System.Windows.Forms.Padding(8, 9, 8, 9);
-            this.cb_YXB.Name = "cb_YXB";
-            this.cb_YXB.Size = new System.Drawing.Size(20, 20);
-            this.cb_YXB.TabIndex = 6;
-            this.cb_YXB.MouseClick += new System.Windows.Forms.MouseEventHandler(this.cbOnChange);
-            // 
-            // cb_IDTacGia
-            // 
-            this.cb_IDTacGia.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(135)))), ((int)(((byte)(140)))));
-            this.cb_IDTacGia.ChechedOffColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(135)))), ((int)(((byte)(140)))));
-            this.cb_IDTacGia.Checked = false;
-            this.cb_IDTacGia.CheckedOnColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(205)))), ((int)(((byte)(117)))));
-            this.cb_IDTacGia.ForeColor = System.Drawing.Color.White;
-            this.cb_IDTacGia.Location = new System.Drawing.Point(614, 84);
-            this.cb_IDTacGia.Margin = new System.Windows.Forms.Padding(8, 9, 8, 9);
-            this.cb_IDTacGia.Name = "cb_IDTacGia";
-            this.cb_IDTacGia.Size = new System.Drawing.Size(20, 20);
-            this.cb_IDTacGia.TabIndex = 5;
-            this.cb_IDTacGia.MouseClick += new System.Windows.Forms.MouseEventHandler(this.cbOnChange);
-            // 
-            // cb_TheLoai
-            // 
-            this.cb_TheLoai.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(135)))), ((int)(((byte)(140)))));
-            this.cb_TheLoai.ChechedOffColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(135)))), ((int)(((byte)(140)))));
-            this.cb_TheLoai.Checked = false;
-            this.cb_TheLoai.CheckedOnColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(205)))), ((int)(((byte)(117)))));
-            this.cb_TheLoai.ForeColor = System.Drawing.Color.White;
-            this.cb_TheLoai.Location = new System.Drawing.Point(614, 163);
-            this.cb_TheLoai.Margin = new System.Windows.Forms.Padding(8, 9, 8, 9);
-            this.cb_TheLoai.Name = "cb_TheLoai";
-            this.cb_TheLoai.Size = new System.Drawing.Size(20, 20);
-            this.cb_TheLoai.TabIndex = 4;
-            this.cb_TheLoai.MouseClick += new System.Windows.Forms.MouseEventHandler(this.cbOnChange);
-            // 
-            // cb_TinhTrang
-            // 
-            this.cb_TinhTrang.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(135)))), ((int)(((byte)(140)))));
-            this.cb_TinhTrang.ChechedOffColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(135)))), ((int)(((byte)(140)))));
-            this.cb_TinhTrang.Checked = false;
-            this.cb_TinhTrang.CheckedOnColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(205)))), ((int)(((byte)(117)))));
-            this.cb_TinhTrang.ForeColor = System.Drawing.Color.White;
-            this.cb_TinhTrang.Location = new System.Drawing.Point(614, 228);
-            this.cb_TinhTrang.Margin = new System.Windows.Forms.Padding(8, 9, 8, 9);
-            this.cb_TinhTrang.Name = "cb_TinhTrang";
-            this.cb_TinhTrang.Size = new System.Drawing.Size(20, 20);
-            this.cb_TinhTrang.TabIndex = 3;
-            this.cb_TinhTrang.MouseClick += new System.Windows.Forms.MouseEventHandler(this.cbOnChange);
-            // 
-            // cb_NXB
-            // 
-            this.cb_NXB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(135)))), ((int)(((byte)(140)))));
-            this.cb_NXB.ChechedOffColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(135)))), ((int)(((byte)(140)))));
-            this.cb_NXB.Checked = false;
-            this.cb_NXB.CheckedOnColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(205)))), ((int)(((byte)(117)))));
-            this.cb_NXB.ForeColor = System.Drawing.Color.White;
-            this.cb_NXB.Location = new System.Drawing.Point(296, 228);
-            this.cb_NXB.Margin = new System.Windows.Forms.Padding(8, 9, 8, 9);
-            this.cb_NXB.Name = "cb_NXB";
-            this.cb_NXB.Size = new System.Drawing.Size(20, 20);
-            this.cb_NXB.TabIndex = 2;
-            this.cb_NXB.MouseClick += new System.Windows.Forms.MouseEventHandler(this.cbOnChange);
-            // 
-            // cb_NameBook
-            // 
-            this.cb_NameBook.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(135)))), ((int)(((byte)(140)))));
-            this.cb_NameBook.ChechedOffColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(135)))), ((int)(((byte)(140)))));
-            this.cb_NameBook.Checked = false;
-            this.cb_NameBook.CheckedOnColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(205)))), ((int)(((byte)(117)))));
-            this.cb_NameBook.ForeColor = System.Drawing.Color.White;
-            this.cb_NameBook.Location = new System.Drawing.Point(296, 163);
-            this.cb_NameBook.Margin = new System.Windows.Forms.Padding(8, 9, 8, 9);
-            this.cb_NameBook.Name = "cb_NameBook";
-            this.cb_NameBook.Size = new System.Drawing.Size(20, 20);
-            this.cb_NameBook.TabIndex = 1;
-            this.cb_NameBook.MouseClick += new System.Windows.Forms.MouseEventHandler(this.cbOnChange);
-            // 
-            // cb_IDBook
-            // 
-            this.cb_IDBook.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(135)))), ((int)(((byte)(140)))));
-            this.cb_IDBook.ChechedOffColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(135)))), ((int)(((byte)(140)))));
-            this.cb_IDBook.Checked = false;
-            this.cb_IDBook.CheckedOnColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(205)))), ((int)(((byte)(117)))));
-            this.cb_IDBook.ForeColor = System.Drawing.Color.White;
-            this.cb_IDBook.Location = new System.Drawing.Point(296, 84);
-            this.cb_IDBook.Margin = new System.Windows.Forms.Padding(8, 9, 8, 9);
-            this.cb_IDBook.Name = "cb_IDBook";
-            this.cb_IDBook.Size = new System.Drawing.Size(20, 20);
-            this.cb_IDBook.TabIndex = 0;
-            this.cb_IDBook.MouseClick += new System.Windows.Forms.MouseEventHandler(this.cbOnChange);
             // 
             // grb_DieuKhien
             // 
@@ -318,6 +145,90 @@
             this.btn_Search.UseVisualStyleBackColor = true;
             this.btn_Search.Click += new System.EventHandler(this.btn_Search_Click);
             // 
+            // rd_IDSach
+            // 
+            this.rd_IDSach.AutoSize = true;
+            this.rd_IDSach.Location = new System.Drawing.Point(33, 59);
+            this.rd_IDSach.Name = "rd_IDSach";
+            this.rd_IDSach.Size = new System.Drawing.Size(140, 40);
+            this.rd_IDSach.TabIndex = 0;
+            this.rd_IDSach.TabStop = true;
+            this.rd_IDSach.Text = "ID sách";
+            this.rd_IDSach.UseVisualStyleBackColor = true;
+            // 
+            // rd_TenSach
+            // 
+            this.rd_TenSach.AutoSize = true;
+            this.rd_TenSach.Location = new System.Drawing.Point(33, 134);
+            this.rd_TenSach.Name = "rd_TenSach";
+            this.rd_TenSach.Size = new System.Drawing.Size(162, 40);
+            this.rd_TenSach.TabIndex = 1;
+            this.rd_TenSach.TabStop = true;
+            this.rd_TenSach.Text = "Tên sách";
+            this.rd_TenSach.UseVisualStyleBackColor = true;
+            // 
+            // rd_NXB
+            // 
+            this.rd_NXB.AutoSize = true;
+            this.rd_NXB.Location = new System.Drawing.Point(33, 196);
+            this.rd_NXB.Name = "rd_NXB";
+            this.rd_NXB.Size = new System.Drawing.Size(217, 40);
+            this.rd_NXB.TabIndex = 2;
+            this.rd_NXB.TabStop = true;
+            this.rd_NXB.Text = "Nhà xuất bản";
+            this.rd_NXB.UseVisualStyleBackColor = true;
+            // 
+            // rd_TacGia
+            // 
+            this.rd_TacGia.AutoSize = true;
+            this.rd_TacGia.Location = new System.Drawing.Point(365, 59);
+            this.rd_TacGia.Name = "rd_TacGia";
+            this.rd_TacGia.Size = new System.Drawing.Size(137, 40);
+            this.rd_TacGia.TabIndex = 3;
+            this.rd_TacGia.TabStop = true;
+            this.rd_TacGia.Text = "Tác giả";
+            this.rd_TacGia.UseVisualStyleBackColor = true;
+            // 
+            // rd_TheLoai
+            // 
+            this.rd_TheLoai.AutoSize = true;
+            this.rd_TheLoai.Location = new System.Drawing.Point(365, 134);
+            this.rd_TheLoai.Name = "rd_TheLoai";
+            this.rd_TheLoai.Size = new System.Drawing.Size(146, 40);
+            this.rd_TheLoai.TabIndex = 4;
+            this.rd_TheLoai.TabStop = true;
+            this.rd_TheLoai.Text = "Thể loại";
+            this.rd_TheLoai.UseVisualStyleBackColor = true;
+            // 
+            // rd_TinhTrang
+            // 
+            this.rd_TinhTrang.AutoSize = true;
+            this.rd_TinhTrang.Location = new System.Drawing.Point(365, 196);
+            this.rd_TinhTrang.Name = "rd_TinhTrang";
+            this.rd_TinhTrang.Size = new System.Drawing.Size(175, 40);
+            this.rd_TinhTrang.TabIndex = 5;
+            this.rd_TinhTrang.TabStop = true;
+            this.rd_TinhTrang.Text = "Tình trạng";
+            this.rd_TinhTrang.UseVisualStyleBackColor = true;
+            // 
+            // rd_YXB
+            // 
+            this.rd_YXB.AutoSize = true;
+            this.rd_YXB.Location = new System.Drawing.Point(658, 59);
+            this.rd_YXB.Name = "rd_YXB";
+            this.rd_YXB.Size = new System.Drawing.Size(223, 40);
+            this.rd_YXB.TabIndex = 6;
+            this.rd_YXB.TabStop = true;
+            this.rd_YXB.Text = "Năm xuất bản";
+            this.rd_YXB.UseVisualStyleBackColor = true;
+            // 
+            // tb_Search
+            // 
+            this.tb_Search.Location = new System.Drawing.Point(658, 134);
+            this.tb_Search.Name = "tb_Search";
+            this.tb_Search.Size = new System.Drawing.Size(285, 41);
+            this.tb_Search.TabIndex = 7;
+            // 
             // frmSearchBook
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -350,19 +261,13 @@
         private System.Windows.Forms.Button btn_Back;
         private System.Windows.Forms.Button btn_Search;
         private System.Windows.Forms.Button btn_HienDL;
-        private Bunifu.Framework.UI.BunifuCheckbox cb_TinhTrang;
-        private Bunifu.Framework.UI.BunifuCheckbox cb_NXB;
-        private Bunifu.Framework.UI.BunifuCheckbox cb_NameBook;
-        private Bunifu.Framework.UI.BunifuCheckbox cb_IDBook;
-        private System.Windows.Forms.Label lb_YXB;
-        private System.Windows.Forms.Label lb_TinhTrang;
-        private System.Windows.Forms.Label lb_TheLoai;
-        private System.Windows.Forms.Label lb_IDTacGia;
-        private System.Windows.Forms.Label lb_NhaXB;
-        private System.Windows.Forms.Label lb_IDBook;
-        private Bunifu.Framework.UI.BunifuCheckbox cb_YXB;
-        private Bunifu.Framework.UI.BunifuCheckbox cb_IDTacGia;
-        private Bunifu.Framework.UI.BunifuCheckbox cb_TheLoai;
-        private System.Windows.Forms.Label lb_NameBook;
+        private System.Windows.Forms.RadioButton rd_YXB;
+        private System.Windows.Forms.RadioButton rd_TinhTrang;
+        private System.Windows.Forms.RadioButton rd_TheLoai;
+        private System.Windows.Forms.RadioButton rd_TacGia;
+        private System.Windows.Forms.RadioButton rd_NXB;
+        private System.Windows.Forms.RadioButton rd_TenSach;
+        private System.Windows.Forms.RadioButton rd_IDSach;
+        private System.Windows.Forms.TextBox tb_Search;
     }
 }
