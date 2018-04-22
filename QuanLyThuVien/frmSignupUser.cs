@@ -42,7 +42,12 @@ namespace QuanLyThuVien
                     DialogResult changeform;
                     changeform = MessageBox.Show("Bạn đã đăng kí thành công!", "Chú ý", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                     if (changeform == DialogResult.Yes)
+                    {
+                        frmLogin dlg2 = new frmLogin();
+                        dlg2.ShowDialog();
                         this.Close();
+                    }
+                        
                 }
             }
         }

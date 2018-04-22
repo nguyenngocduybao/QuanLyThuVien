@@ -35,6 +35,7 @@ namespace QuanLyThuVien
                     MessageBox.Show("Đăng nhập thành công");
                     frmMain dlg2 = new frmMain();
                     dlg2.ShowDialog();
+                    this.Close();
                 }
                 else
                 {
@@ -51,6 +52,7 @@ namespace QuanLyThuVien
         {
             frmInfoUser dlg2 = new frmInfoUser();
             dlg2.ShowDialog();
+            this.Close();
         }
 
         private void btn_SigninAdmin_Click(object sender, EventArgs e)
@@ -60,6 +62,7 @@ namespace QuanLyThuVien
                 MessageBox.Show("Đăng nhập thành công");
                 frmMain dlg2 = new frmMain();
                 dlg2.ShowDialog();
+                this.Close();
             }
             else
             {

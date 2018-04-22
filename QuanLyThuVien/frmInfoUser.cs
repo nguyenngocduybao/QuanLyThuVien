@@ -64,6 +64,7 @@ namespace QuanLyThuVien
             {
                 frmSignupUser dlg2 = new frmSignupUser();
                 dlg2.ShowDialog();
+                this.Close();
             }
         }
 
