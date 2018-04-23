@@ -35,7 +35,7 @@ namespace QuanLyThuVien
         if (cbb_TypeReader.Text == "") MessageBox.Show("Vui lòng chọn loại độc giả.", "Chú ý");
             else
         if (dtp_NgayLapThe.Text == "") MessageBox.Show("Không được để trống ngày lập thẻ.", "Chú ý");
-            else
+            else 
             {
                 string sqlINSERT = "INSERT INTO THEDOCGIA VALUES (@IDDocGia, @HoTenDG, @NgSinhDG, @DiachiDG, @EmailDG, @LoaiDG, @NgLapThe, NULL, NULL)";
                 SqlCommand cmd = new SqlCommand(sqlINSERT, con);
@@ -57,15 +57,15 @@ namespace QuanLyThuVien
                     str = str.Substring(67);
                     MessageBox.Show(str, "Chú ý");
                 }
-            }
-            DialogResult kq;
-            kq = MessageBox.Show("Bạn đã chắc chắn thông tin trên là chính xác?", "Chú ý", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (kq == DialogResult.Yes)
-            {
-                frmSignupUser dlg2 = new frmSignupUser();
-                dlg2.ShowDialog();
-                this.Close();
-            }
+                DialogResult kq;
+                kq = MessageBox.Show("Bạn đã chắc chắn thông tin trên là chính xác?", "Chú ý", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (kq == DialogResult.Yes)
+                {
+                    frmSignupUser dlg2 = new frmSignupUser();
+                    dlg2.ShowDialog();
+                    this.Close();
+                }
+            }           
         }
 
         private void frmInfoUser_Load(object sender, EventArgs e)

@@ -98,11 +98,15 @@ namespace QuanLyThuVien
 
         private void btn_Delete_Click(object sender, EventArgs e)
         {
-            string sqlDelete = "DELETE FROM THEDOCGIA WHERE IDDocGia = @IDDocGia";
-            SqlCommand cmd = new SqlCommand(sqlDelete, con);
+            string sqlDeleteUser = "DELETE FROM USERS WHERE IDDocGia = @IDDocGia";
+            string sqlDeleteDocGia = "DELETE FROM THEDOCGIA WHERE IDDocGia = @IDDocGia";
+            SqlCommand cmd1 = new SqlCommand(sqlDeleteUser, con);
+            SqlCommand cmd2 = new SqlCommand(sqlDeleteDocGia, con);
 
-            cmd.Parameters.AddWithValue("IDDocGia", tb_IDDel.Text);
-            cmd.ExecuteNonQuery();
+            cmd1.Parameters.AddWithValue("IDDocGia", tb_IDDel.Text);
+            cmd2.Parameters.AddWithValue("IDDocGia", tb_IDDel.Text);
+            cmd1.ExecuteNonQuery();
+            cmd2.ExecuteNonQuery();
             HienThi();
         }
 
