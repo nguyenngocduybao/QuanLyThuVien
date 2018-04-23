@@ -34,8 +34,8 @@ namespace QuanLyThuVien
 
         public void HienThi()
         {
-            string sqlSELECT = "SELECT * FROM THEDOCGIA";
-            SqlCommand cmd = new SqlCommand(sqlSELECT, con);
+            string sqlSelect = "SELECT * FROM THEDOCGIA";
+            SqlCommand cmd = new SqlCommand(sqlSelect, con);
             SqlDataReader dr = cmd.ExecuteReader();
             DataTable dt = new DataTable();
             dt.Load(dr);
@@ -59,8 +59,8 @@ namespace QuanLyThuVien
                     if (dtp_NgayLapThe.Text == "") MessageBox.Show("Không được để trống ngày lập thẻ.", "Chú ý");
             else
             {
-                string sqlINSERT = "INSERT INTO THEDOCGIA VALUES (@IDDocGia, @HoTenDG, @NgSinhDG, @DiachiDG, @EmailDG, @IDLoaiDG, @NgLapThe, NULL, NULL)";
-                SqlCommand cmd = new SqlCommand(sqlINSERT, con);
+                string sqlInsert = "INSERT INTO THEDOCGIA VALUES (@IDDocGia, @HoTenDG, @NgSinhDG, @DiachiDG, @EmailDG, @IDLoaiDG, @NgLapThe, NULL, NULL)";
+                SqlCommand cmd = new SqlCommand(sqlInsert, con);
 
                 cmd.Parameters.AddWithValue("IDDocGia", tb_ID.Text);
                 cmd.Parameters.AddWithValue("HoTenDG", tb_Name.Text);
@@ -81,9 +81,8 @@ namespace QuanLyThuVien
                     MessageBox.Show(str, "Chú ý");
                 }
                 HienThi();
-            }
-            
-            
+            }   
+           
         }
 
         private void btn_Back_Click(object sender, EventArgs e)
@@ -133,7 +132,7 @@ namespace QuanLyThuVien
                     if (dtp_NgayLapThe.Text == "") MessageBox.Show("Không được để trống ngày lập thẻ.", "Chú ý");
             else
             {
-                string sqlEdit = "UPDATE THEDOCGIA SET HoTenDG=@HoTenDG, NgSinhDG=@NgSinhDG, DiaChiDG=@DiachiDG, EmailDG=@EmailDG, IDLoaiDG=@IDLoaiDG, NgLapThe=@NgLapThe WHERE IDDocGia = @IDDocGia";
+                string sqlEdit = "UPDATE THEDOCGIA SET HoTenDG = @HoTenDG, NgSinhDG = @NgSinhDG, DiaChiDG = @DiachiDG, EmailDG = @EmailDG, IDLoaiDG = @IDLoaiDG, NgLapThe = @NgLapThe WHERE IDDocGia = @IDDocGia";
                 SqlCommand cmd = new SqlCommand(sqlEdit, con);
 
                 cmd.Parameters.AddWithValue("IDDocGia", tb_ID.Text);
@@ -143,6 +142,7 @@ namespace QuanLyThuVien
                 cmd.Parameters.AddWithValue("IDLoaiDG", cbb_TypeReader.Text);
                 cmd.Parameters.AddWithValue("DiaChiDG", tb_Address.Text);
                 cmd.Parameters.AddWithValue("NgLapThe", dtp_NgayLapThe.Text);
+
                 try
                 {
                     cmd.ExecuteNonQuery();
