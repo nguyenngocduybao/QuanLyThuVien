@@ -44,38 +44,37 @@ namespace QuanLyThuVien
 
         private void btn_AddBook_Click(object sender, EventArgs e)
         {
-            if (tb_IDBook.Text == "") MessageBox.Show("Không được để trống ID sách.", "Chú ý");
+            if (tb_IDDauSach.Text == "")
+                MessageBox.Show("Vui lòng nhập ID đầu sách.");
             else
-            if (tb_NameBook.Text == "") MessageBox.Show("Không được để trống tên sách.", "Chú ý");
+                if (tb_TenSach.Text == "") MessageBox.Show("Vui lòng nhập tên sách.");
             else
-            if (cbb_TypeBook.Text == "") MessageBox.Show("Không được để trống thể loại sách", "Chú ý");
+                if (cb_LoaiSach.Text == "") MessageBox.Show("Vui lòng không để trống loại sách.");
             else
-            if (cbb_Authors.Text == "") MessageBox.Show("Không được để trống tên tác giả.", "Chú ý");
+                if (tb_IDSach.Text == "") MessageBox.Show("Vui lòng nhập ID sách.");
             else
-            if (cbb_NamXB.Text == "") MessageBox.Show("Vui lòng chọn năm xuất bản.", "Chú ý");
+                if (tb_NhaXuatBan.Text == "") MessageBox.Show("Vui lòng nhập nhà xuất bản.");
             else
-            if (tb_NhaXB.Text == "") MessageBox.Show("Không được để trống nhà xuất bản.", "Chú ý");
+                if (dtp_NXB.Text == "") MessageBox.Show("Vui lòng không để trống năm xuất bản.");
             else
-            if (dtp_NgayNhap.Text == "") MessageBox.Show("Không được để trống ngày nhập.", "Chú ý");
+                if (tb_SoLuongTon.Text == "") MessageBox.Show("Vui lòng nhập số lượng tồn.");
             else
-            if (tb_TriGia.Text == "") MessageBox.Show("Không được để trống trị giá.", "Chú ý");
-            else
-            if (cbb_TinhTrang.Text == "") MessageBox.Show("Không được để trống tình trạng.", "Chú ý");
+                if (tb_GiaTien.Text == "") MessageBox.Show("Vui lòng nhập giá tiền.");
             else
             {
-                string sqlInsert = "INSERT INTO SACH VALUES (@IDSach, @TenSach, @TheLoai, @TacGia, @NamXB, @NhaXB, @NgNhap, @TriGia, @TinhTrang)";
-                SqlCommand cmd = new SqlCommand(sqlInsert, con);
-
-                cmd.Parameters.AddWithValue("IDSach", tb_IDBook.Text);
-                cmd.Parameters.AddWithValue("TenSach", tb_NameBook.Text);
-                cmd.Parameters.AddWithValue("TheLoai", cbb_TypeBook.Text);
-                cmd.Parameters.AddWithValue("TacGia", cbb_Authors.Text);
-                cmd.Parameters.AddWithValue("NamXB", cbb_NamXB.Text);
-                cmd.Parameters.AddWithValue("NhaXB", tb_NhaXB.Text);
-                cmd.Parameters.AddWithValue("NgNhap", dtp_NgayNhap.Text);
-                cmd.Parameters.AddWithValue("TriGia", tb_TriGia.Text);
-                cmd.Parameters.AddWithValue("TinhTrang", cbb_TinhTrang.Text);
-                cmd.ExecuteNonQuery();
+                string sqlInsertDauSach = "INSERT INTO TACGIA VALUES (@IDDauSach, @TenDauSach, @IDLoaiSach)";
+                SqlCommand cmdDauSach = new SqlCommand(sqlInsertDauSach, con);
+                cmdDauSach.Parameters.AddWithValue("IDDauSach", tb_IDDauSach.Text);
+                cmdDauSach.Parameters.AddWithValue("TenDauSach", tb_TenSach.Text);
+                cmdDauSach.Parameters.AddWithValue("IDLoaiSach", cb_LoaiSach.Text);
+                string sqlInsertSach = "INSERT INTO TACGIA VALUES (@IDSach, @IDDauSach, @NhaXB, @NamXB, @SoLuongTon, @GiaTien)";
+                SqlCommand cmdSach = new SqlCommand(sqlInsertSach, con);
+                cmdSach.Parameters.AddWithValue("IDDauSach", tb_IDDauSach.Text);
+                cmdSach.Parameters.AddWithValue("IDSach", tb_IDSach.Text);
+                cmdSach.Parameters.AddWithValue("NhaXB", tb_NhaXuatBan.Text);
+                cmdSach.Parameters.AddWithValue("NamXB", dtp_NXB.Text);
+                cmdSach.Parameters.AddWithValue("SoLuongTon", tb_SoLuongTon.Text);
+                cmdSach.Parameters.AddWithValue("GiaTien", tb_GiaTien.Text);
                 HienThi();
             }
         }
@@ -92,30 +91,12 @@ namespace QuanLyThuVien
 
         private void btn_DeleteBook_Click(object sender, EventArgs e)
         {
-            string sqlDelete = "DELETE FROM SACH WHERE IDSach = @IDSach";
-            SqlCommand cmd = new SqlCommand(sqlDelete, con);
 
-            cmd.Parameters.AddWithValue("IDSach", tb_IDDel.Text);            
-            cmd.ExecuteNonQuery();
-            HienThi();
         }
 
         private void btn_EditBook_Click(object sender, EventArgs e)
         {
-            string sqlEdit = "UPDATE SACH SET TenSach=@TenSach, TheLoai=@TheLoai, TacGia=@TacGia, NamXB=@NamXB, NhaXB=@NhaXB, NgNhap=@NgNhap, TriGia=@TriGia, TinhTrang=@TinhTrang WHERE IDSach = @IDsach";
-            SqlCommand cmd = new SqlCommand(sqlEdit, con);
 
-            cmd.Parameters.AddWithValue("IDSach", tb_IDBook.Text);
-            cmd.Parameters.AddWithValue("TenSach", tb_NameBook.Text);
-            cmd.Parameters.AddWithValue("TheLoai", cbb_TypeBook.Text);
-            cmd.Parameters.AddWithValue("TacGia", cbb_Authors.Text);
-            cmd.Parameters.AddWithValue("NamXB", cbb_NamXB.Text);
-            cmd.Parameters.AddWithValue("NhaXB", tb_NhaXB.Text);
-            cmd.Parameters.AddWithValue("NgNhap", dtp_NgayNhap.Text);
-            cmd.Parameters.AddWithValue("TriGia", tb_TriGia.Text);
-            cmd.Parameters.AddWithValue("TinhTrang", cbb_TinhTrang.Text);
-            cmd.ExecuteNonQuery();
-            HienThi();
         }
 
         private void tb_TriGia_KeyPress(object sender, KeyPressEventArgs e)
