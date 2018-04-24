@@ -90,4 +90,3 @@ D:\Mine\5. Study\Projects Test\C#\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyTh
 D:\Mine\5. Study\Projects Test\C#\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.frmSignupUser.resources
 C:\Users\NNDB\Desktop\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.frmAddTacGia.resources
 D:\Mine\5. Study\Projects Test\C#\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.frmAddTacGia.resources
-C:\Users\NNDB\Desktop\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.frmAddCuonSach.resources

@@ -31,7 +31,7 @@ namespace QuanLyThuVien
                 string sqlINSERT = "INSERT INTO USERS VALUES (@UserName,@IDDocGia,@Pwd)";
                 SqlCommand cmd = new SqlCommand(sqlINSERT, con);
 
-                cmd.Parameters.AddWithValue("IDDocGia", tb_ID.Text);
+                cmd.Parameters.AddWithValue("IDDocGia", "DG" + tb_ID.Text);
                 cmd.Parameters.AddWithValue("UserName", tb_UserName.Text);
                 cmd.Parameters.AddWithValue("Pwd", tb_Pwd.Text);
                 cmd.ExecuteNonQuery();
@@ -40,8 +40,8 @@ namespace QuanLyThuVien
                 if (kq == DialogResult.Yes)
                 {
                     DialogResult changeform;
-                    changeform = MessageBox.Show("Bạn đã đăng kí thành công!", "Chú ý", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                    if (changeform == DialogResult.Yes)
+                    changeform = MessageBox.Show("Bạn đã đăng kí thành công!", "Chú ý", MessageBoxButtons.OK, MessageBoxIcon.Question);
+                    if (changeform == DialogResult.OK)
                     {
                         frmLogin dlg2 = new frmLogin();
                         dlg2.ShowDialog();

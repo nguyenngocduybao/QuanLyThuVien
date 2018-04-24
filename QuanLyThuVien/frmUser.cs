@@ -62,7 +62,7 @@ namespace QuanLyThuVien
                 string sqlInsert = "INSERT INTO THEDOCGIA VALUES (@IDDocGia, @HoTenDG, @NgSinhDG, @DiachiDG, @EmailDG, @IDLoaiDG, @NgLapThe, NULL, NULL)";
                 SqlCommand cmd = new SqlCommand(sqlInsert, con);
 
-                cmd.Parameters.AddWithValue("IDDocGia", tb_ID.Text);
+                cmd.Parameters.AddWithValue("IDDocGia", "DG" + tb_ID.Text);
                 cmd.Parameters.AddWithValue("HoTenDG", tb_Name.Text);
                 cmd.Parameters.AddWithValue("NgSinhDG", dtp_BirthDay.Text);
                 cmd.Parameters.AddWithValue("EmailDG", tb_Email.Text);

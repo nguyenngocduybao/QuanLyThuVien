@@ -20,6 +20,17 @@ namespace QuanLyThuVien
 
         SqlConnection con;
 
+        private void frmInfoUser_Load(object sender, EventArgs e)
+        {
+            con = new SqlConnection(@"Data Source=DESKTOP-UKUNBAP\SQLEXPRESS;Initial Catalog=QuanLyThuVien;Integrated Security=True");
+            con.Open();
+        }
+
+        private void frmInfoUser_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            con.Close();
+        }
+
         private void btn_Add_Click(object sender, EventArgs e)
         {
         if (tb_ID.Text == "") MessageBox.Show("Không được để trống ID độc giả.", "Chú ý");
@@ -37,10 +48,10 @@ namespace QuanLyThuVien
         if (dtp_NgayLapThe.Text == "") MessageBox.Show("Không được để trống ngày lập thẻ.", "Chú ý");
             else 
             {
-                string sqlINSERT = "INSERT INTO THEDOCGIA VALUES (@IDDocGia, @HoTenDG, @NgSinhDG, @DiachiDG, @EmailDG, @LoaiDG, @NgLapThe, NULL, NULL)";
-                SqlCommand cmd = new SqlCommand(sqlINSERT, con);
+                string sqlInsert = "INSERT INTO THEDOCGIA VALUES (@IDDocGia, @HoTenDG, @NgSinhDG, @DiachiDG, @EmailDG, @LoaiDG, @NgLapThe, NULL, NULL)";
+                SqlCommand cmd = new SqlCommand(sqlInsert, con);
 
-                cmd.Parameters.AddWithValue("IDDocGia", tb_ID.Text);
+                cmd.Parameters.AddWithValue("IDDocGia", "DG" + tb_ID.Text);
                 cmd.Parameters.AddWithValue("HoTenDG", tb_Name.Text);
                 cmd.Parameters.AddWithValue("NgSinhDG", dtp_BirthDay.Text);
                 cmd.Parameters.AddWithValue("EmailDG", tb_Email.Text);
@@ -67,17 +78,7 @@ namespace QuanLyThuVien
                 }
             }           
         }
-
-        private void frmInfoUser_Load(object sender, EventArgs e)
-        {
-            con = new SqlConnection(@"Data Source=DESKTOP-UKUNBAP\SQLEXPRESS;Initial Catalog=QuanLyThuVien;Integrated Security=True");
-            con.Open();
-        }
-
-        private void frmInfoUser_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            con.Close();
-        }
+        
         private void tb_ID_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))

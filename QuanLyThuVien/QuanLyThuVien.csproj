@@ -55,12 +55,6 @@
     <Compile Include="frmAddBook.Designer.cs">
       <DependentUpon>frmAddBook.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmAddCuonSach.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmAddCuonSach.Designer.cs">
-      <DependentUpon>frmAddCuonSach.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmAddTacGia.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -113,9 +107,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmAddBook.resx">
       <DependentUpon>frmAddBook.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmAddCuonSach.resx">
-      <DependentUpon>frmAddCuonSach.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmAddTacGia.resx">
       <DependentUpon>frmAddTacGia.cs</DependentUpon>

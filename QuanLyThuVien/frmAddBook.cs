@@ -45,21 +45,21 @@ namespace QuanLyThuVien
         private void btn_AddBook_Click(object sender, EventArgs e)
         {
             if (tb_IDDauSach.Text == "")
-                MessageBox.Show("Vui lòng nhập ID đầu sách.");
+                MessageBox.Show("Vui lòng nhập ID đầu sách.", "Chú ý");
             else
-                if (tb_TenSach.Text == "") MessageBox.Show("Vui lòng nhập tên sách.");
+                if (tb_TenSach.Text == "") MessageBox.Show("Vui lòng nhập tên sách.", "Chú ý");
             else
-                if (cb_LoaiSach.Text == "") MessageBox.Show("Vui lòng không để trống loại sách.");
+                if (cb_LoaiSach.Text == "") MessageBox.Show("Vui lòng không để trống loại sách.", "Chú ý");
             else
-                if (tb_IDSach.Text == "") MessageBox.Show("Vui lòng nhập ID sách.");
+                if (tb_IDSach.Text == "") MessageBox.Show("Vui lòng nhập ID sách.", "Chú ý");
             else
-                if (tb_NhaXuatBan.Text == "") MessageBox.Show("Vui lòng nhập nhà xuất bản.");
+                if (tb_NhaXuatBan.Text == "") MessageBox.Show("Vui lòng nhập nhà xuất bản.", "Chú ý");
             else
-                if (dtp_NXB.Text == "") MessageBox.Show("Vui lòng không để trống năm xuất bản.");
+                if (dtp_NXB.Text == "") MessageBox.Show("Vui lòng không để trống năm xuất bản.", "Chú ý");
             else
-                if (tb_SoLuongTon.Text == "") MessageBox.Show("Vui lòng nhập số lượng tồn.");
+                if (tb_SoLuongTon.Text == "") MessageBox.Show("Vui lòng nhập số lượng tồn.", "Chú ý");
             else
-                if (tb_GiaTien.Text == "") MessageBox.Show("Vui lòng nhập giá tiền.");
+                if (tb_GiaTien.Text == "") MessageBox.Show("Vui lòng nhập giá tiền.", "Chú ý");
             else
             {
                 string sqlInsertDauSach = "INSERT INTO TACGIA VALUES (@IDDauSach, @TenDauSach, @IDLoaiSach)";
