@@ -33,20 +33,22 @@ namespace QuanLyThuVien
 
         private void btn_Add_Click(object sender, EventArgs e)
         {
-        if (tb_ID.Text == "") MessageBox.Show("Không được để trống ID độc giả.", "Chú ý");
+            if (tb_ID.Text == "") MessageBox.Show("Không được để trống ID độc giả.", "Chú ý");
             else
-        if (tb_Name.Text == "") MessageBox.Show("Không được để trống tên độc giả.", "Chú ý");
+            if (tb_Name.Text == "") MessageBox.Show("Không được để trống tên độc giả.", "Chú ý");
             else
-        if (dtp_BirthDay.Text == "") MessageBox.Show("Không được để trống ngày sinh", "Chú ý");
+            if (dtp_BirthDay.Text == "") MessageBox.Show("Không được để trống ngày sinh", "Chú ý");
             else
-        if (tb_Email.Text == "") MessageBox.Show("Không được để trống email.", "Chú ý");
+            if (tb_Email.Text == "") MessageBox.Show("Không được để trống email.", "Chú ý");
             else
-        if (tb_Email.Text.Length < 11 || (tb_Email.Text.Substring(tb_Email.Text.Length - 10) != "@gmail.com" && tb_Email.Text.Substring(tb_Email.Text.Length - 10) != "@yahoo.com")) MessageBox.Show("Không đúng định dạng email.", "Chú ý");
+            if (tb_Email.Text.Length < 11 || (tb_Email.Text.Substring(tb_Email.Text.Length - 10) != "@gmail.com" && tb_Email.Text.Substring(tb_Email.Text.Length - 10) != "@yahoo.com")) MessageBox.Show("Không đúng định dạng email.", "Chú ý");
             else
-        if (cbb_TypeReader.Text == "") MessageBox.Show("Vui lòng chọn loại độc giả.", "Chú ý");
+            if (cbb_TypeReader.Text == "") MessageBox.Show("Vui lòng chọn loại độc giả.", "Chú ý");
             else
-        if (dtp_NgayLapThe.Text == "") MessageBox.Show("Không được để trống ngày lập thẻ.", "Chú ý");
-            else 
+            if (tb_Address.Text == "") MessageBox.Show("Không được để trống địa chỉ.","Chú ý");
+            else
+            if (dtp_NgayLapThe.Text == "") MessageBox.Show("Không được để trống ngày lập thẻ.", "Chú ý");
+            else
             {
                 string sqlInsert = "INSERT INTO THEDOCGIA VALUES (@IDDocGia, @HoTenDG, @NgSinhDG, @DiachiDG, @EmailDG, @LoaiDG, @NgLapThe, NULL, NULL)";
                 SqlCommand cmd = new SqlCommand(sqlInsert, con);
@@ -60,7 +62,7 @@ namespace QuanLyThuVien
                 cmd.Parameters.AddWithValue("NgLapThe", dtp_NgayLapThe.Text);
                 try
                 {
-                    cmd.ExecuteNonQuery();                    
+                    cmd.ExecuteNonQuery();
                 }
                 catch (Exception ex)
                 {
@@ -68,6 +70,9 @@ namespace QuanLyThuVien
                     str = str.Substring(67);
                     MessageBox.Show(str, "Chú ý");
                 }
+            }
+            if(tb_Address.Text!="" && tb_Email.Text!="" && tb_ID.Text!="" && tb_Name.Text!="" && cbb_TypeReader.Text!="" && dtp_BirthDay.Text!="" && dtp_NgayLapThe.Text!="")
+            {
                 DialogResult kq;
                 kq = MessageBox.Show("Bạn đã chắc chắn thông tin trên là chính xác?", "Chú ý", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (kq == DialogResult.Yes)
