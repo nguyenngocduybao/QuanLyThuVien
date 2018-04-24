@@ -82,7 +82,7 @@ namespace QuanLyThuVien
                     if (dtp_NgaySinh.Text == "") MessageBox.Show("Không được để trống ngày sinh", "Chú ý");
             else
             {
-                string sqlEdit = "UPDATE TACGIA SET TenTacGia = @TenTacGia, NgaySinh = @NgaySinh WHERE IDTacGia = @IDTacGia)";
+                string sqlEdit = "UPDATE TACGIA SET TenTacGia = @TenTacGia, NgaySinh = @NgaySinh WHERE IDTacGia = @IDTacGia";
                 SqlCommand cmd = new SqlCommand(sqlEdit, con);
 
                 cmd.Parameters.AddWithValue("IDTacGia", tb_ID.Text);
@@ -92,7 +92,7 @@ namespace QuanLyThuVien
                 try
                 {
                     cmd.ExecuteNonQuery();
-                    MessageBox.Show("Cập nhật thành công", "Chú ý");
+                    MessageBox.Show("Sửa thành công", "Chú ý");
                 }
                 catch (Exception ex)
                 {
@@ -121,6 +121,7 @@ namespace QuanLyThuVien
 
             cmd.Parameters.AddWithValue("IDTacGia", tb_IDDel.Text);
             cmd.ExecuteNonQuery();
+            MessageBox.Show("Xoá thành công", "Chú ý");
             HienThi();
         }
 

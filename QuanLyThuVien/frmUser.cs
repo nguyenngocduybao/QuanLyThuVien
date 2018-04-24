@@ -102,10 +102,11 @@ namespace QuanLyThuVien
             SqlCommand cmd1 = new SqlCommand(sqlDeleteUser, con);
             SqlCommand cmd2 = new SqlCommand(sqlDeleteDocGia, con);
 
-            cmd1.Parameters.AddWithValue("IDDocGia", tb_IDDel.Text);
-            cmd2.Parameters.AddWithValue("IDDocGia", tb_IDDel.Text);
+            cmd1.Parameters.AddWithValue("IDDocGia", "DG" + tb_IDDel.Text);
+            cmd2.Parameters.AddWithValue("IDDocGia", "DG" + tb_IDDel.Text);
             cmd1.ExecuteNonQuery();
             cmd2.ExecuteNonQuery();
+            MessageBox.Show("Xoá thành công", "Chú ý");
             HienThi();
         }
 
@@ -135,18 +136,17 @@ namespace QuanLyThuVien
                 string sqlEdit = "UPDATE THEDOCGIA SET HoTenDG = @HoTenDG, NgSinhDG = @NgSinhDG, DiaChiDG = @DiachiDG, EmailDG = @EmailDG, IDLoaiDG = @IDLoaiDG, NgLapThe = @NgLapThe WHERE IDDocGia = @IDDocGia";
                 SqlCommand cmd = new SqlCommand(sqlEdit, con);
 
-                cmd.Parameters.AddWithValue("IDDocGia", tb_ID.Text);
+                cmd.Parameters.AddWithValue("IDDocGia", "DG" + tb_ID.Text);
                 cmd.Parameters.AddWithValue("HoTenDG", tb_Name.Text);
                 cmd.Parameters.AddWithValue("NgSinhDG", dtp_BirthDay.Text);
                 cmd.Parameters.AddWithValue("EmailDG", tb_Email.Text);
                 cmd.Parameters.AddWithValue("IDLoaiDG", cbb_TypeReader.Text);
                 cmd.Parameters.AddWithValue("DiaChiDG", tb_Address.Text);
                 cmd.Parameters.AddWithValue("NgLapThe", dtp_NgayLapThe.Text);
-
                 try
                 {
                     cmd.ExecuteNonQuery();
-                    MessageBox.Show("Cập nhật thành công");
+                    MessageBox.Show("Sửa thành công", "Chú ý");
                 }
                 catch (Exception ex)
                 {
